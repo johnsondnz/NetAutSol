@@ -3,6 +3,10 @@
 ## Brief
 MPLS network consisting of 6 x Junos Olives in EVE-NG.
 
+## Current Objectives
+* Provision all services via automated solution.
+* Scalability is key, addition of new devices, links, VPNs etc must be easy.
+
 ### P Nodes
 * LAB-COR1
 * LAB-COR2
@@ -27,7 +31,3 @@ Network in configured using *Ansible 2.4 and NAPALM.*
 
 ## Drawing
 ![Topology](https://i.imgur.com/fTlCm8y.png)
-
-## Current Objectives
-* Provision all services via automated solution.
-* Scalability is key, addition of new devices, links, VPNs etc must be easy.
