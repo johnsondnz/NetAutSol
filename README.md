@@ -54,7 +54,7 @@ All roles start with `base.j2` which then calls the other templates as required.
 
 ## Directories
 Defined in `./group_vars/all.yml`
-* `./build/`           # Used only to create device configurations, files are then assembled into a candidate configuration in `./compiled/`.
+* `./build/`           # Used only to create device configurations.
 * `./compiled/`        # Assembled configrations appear here along with diff files.
 * `./reports/`         # Operational verification reports will appear here.
 * `./.recue-configs/`  # used by rollback-rescue.sh script to return LAB to pre-automated state.
