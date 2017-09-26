@@ -57,7 +57,7 @@ Defined in `./group_vars/all.yml`
 * `./build/`           # Used only to create device configurations.
 * `./compiled/`        # Assembled configrations appear here along with diff files.
 * `./reports/`         # Operational verification reports will appear here.
-* `./.recue-configs/`  # used by rollback-rescue.sh script to return LAB to pre-automated state.
+* `./.rescue-configs/`  # used by rollback-rescue.sh script to return LAB to pre-automated state.
 
 ## Automated fabric provisioning
 1. `./rollback-rescue.sh`      # only to reset configurations to management only, no services provisioned.
