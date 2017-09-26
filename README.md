@@ -27,7 +27,7 @@ MPLS network consisting of 6 x Junos Olives in EVE-NG.
 em0 on all nodes connected to physical VLAN 22
 
 ### Automation
-Network in configured using *Ansible 2.4 and NAPALM.*
+Network in configured using *Ansible and NAPALM.*
 
 ## Drawing
 ![Topology](https://i.imgur.com/fTlCm8y.png)
