@@ -6,7 +6,15 @@ MPLS network consisting of 6 x Junos Olives in EVE-NG.
 ## Current Objectives
 * Provision all services via automated solution.
 * Scalability is key, addition of new devices, links, VPNs etc must be easy.
-* Generate network diagram based on ISIS protocol advertisements.
+* Verification of desired network state based on abstracted configuration.
+* Network diagram generation based on ISIS protocol advertisements.
+
+## Implimented
+- [x] Link Fabric and associated routing protocols.
+- [ ] BGP.
+- [ ] VPNs / Customer Access.
+- [ ] Network state verification.
+- [ ] Network diagram generation.
 
 ### P Nodes
 * LAB-COR1
@@ -36,7 +44,7 @@ Network in configured using *Ansible and NAPALM.*
 # Playbook Information
 
 ## Per Device Brown Files
-For anything not yet abstarcted with goal to abstract.
+For anything not yet abstracted with goal to abstract.
 * `./tasks/roles/base_config/templates/brownfiles/{{ inventory_hostname }}.txt`
 
 ## Variables
