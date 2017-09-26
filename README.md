@@ -36,28 +36,28 @@ Network in configured using *Ansible and NAPALM.*
 # Playbook Information
 
 ## Per Device Brown Files
-`./tasks/roles/base_config/templates/brownfiles`
+* `./tasks/roles/base_config/templates/brownfiles`
 
 ## Variables
-`./group_vars/all.yml`                                 # used to define playbook level variables.
-`./tasks/roles/base_config/base_config/vars/main.yml`  # currently empty.
-`./tasks/roles/base_config/fabric/vars/main.yml`       # all fabric links.
-`./tasks/roles/base_config/bgp_speaker/vars/main.yml`  # all fabric bgp fabric variables.
-`./host_vars`                                          # minimal information related to hosts that is not fabric based.
+* `./group_vars/all.yml`                                 # used to define playbook level variables.
+* `./tasks/roles/base_config/base_config/vars/main.yml`  # currently empty.
+* `./tasks/roles/base_config/fabric/vars/main.yml`       # all fabric links.
+* `./tasks/roles/base_config/bgp_speaker/vars/main.yml`  # all fabric bgp fabric variables.
+* `./host_vars`                                          # minimal information related to hosts that is not fabric based.
 
 ## Templates
 All roles start with `base.j2` which then calls the other templates as required.
-`./tasks/roles/base_config/base_config/templates/`
-`./tasks/roles/base_config/fabric/templates/`
-`./tasks/roles/base_config/bgp_speaker/templates/`
-`./templates`                                          # Used soley for operations verification.
+* `./tasks/roles/base_config/base_config/templates/`
+* `./tasks/roles/base_config/fabric/templates/`
+* `./tasks/roles/base_config/bgp_speaker/templates/`
+* `./templates`                                          # Used soley for operations verification.
 
 ## Directories
 Defined in `./group_vars/all.yml`
-`./build/`           # Used only to create device configurations, files are then assembled into a candidate configuration in `./compiled/`.
-`./compiled/`        # Assembled configrations appear here along with diff files.
-`./reports/`         # Operational verification reports will appear here.
-`./.recue-configs/`  # used by rollback-rescue.sh script to return LAB to pre-automated state.
+* `./build/`           # Used only to create device configurations, files are then assembled into a candidate configuration in `./compiled/`.
+* `./compiled/`        # Assembled configrations appear here along with diff files.
+* `./reports/`         # Operational verification reports will appear here.
+* `./.recue-configs/`  # used by rollback-rescue.sh script to return LAB to pre-automated state.
 
 ## Automated fabric provisioning
 1. `./rollback-rescue.sh`      # only to reset configurations to management only, no services provisioned.
@@ -65,4 +65,4 @@ Defined in `./group_vars/all.yml`
 3. `./deploy-configs.sh`    # deploy configurations and commit changes.
 
 ## Automated fabric verification
-`./verify.sh`               # currently verifies ISIS protocol only.
+1. `./verify.sh`               # currently verifies ISIS protocol only.
