@@ -36,7 +36,8 @@ Network in configured using *Ansible and NAPALM.*
 # Playbook Information
 
 ## Per Device Brown Files
-* `./tasks/roles/base_config/templates/brownfiles`
+For anything not yet abstarcted with goal to abstract.
+* `./tasks/roles/base_config/templates/brownfiles/{{ inventory_hostname }}.txt`
 
 ## Variables
 * `./group_vars/all.yml`                                 # used to define playbook level variables.
