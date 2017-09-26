@@ -6,6 +6,7 @@ MPLS network consisting of 6 x Junos Olives in EVE-NG.
 ## Current Objectives
 * Provision all services via automated solution.
 * Scalability is key, addition of new devices, links, VPNs etc must be easy.
+* Generate network diagram based on ISIS protocol advertisements.
 
 ### P Nodes
 * LAB-COR1
