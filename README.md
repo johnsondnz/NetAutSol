@@ -16,6 +16,7 @@ MPLS network consisting of 6 x Junos Olives in EVE-NG.
 - [ ] Network state verification.
 - [ ] Network diagram generation.
 
+## Network Setup
 ### P Nodes
 * LAB-COR1
 * LAB-COR2
@@ -38,7 +39,7 @@ em0 on all nodes connected to physical VLAN 22
 ### Automation
 Network in configured using *Ansible and NAPALM.*
 
-## Drawing / Topology
+### Drawing / Topology
 ![Topology](https://i.imgur.com/fTlCm8y.png)
 
 # Playbook Information
