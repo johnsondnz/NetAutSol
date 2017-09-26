@@ -1,0 +1,20 @@
+groups {
+	OUT-OF-BAND-MANAGEMENT {
+		interfaces {
+			em0 {
+			  description "OOOB MANAGEMENT INTERFACE --- DO NOT DELETE";
+			  unit 0 {
+			      family inet {
+			          address {{ oob_management_range }}.{{ id }}/24;
+			      }
+			  }
+			}
+		}
+		routing-options {
+			static {
+			    route 0.0.0.0/0 next-hop {{ oob_management_next_hop }};
+			}
+		}
+	}
+}
+apply-groups OUT-OF-BAND-MANAGEMENT;

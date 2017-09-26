@@ -1,0 +1,5 @@
+---
+os: junos
+system:
+  hostname: LAB-COR1
+id: 11

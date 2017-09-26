@@ -1,0 +1,38 @@
+---
+- name: Assmeble and Push Configuration
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    
+    - name: Assemble configuration
+      assemble: src=../compiled/{{ inventory_hostname }}/ dest=../compiled/{{ inventory_hostname }}/999-candidate.conf
+      changed_when: False
+      when: commit_changes | match('0')
+
+      tags:
+        - deploy
+
+    - name: Remove temporary configuration files
+      file: path=../compiled/{{ inventory_hostname }}/*.out state=absent
+      changed_when: False
+      when: commit_changes | match('0')
+
+      tags:
+        - deploy
+
+    - name: Executing Napalm Tasks
+      napalm_install_config:
+        hostname={{ inventory_hostname }}
+        username={{ ansible_user }}
+        dev_os={{ os }}
+        password={{ ansible_ssh_pass }}
+        config_file=../compiled/{{ inventory_hostname }}/999-candidate.conf
+        commit_changes={{ commit_changes }}
+        diff_file=../compiled/{{ inventory_hostname }}/diff
+      #no_log: true
+
+      tags:
+        - deploy
+        - print_action

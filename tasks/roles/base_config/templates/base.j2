@@ -1,0 +1,7 @@
+{% include 'static-system.j2' %}
+
+{% include 'static-management.j2' %}
+
+{% include 'static-protocol-defaults.j2' %}
+
+{% include 'brownfiles/{{ inventory_hostname }}.txt' ignore missing %}

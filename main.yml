@@ -1,0 +1,47 @@
+---
+- name: EVE-NG MPLS Topology - Ansible Playbook Test
+  hosts: all
+  connection: local
+
+  vars:
+ 
+  pre_tasks:
+
+    - include: tasks/hostfile.yml
+      name: Build hostfile
+
+    - include: tasks/ssh-key-grab.yml
+      vars:
+        known_hosts: ~/.ssh/known_hosts
+      name: Grab SSH keys
+
+      tags:
+        - rollback
+
+    - include: tasks/cleanup.yml
+      name: Cleanup
+
+  tasks:
+
+    - name: Rollback to rescue
+      junos_config:
+        src: .rescue-configs/{{ inventory_hostname }}.conf
+        src_format: set
+        update: replace
+        provider: "{{ netconf }}"
+      when: rollback_rescue == '1'
+
+      tags:
+        - rollback
+        - print_action
+
+    - include: tasks/cleanup.yml
+      name: Cleanup
+
+      tags:
+        - rollback
+        - print_action
+
+# - include: tasks/get_facts.yml
+- include: tasks/def_roles.yml
+- include: tasks/assemble_push_conf.yml

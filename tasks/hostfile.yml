@@ -1,0 +1,20 @@
+---
+- name: Populate /etc/hosts
+  blockinfile:
+    path: /etc/hosts
+    marker: "# {mark} ANSIBLE MANAGED BLOCK #"
+    insertafter: "127.0.1.1       ubuntu-xenial   ubuntu-xenial"
+    block: |
+      192.168.1.1 LAB-PE1
+      192.168.1.2 LAB-PE2
+      192.168.1.3 LAB-PE3
+      192.168.1.4 LAB-PE4
+      192.168.1.11 LAB-COR1
+      192.168.1.12 LAB-COR2
+      192.168.1.13 LAB-COR3
+      192.168.1.14 LAB-COR4
+  run_once: yes
+  become: yes
+
+  tags:
+    - rollback

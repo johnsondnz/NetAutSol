@@ -1,0 +1,16 @@
+---
+- name: Create base config
+  hosts: LAB-PE*:LAB-COR*
+  gather_facts: no
+  connection: local
+
+  roles:
+    - base_config
+
+- name: Configure fabric
+  hosts: LAB-PE*:LAB-COR*
+  gather_facts: no
+  connection: local
+
+  roles:
+    - fabric

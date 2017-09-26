@@ -1,0 +1,28 @@
+---
+# Olive Fabric
+fabric:
+  - { left: 'LAB-PE1', left_port: 'em1', right: 'LAB-COR1', right_port: 'em1' }
+  - { left: 'LAB-PE1', left_port: 'em2', right: 'LAB-COR2', right_port: 'em1' }
+  - { left: 'LAB-PE2', left_port: 'em1', right: 'LAB-COR1', right_port: 'em2' }
+  - { left: 'LAB-PE2', left_port: 'em2', right: 'LAB-COR2', right_port: 'em2' }
+  - { left: 'LAB-PE3', left_port: 'em1', right: 'LAB-COR3', right_port: 'em3' }
+  - { left: 'LAB-PE3', left_port: 'em2', right: 'LAB-COR4', right_port: 'em4' }
+  - { left: 'LAB-PE4', left_port: 'em1', right: 'LAB-COR4', right_port: 'em3' }
+  - { left: 'LAB-PE4', left_port: 'em2', right: 'LAB-COR3', right_port: 'em4' }
+  - { left: 'LAB-COR1', left_port: 'em3', right: 'LAB-COR2', right_port: 'em3' }
+  - { left: 'LAB-COR1', left_port: 'em5', right: 'LAB-COR4', right_port: 'em5' }
+  - { left: 'LAB-COR1', left_port: 'em4', right: 'LAB-COR3', right_port: 'em1' }
+  - { left: 'LAB-COR2', left_port: 'em5', right: 'LAB-COR3', right_port: 'em5' }
+  - { left: 'LAB-COR2', left_port: 'em4', right: 'LAB-COR4', right_port: 'em1' }
+  - { left: 'LAB-COR3', left_port: 'em2', right: 'LAB-COR4', right_port: 'em2' }
+
+# vMX Fabric
+# fabric:
+#   - { left: 'LAB-PE1', left_port: 'em2', right: 'LAB-COR1', right_port: 'em2' }
+#   - { left: 'LAB-PE1', left_port: 'em3', right: 'LAB-COR2', right_port: 'em2' }
+#   - { left: 'LAB-PE2', left_port: 'em2', right: 'LAB-COR3', right_port: 'em2' }
+#   - { left: 'LAB-PE2', left_port: 'em3', right: 'LAB-COR4', right_port: 'em2' }
+#   - { left: 'LAB-COR1', left_port: 'em3', right: 'LAB-COR2', right_port: 'em4' }
+#   - { left: 'LAB-COR1', left_port: 'em4', right: 'LAB-COR3', right_port: 'em4' }
+#   - { left: 'LAB-COR2', left_port: 'em3', right: 'LAB-COR4', right_port: 'em4' }
+#   - { left: 'LAB-COR3', left_port: 'em3', right: 'LAB-COR4', right_port: 'em3' }
