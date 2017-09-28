@@ -9,9 +9,9 @@ MPLS network consisting of 6 x Junos Olives in EVE-NG.
 * Network diagram generation based on ISIS protocol advertisements.
 
 ## Implimented
-- [x] Link Fabric and associated routing protocols.
-- [ ] BGP.
-- [ ] VPNs / Customer Access.
+- [x] MPLS Fabric and associated core routing protocols.
+- [ ] MP-BGP.
+- [ ] Layer-2 and Layer-3 VPNs for customer access.
 - [ ] Network state verification.
 - [ ] Network diagram generation.
 
