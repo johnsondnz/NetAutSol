@@ -47,9 +47,9 @@ Network in configured using *Ansible and NAPALM.*
 
 ## NAPALM Libraries
 [napalm-ansible project](https://github.com/napalm-automation/napalm-ansible)
-* `tasks/roles/compliance/napalm_get_facts.py`
-* `tasks/roles/compliance/napalm_ping.py`
-* `library/napalm_install_config`
+* `tasks/roles/compliance/library/napalm_get_facts.py`
+* `tasks/roles/compliance/library/napalm_ping.py`
+* `library/napalm_install_config.py`
 
 # Playbook Information
 
@@ -76,7 +76,7 @@ All roles start with `base.j2` which then calls the other templates as required.
 * `./tasks/roles/base_config/base_config/templates/`
 * `./tasks/roles/base_config/fabric/templates/`
 * `./tasks/roles/base_config/bgp_speaker/templates/`
-* `./tasks/roles/compliance_reports//templates/output.j2`
+* `./tasks/roles/compliance_reports/templates/output.j2`
 
 ## Directories
 Defined in `./group_vars/all.yml`
