@@ -1,16 +1,6 @@
 ---
-- name: Create base config
-  hosts: LAB-PE*:LAB-COR*
+- name: Configure MPLS fabric
+  hosts: mpls
   gather_facts: no
   connection: local
-
-  roles:
-    - base_config
-
-- name: Configure fabric
-  hosts: LAB-PE*:LAB-COR*
-  gather_facts: no
-  connection: local
-
-  roles:
-    - fabric
+  roles: [ config_base, config_fabric, config_bgp ]

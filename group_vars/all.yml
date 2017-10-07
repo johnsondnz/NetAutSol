@@ -1,9 +1,12 @@
 ---
 pkg_dir: packages
 log_dir: logs
-build_dir: build
-configs_dir: configs
-reports_dir: reports
+configs_dir: compiled
+report_dir: reports
+reports_children_dirs: [ build, debug ]
+
+
+debug_dir: debug
 
 report_type: full
 

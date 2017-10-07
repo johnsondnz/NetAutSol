@@ -7,7 +7,7 @@
   tasks:
     
     - name: Assemble configuration
-      assemble: src=../compiled/{{ inventory_hostname }}/ dest=../compiled/{{ inventory_hostname }}/999-candidate.conf
+      assemble: src=../{{ configs_dir }}/{{ inventory_hostname }}/ dest=../{{ configs_dir }}/{{ inventory_hostname }}/999-candidate.conf
       changed_when: False
       when: commit_changes | match('0')
 
@@ -15,7 +15,7 @@
         - deploy
 
     - name: Remove temporary configuration files
-      file: path=../compiled/{{ inventory_hostname }}/*.out state=absent
+      file: path=../{{ configs_dir }}/{{ inventory_hostname }}/*.out state=absent
       changed_when: False
       when: commit_changes | match('0')
 
@@ -28,9 +28,9 @@
         username={{ ansible_user }}
         dev_os={{ os }}
         password={{ ansible_ssh_pass }}
-        config_file=../compiled/{{ inventory_hostname }}/999-candidate.conf
+        config_file=../{{ configs_dir }}/{{ inventory_hostname }}/999-candidate.conf
         commit_changes={{ commit_changes }}
-        diff_file=../compiled/{{ inventory_hostname }}/diff
+        diff_file=../{{ configs_dir }}/{{ inventory_hostname }}/show-comapre.diff
       #no_log: true
 
       tags:

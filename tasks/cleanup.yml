@@ -15,21 +15,3 @@
 
   tags:
     - base
-
-- name: Remove Old Reports
-  file: path={{ reports_dir }}/ state=absent
-  run_once: true
-  changed_when: False
-  when: commit_changes | match('0')
-
-  tags:
-    - base
-
-- name: Create Empty Reports Directory
-  file: path={{ reports_dir }} state=directory
-  run_once: true
-  changed_when: False
-  when: commit_changes | match('0') and rollback_rescue | match('0')
-
-  tags:
-    - base
