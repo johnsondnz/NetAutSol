@@ -1,0 +1,24 @@
+---
+- name: EVE-NG MPLS Verify Topology - Ansible Playbook Test
+  hosts: all
+  connection: local
+  roles: [ compliance, compliance_reports ]
+
+  vars:
+ 
+  pre_tasks:
+
+    - include: hostfile.yml
+      name: Build hostfile
+
+    - include: ssh-key-grab.yml
+      vars:
+        known_hosts: ~/.ssh/known_hosts
+      name: Grab SSH keys
+
+      tags:
+        - rollback
+
+    - command: date
+      register: play_run_datetime
+      run_once: true
