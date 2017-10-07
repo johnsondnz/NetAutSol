@@ -1,7 +1,3 @@
-[mpls:children]
-cor.nodes
-pe.nodes
-
 [cor.nodes]
 LAB-COR1
 LAB-COR2
@@ -13,3 +9,7 @@ LAB-PE1
 LAB-PE2
 LAB-PE3
 LAB-PE4
+
+[mpls:children]
+cor.nodes
+pe.nodes

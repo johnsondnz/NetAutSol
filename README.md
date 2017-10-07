@@ -5,7 +5,7 @@ MPLS network consisting of 6 x Junos Olives in EVE-NG.
 ## Current Objectives
 * Provision all services via automated solution.
 * Scalability is key, addition of new devices, links, VPNs etc must be easy.
-* Verification of desired network state based on abstracted configuration.
+* Verification of network state based on abstracted configuration.
 * Network diagram generation based on ISIS protocol advertisements.
 
 ## Implimented
@@ -26,7 +26,7 @@ MPLS network consisting of 6 x Junos Olives in EVE-NG.
 * LAB-PE1
 * LAB-PE2
 * LAB-PE3 (Added later to test scalability)
-  * Not pictured in the topology
+* LAB-PE4 (Added later to test scalability)
 
 ### Route Reflector Cluster
 * LAB-COR1
@@ -41,10 +41,28 @@ Network in configured using *Ansible and NAPALM.*
 ### Topology
 ![Topology](https://i.imgur.com/fTlCm8y.png)
 
+# Libraries
+## Custom Libraries
+* `tasks/roles/compliance/compliance_test.py`     # custom mobule for setting ansible_facts based on compliance tests
+
+## NAPALM Libraries
+[napalm-ansible project](https://github.com/napalm-automation/napalm-ansible)
+* `tasks/roles/compliance/napalm_get_facts.py`
+* `tasks/roles/compliance/napalm_ping.py`
+* `library/napalm_install_config`
+
 # Playbook Information
+
 ## Per Device Brown Files
 For anything not yet abstracted with goal to abstract.
 * `./tasks/roles/base_config/templates/brownfiles/{{ inventory_hostname }}.txt`
+
+## Roles
+* `compliance`          # shows commands and compliance_test fact generation
+* `compliance_reports`  # generates reports from facts 'compliance_test_*'
+* `config_base`         # base configurations
+* `config_bgp`          # dynamic bgp configurations
+* `config_fabric`       # dynamic mpls fabric
 
 ## Variables
 * `./group_vars/all.yml`                                 # used to define playbook level variables.
@@ -58,7 +76,7 @@ All roles start with `base.j2` which then calls the other templates as required.
 * `./tasks/roles/base_config/base_config/templates/`
 * `./tasks/roles/base_config/fabric/templates/`
 * `./tasks/roles/base_config/bgp_speaker/templates/`
-* `./templates/`                                          # Used soley for operations verification.
+* `./tasks/roles/compliance_reports//templates/output.j2`
 
 ## Directories
 Defined in `./group_vars/all.yml`
@@ -74,4 +92,4 @@ Defined in `./group_vars/all.yml`
 3. `./deploy-configs.sh`    # deploy configurations and commit changes.
 
 ## Automated fabric verification
-1. `./verify.sh`            # currently verifies ISIS protocol only.
+1. `./verify.sh`            # fabric operation verification tests

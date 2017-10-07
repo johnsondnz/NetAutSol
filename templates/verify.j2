@@ -1,7 +1,0 @@
-{% include 'base.j2' %}
-{% for data in gathered_data.results %}
-{% if 'isis' in data.item %}
-{% include 'includes/isis-checks.j2' %}
-{% endif %}
-{% endfor %}
-    

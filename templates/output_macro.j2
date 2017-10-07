@@ -1,8 +1,0 @@
-{% macro output_macro(test_name, tested_item, test_result) %}
-{% if test_result %}
-{% set output = "TASK: {:<26}{:<37}{}".format(test_name, tested_item, '[FAIL]') %}
-{% elif report_type == 'full' %}
-{% set output = "TASK: {:<26}{:<37}{}".format(test_name, tested_item, '[PASS]') %}
-{% endif %}
-{% if output is defined %}{{output}}{% endif %}
-{% endmacro %}
