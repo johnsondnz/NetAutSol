@@ -1,0 +1,10 @@
+{% for host,facts in allhosts|dictsort %}
+{%   if host == inventory_hostname %}
+{%     for key,value in facts|dictsort %}
+{%       if 'compliance_test_' in key %}
+{% set output = "{:<50}{:<75}{}".format(value.test_name, value.test_description, value.test_result) %}
+{{ output }}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}

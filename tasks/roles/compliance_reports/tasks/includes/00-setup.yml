@@ -1,0 +1,36 @@
+---
+- name: Cleanup old report directory
+  file:
+    path: ../{{ report_dir }}
+    state: absent
+  changed_when: false
+  run_once: true
+
+- name: Create report directory
+  file:
+    path: ../{{ report_dir }}
+    state: directory
+  changed_when: false
+  run_once: true
+
+- name: Create report directory children
+  file:
+    path: ../{{ report_dir }}/{{ line_item }}
+    state: directory
+  with_items:
+    - "{{ reports_children_dirs }}"
+  changed_when: false
+  loop_control:
+    loop_var: line_item
+  run_once: true
+
+- name: Create report Inventory folders
+  file:
+    path: ../{{ report_dir }}/{{ line_item.0 }}/{{ line_item.1 }}
+    state: directory
+  with_nested:
+    - "{{ reports_children_dirs }}"
+    - "{{ inventory_hostname }}"
+  changed_when: false
+  loop_control:
+    loop_var: line_item

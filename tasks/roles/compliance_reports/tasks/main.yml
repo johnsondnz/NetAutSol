@@ -1,0 +1,4 @@
+---
+- name: Include report modules
+  include: "{{ item }}"
+  with_fileglob: [ "includes/*.yml" ]

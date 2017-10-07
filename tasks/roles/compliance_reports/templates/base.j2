@@ -1,0 +1,8 @@
+{% set header = "{:<50}{:<75}{:<6}".format('TASK', 'TASK DESCRIPTION', 'RESULT') %}
+Ansible Generated MPLS Report - {{ play_run_datetime.stdout_lines[0] }}
+Hostname: {{ inventory_hostname|upper }}
+Serial: serial_number
+Software Version: software_ver
+
+{{ header }}
+-----------------------------------------------------------------------------------------------------------------------------------

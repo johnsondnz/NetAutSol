@@ -1,0 +1,14 @@
+---
+- name: Generate report header for each host
+  template:
+    src: base.j2
+    dest: ../{{ report_dir }}/{{ reports_children_dirs[0] }}/{{ inventory_hostname }}/00-header.txt
+  changed_when: false
+
+- name: Generate report content
+  vars: 
+    allhosts: "{{hostvars}}"
+  template: 
+    src: output.j2
+    dest: "../{{ report_dir }}/{{ reports_children_dirs[0] }}/{{ inventory_hostname }}/01-content.txt"
+  tags: [print_action]

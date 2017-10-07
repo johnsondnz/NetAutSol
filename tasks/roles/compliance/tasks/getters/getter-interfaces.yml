@@ -1,0 +1,12 @@
+# ---
+# - name: Interace media
+#   junos_command:
+#     commands: "{{ line_item }}"
+#     display: xml
+#     provider: "{{ netconf }}"
+#   with_items:
+#     - show interface media
+#   loop_control:
+#     loop_var: line_item
+#   register: getter_interfaces
+#   tags: [ print_action ]

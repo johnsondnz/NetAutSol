@@ -1,0 +1,50 @@
+# ----- JSON Data structure does no contain 'multi-routing-engine-results'----- #
+# ----- Level-1 'Disabled' ----- #
+- set_fact: test_name="IS-IS Interface Level-1"
+- name: "{{ test_name }} Check"
+  compliance_test:
+    fact_name: isis_level1_{{ line_item['interface-name'] | regex_replace('/','_') | regex_replace('-','') }}
+    test_name: "{{ test_name }}"
+    description: Check {{ line_item['interface-name'] }} Level-1 is 'Disabled'
+    key: isis-interface-state-one
+    search: 'Disabled'
+    data: "{{ line_item }}"
+    condition: key-value-match
+  with_items:
+    - "{{ getter_isis_interface.output[0]['rpc-reply']['isis-interface-information']['isis-interface'] }}"
+  when: "'lo0' not in line_item['interface-name']"
+  loop_control:
+    loop_var: line_item
+
+# ----- Level-2 'Point to Point' ----- #
+- set_fact: test_name="IS-IS Interface Level-2"
+- name: "{{ test_name }} Check"
+  compliance_test:
+    fact_name: isis_level1_{{ line_item['interface-name'] | regex_replace('/','_') | regex_replace('-','') }}
+    test_name: "{{ test_name }}"
+    description: Check {{ line_item['interface-name'] }} Level-2 is 'Point to Point'
+    key: isis-interface-state-two
+    search: 'Point to Point'
+    data: "{{ line_item }}"
+    condition: key-value-match
+  with_items:
+    - "{{ getter_isis_interface.output[0]['rpc-reply']['isis-interface-information']['isis-interface'] }}"
+  when: "'lo0' not in line_item['interface-name']"
+  loop_control:
+    loop_var: line_item
+
+# ----- Neighbours ----- #
+- set_fact: test_name="IS-IS Adjancencies"
+- name: "{{ test_name }} Check"
+  compliance_test:
+    fact_name: isis_adjacency_{{ line_item['interface-name'] | regex_replace('/','_') | regex_replace('-','') }}
+    test_name: "{{ test_name }}"
+    description: Check neighbour state is "Up' to {{ line_item['system-name'] }} on {{ line_item['interface-name'] }}"
+    key: adjacency-state
+    search: 'Up'
+    data: "{{ line_item }}"
+    condition: key-value-match
+  with_items:
+    - "{{ getter_isis_adjacency.output[0]['rpc-reply']['isis-adjacency-information']['isis-adjacency'] }}"
+  loop_control:
+    loop_var: line_item

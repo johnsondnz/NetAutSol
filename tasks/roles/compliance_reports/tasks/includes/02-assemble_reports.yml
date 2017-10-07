@@ -1,0 +1,28 @@
+---
+- name: Assemble full reports
+  assemble:
+    src: "../{{ report_dir }}/{{ reports_children_dirs[0] }}/{{ inventory_hostname }}"
+    dest: "../{{ report_dir }}/{{ inventory_hostname }}.txt"
+  tags: [print_action]
+
+# - name: Build reports filtering for failed items
+#   shell: cat ../{{ report_dir }}/full-report-{{ inventory_hostname }}.txt | grep FAIL | tee ../{{ build_dir }}/failed/{{ inventory_hostname }}.out
+#   args:
+#     chdir: "{{ playbook_dir }}"
+
+# - name: Assemble failed reports
+#   assemble:
+#     src: "../{{ build_dir }}/failed/{{ inventory_hostname }}"
+#     dest: "../{{ report_dir }}/failed-report-{{ inventory_hostname }}.txt"
+
+# - name: Create the aggregated failed report
+#   assemble:
+#     src: "../{{ report_dir }}"
+#     dest: "../{{ report_dir }}/01-failed-report.txt"
+#   run_once: true
+
+# - file:
+#     path: ../{{ build_dir }}
+#     state: absent
+#   run_once: true
+#   changed_when: False

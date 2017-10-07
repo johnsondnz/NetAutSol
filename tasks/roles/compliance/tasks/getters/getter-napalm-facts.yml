@@ -1,0 +1,23 @@
+# ---
+# - name: Gather common NAPALM facts about devices
+#   napalm_get_facts:
+#     hostname: "{{ inventory_hostname }}"
+#     username: "{{ ansible_user }}"
+#     dev_os: junos
+#     password: "{{ ansible_ssh_pass }}"
+#     provider: "{{ netconf }}"
+#     filter:
+#       - facts
+#       - interfaces
+#       - interfaces_ip
+#       - interfaces_counters
+#       - arp_table
+#       - mac_address_table
+#       - lldp_neighbors
+#       - environment
+#       - ntp_servers
+#       - ntp_stats
+#       - optics
+#       - snmp_information
+#       - users
+#   tags: [ print_action ]

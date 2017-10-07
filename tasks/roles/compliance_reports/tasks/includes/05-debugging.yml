@@ -1,0 +1,10 @@
+---
+- name: "Debugs: Output hostvars as YAML"
+  copy:
+    content: "{{ hostvars[inventory_hostname] | to_nice_yaml(indent=4) }}"
+    dest: "../{{ report_dir }}/{{ reports_children_dirs[1] }}/{{ inventory_hostname }}/debugging.yml"
+
+- name: "Debugs: Output hostvars as JSON"
+  copy:
+    content: "{{ hostvars[inventory_hostname] }}"
+    dest: "../{{ report_dir }}/{{ reports_children_dirs[1] }}/{{ inventory_hostname }}/debugging.json"
