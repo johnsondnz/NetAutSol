@@ -1,6 +1,6 @@
 # NetAutSol
 ## Brief
-MPLS network consisting of 6 x Junos Olives in EVE-NG.
+MPLS network consisting of 8 x Junos Olives in EVE-NG.
 
 ## Current Objectives
 * Provision all services via automated solution.
