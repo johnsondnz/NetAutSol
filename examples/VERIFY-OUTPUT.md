@@ -1,4 +1,4 @@
-`
+```
 ----- Stating Verification Tasks -----
 ...............................................................................................................................
 # compliance_reports : Generate report content ****************************************************************************
@@ -41,4 +41,4 @@ reports/LAB-COR4.txt:IS-IS Adjancency                                  Check for
 reports/LAB-COR4.txt:Ping Test                                         Check for successful ping to 169.254.0.28                                  [FAIL]
 
 ----- End of script -----
-`
+```
