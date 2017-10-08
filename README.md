@@ -1,6 +1,9 @@
 # NetAutSol
 ## Brief
-MPLS network consisting of 8 x Junos Olives in EVE-NG.
+MPLS network consisting of;
+* 8 x Junos Olives in EVE-NG.
+* 6 x C3725
+* 2 x vIOS L2
 
 ## Current Objectives
 * Provision all services via automated solution.
@@ -39,7 +42,7 @@ em0 on all nodes connected to physical VLAN 22
 Network in configured using *Ansible and NAPALM.*
 
 ### Topology
-![Topology](https://i.imgur.com/fTlCm8y.png)
+![Topology](https://i.imgur.com/J4VCsYK.png)
 
 # Libraries
 ## Custom Libraries
@@ -58,24 +61,26 @@ For anything not yet abstracted with goal to abstract.
 * `./tasks/roles/base_config/templates/brownfiles/{{ inventory_hostname }}.txt`
 
 ## Roles
-* `compliance`          # shows commands and compliance_test fact generation
-* `compliance_reports`  # generates reports from facts 'compliance_test_*'
-* `config_base`         # base configurations
-* `config_bgp`          # dynamic bgp configurations
-* `config_fabric`       # dynamic mpls fabric
+* `compliance`               # shows commands and compliance_test fact generation
+* `compliance_reports`       # generates reports from facts 'compliance_test_*'
+* `config_base`              # base configurations
+* `config_bgp`               # dynamic bgp configurations
+* `config_fabric`            # dynamic mpls fabric
+* `config_customer`          # dynamic customer interface provisioning, includes VLAN-SW, PEs and CEs
 
 ## Variables
-* `./group_vars/all.yml`                                 # used to define playbook level variables.
-* `./tasks/roles/base_config/base_config/vars/main.yml`  # currently empty.
-* `./tasks/roles/base_config/fabric/vars/main.yml`       # all fabric links.
-* `./tasks/roles/base_config/bgp_speaker/vars/main.yml`  # all fabric bgp fabric variables.
-* `./host_vars`                                          # minimal information related to hosts that is not fabric based.
+* `./group_vars/all.yml`                           # used to define playbook level variables.
+* `./tasks/roles/base_base/vars/main.yml`          # currently empty.
+* `./tasks/roles/base_fabric/vars/main.yml`        # all fabric links.
+* `./tasks/roles/base_bgp/vars/main.yml`           # all fabric bgp fabric variables.
+* `./host_vars`                                    # minimal information related to hosts that is not fabric based.
 
 ## Templates
 All roles start with `base.j2` which then calls the other templates as required.
-* `./tasks/roles/base_config/base_config/templates/`
-* `./tasks/roles/base_config/fabric/templates/`
-* `./tasks/roles/base_config/bgp_speaker/templates/`
+* `./tasks/roles/config_base/templates/`
+* `./tasks/roles/config_fabric/templates/`
+* `./tasks/roles/config_bgp/templates/`
+* `./tasks/roles/config_customer/templates/{{ role }}`
 * `./tasks/roles/compliance_reports/templates/output.j2`
 
 ## Directories

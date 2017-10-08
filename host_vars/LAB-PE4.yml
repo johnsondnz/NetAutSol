@@ -1,5 +1,6 @@
 ---
 os: junos
+role: pe
 system:
   hostname: LAB-PE4
 id: 4

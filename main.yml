@@ -23,13 +23,25 @@
 
   tasks:
 
-    - name: Rollback to rescue
+    - name: Rollback MPLS to rescue
       junos_config:
         src: .rescue-configs/{{ inventory_hostname }}.conf
         src_format: set
         update: replace
         provider: "{{ netconf }}"
-      when: rollback_rescue == '1'
+      when: rollback_rescue == '1' and 'junos' in group_names
+
+      tags:
+        - rollback
+        - print_action
+
+    - name: Rollback Cisco to rescue
+      ios_config:
+        src: .rescue-configs/{{ inventory_hostname }}.conf
+        replace: block
+        provider: "{{ cisco_ssh }}"
+        save_when: always
+      when: rollback_rescue == '1' and 'ios' in group_name
 
       tags:
         - rollback
