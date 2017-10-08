@@ -1,8 +1,8 @@
 # Easy Wins
 
 ## New Roles
-* [compliance](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance)
-* [compliance_reports](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance_reports)
+* [tasks/roles/compliance](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance)
+* [tasks/roles/compliance_reports](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance_reports)
 
 ## New Plays
 * [tasks/compliance_play.yml](https://github.com/johnsondnz/NetAutSol/blob/master/tasks/compliance_play.yml)
