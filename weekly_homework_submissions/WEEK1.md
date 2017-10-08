@@ -1,5 +1,6 @@
 # Getting Started
 - [Playbook Information](https://github.com/johnsondnz/NetAutSol/blob/master/DETAILS.md)
+
 Uploaded (with a few tweaks) a play that I had been playing with since doing the Ansible for Network Enngeerss webinar.
 
 ## Roles

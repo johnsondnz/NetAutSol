@@ -21,7 +21,7 @@
   * results are standardised and prefix with `compliance_test_` before being returned as ansible_facts.
 * Compliance tests:
   * `/tasks/roles/config_fabric/vars/main.yml` is used to generate an ansible_facts dictionary called `fabric_tests`
-  * `show isis adjacency` is excuted on the Junos Olives
+  * `show isis adjacency` is executed on the Junos Olives
   * `fabric_tests.interface` is used as a re.search to look for the interface in an 'Up' state, i.e. 'em1.*?Up'
   * `fabric_tests.ping_dest` is passed to `naplam_ping` with results stored in `ping_results`
   * `ping_results` is passed to `compliance_test` module and result standardised.
@@ -38,3 +38,10 @@
 * Each hosts assembled a report is placed into `./reports`
 * Summary report information is placed at the end of each host report, including passed and failed test counts.
 * Finally An aggregated report is generated combining all hosts into a MEGA report, it too is placed into `./reports`
+
+## Examples
+[00-full-report.txt](https://github.com/johnsondnz/NetAutSol/blob/master/examples/00-full-report.txt)
+[DEPLOY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/DEPLOY-OUTPUT.md)
+[GENERATE-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/GENERATE-OUTPUT.md)
+[ROLLBACK-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/ROLLBACK-OUTPUT.md)
+[VERIFY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/VERIFY-OUTPUT.md)

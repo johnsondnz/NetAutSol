@@ -6,6 +6,9 @@ MPLS network consisting of;
 * 6 x C3725
 * 2 x vIOS L2
 
+## Playbook Details
+[Playbook Information](https://github.com/johnsondnz/NetAutSol/blob/master/DETAILS.md)
+
 ## Homework submissions
 - [Week 1](https://github.com/johnsondnz/NetAutSol/blob/master/weekly_homework_submissions/WEEK1.md)
 - [Week 2](https://github.com/johnsondnz/NetAutSol/blob/master/weekly_homework_submissions/WEEK2.md)
@@ -28,8 +31,6 @@ MPLS network consisting of;
   - [x] Ping Tests
 - [ ] Network diagram generation.
 
-[Playbook Information](https://github.com/johnsondnz/NetAutSol/blob/master/DETAILS.md)
-
 # LAB Information
 ## Network Setup
 ### P Nodes
@@ -41,8 +42,8 @@ MPLS network consisting of;
 ### PEs
 * LAB-PE1
 * LAB-PE2
-* LAB-PE3 (Added later to test scalability)
-* LAB-PE4 (Added later to test scalability)
+* LAB-PE3
+* LAB-PE4
 
 ### Route Reflector Cluster
 * LAB-COR1
