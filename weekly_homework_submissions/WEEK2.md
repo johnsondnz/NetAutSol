@@ -1,6 +1,14 @@
 # Easy Wins
 
-## Compliance Testing
+## New Roles
+* [compliance](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance)
+* [compliance_reports](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance_reports)
+
+## New Plays
+* [compliance_play.yml](https://github.com/johnsondnz/NetAutSol/blob/master/tasks/compliance_play.yml)
+  * Inherits `compliance` and `compliance_report` roles.
+
+## Compliance Role
 * `./verify.sh` will call `tasks/compliance_play.yml`.
 * This play triggers the roles `compliance` and `compliance_reports` which are found in `tasks/roles/`.
 * The play uses `include_vars` to import variables from the `config_fabric` role.
@@ -18,7 +26,7 @@
   * `fabric_tests.ping_dest` is passed to `naplam_ping` with results stored in `ping_results`
   * `ping_results` is passed to `compliance_test` module and result standardised.
 
-## Compliance Reporting
+## Compliance Reporting Role
 * Triggered with running `./verify.sh`.
 * Play creates `./reports` directory.
   * subdirectories `build` and `debug` are also created.
