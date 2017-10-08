@@ -37,7 +37,8 @@
 * Assemble module is used to combine the header and report contents
 * Each hosts assembled a report is placed into `./reports`
 * Summary report information is placed at the end of each host report, including passed and failed test counts.
-* Finally An aggregated report is generated combining all hosts into a MEGA report, it too is placed into `./reports`
+* An aggregated report is generated combining all hosts into a MEGA report, it too is placed into `./reports`
+* The last output is a search of generated reports (excluding the aggregated on) using bash and grep.  Script searches for '[FAIL]', matches are printed to stdout
 
 ## Examples
 - [00-full-report.txt](https://github.com/johnsondnz/NetAutSol/blob/master/examples/00-full-report.txt)
