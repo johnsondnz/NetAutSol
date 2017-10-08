@@ -30,7 +30,7 @@
         password={{ ansible_ssh_pass }}
         config_file=../{{ configs_dir }}/{{ inventory_hostname }}/999-candidate.conf
         commit_changes={{ commit_changes }}
-        diff_file=../{{ configs_dir }}/{{ inventory_hostname }}/show-comapre.diff
+        diff_file=../{{ configs_dir }}/{{ inventory_hostname }}/show-compare.diff
       #no_log: true
 
       tags:

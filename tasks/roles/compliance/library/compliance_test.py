@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 """
 from ansible.module_utils.basic import AnsibleModule, return_values
-
+import re
 
 DOCUMENTATION = '''
 
@@ -30,10 +30,11 @@ description:
     - "Custom module to decern pass/fail of a specified test and return as ansible facts."
 options:
     fact_name: Desired fact name, auto prepended with 'compliance_test_'
-    data: JSON key,value data to iterate over - strings not accepted at this time
+    structured_data: JSON key,value data to iterate over - strings not accepted at this time
+    string: used instead of structured_data, allows for the search of a phrase within a string
     condition: condition that must be met to 'PASS'
     key: the key to check exists or if value is present
-    search: value to look for
+    search: value to look for in either structured_data or string (regex enabled when searching strings)
     test_name: Name of test
     description: Brief description of the unit test
 
@@ -130,6 +131,40 @@ EXAMPLES = '''
     },
 }
 
+# ----- ----- #
+- set_fact: test_name="IS-IS Adjancency"
+- name: "{{ test_name }} Check"
+  compliance_test:
+    fact_name: isis_adjacency_{{ line_item.interface | regex_replace('/','_') | regex_replace('-','') }}
+    test_name: "{{ test_name }}"
+    description: Check for IS-IS neighbour on '{{ line_item.interface }}'
+    search: "{{ line_item.interface }}.*?Up"
+    string: "{{ getter_isis_adjacency.stdout[0] }}"
+    condition: unstructured-data-text-search
+  with_items:
+    - "{{ fabric_tests }}"
+  loop_control:
+    loop_var: line_item
+
+"ansible_facts": {
+    "compliance_test_isis_adjacency_em1": {
+        "search": "em1.+?Up",
+        "test_name": "IS-IS Adjancency",
+        "conditon": "unstructured-data-text-search",
+        "key": null,
+        "test_description": "Check for IS-IS neighbour on 'em1'",
+        "test_result": "[PASS]"
+    },
+    "compliance_test_isis_adjacency_em0": {
+        "search": "em0.+?Up",
+        "test_name": "IS-IS Adjancency",
+        "conditon": "unstructured-data-text-search",
+        "key": null,
+        "test_description": "Check for IS-IS neighbour on 'em0'",
+        "test_result": "[FAIL]"
+    },
+}
+
 '''
 
 RETURN = '''
@@ -143,7 +178,7 @@ ansible_facts:
         'test_name': test_name,
         'test_description': description,
         'conditon': condition,
-        'key': key,
+        'key': key or null,
         'search': search or null,
         'test_result': test_result
     }
@@ -206,9 +241,10 @@ def _main():
     module_args = dict(
         fact_name=dict(type='str', required=True),
         test_name=dict(type='str', required=True),
-        data=dict(type='dict', required=True),
+        string=dict(type='str', required=False),
+        structured_data=dict(type='dict', required=False),
         condition=dict(type='str', required=True, choices=[
-                       'key-exists', 'key-not-exist', 'key-value-match']),
+                       'key-exists', 'key-not-exist', 'key-value-match', 'unstructured-data-text-search']),
         key=dict(type='str', required=False),
         search=dict(type='str', required=False),
         description=dict(type='str', required=True),
@@ -226,7 +262,10 @@ def _main():
     # Setup easy to reference variables
     fact_name = module.params['fact_name'].lower()
     test_name = module.params['test_name']
-    data = module.params['data']
+    if module.params['structured_data']:
+        data = module.params['structured_data']
+    elif not module.params['structured_data'] and module.params['string']:
+        data = module.params['string']
     condition = module.params['condition']
     key = module.params['key']
     search = module.params['search']
@@ -244,6 +283,13 @@ def _main():
 
     elif condition == 'key-value-match':
         test = _recursive_search(data, key, search)
+        test_result = _evaluate_results(test)
+
+    elif condition == 'unstructured-data-text-search':
+        if re.search(re.compile(search), data) is not None:
+            test = True
+        else:
+            test = False
         test_result = _evaluate_results(test)
 
     # Create facts object

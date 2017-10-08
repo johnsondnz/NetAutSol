@@ -16,6 +16,8 @@ MPLS network consisting of;
 - [ ] MP-BGP.
 - [ ] Layer-2 and Layer-3 VPNs for customer access.
 - [ ] Network state verification.
+  - [x] IS-IS Adjacencies
+  - [x] Ping Tests
 - [ ] Network diagram generation.
 
 ## Network Setup

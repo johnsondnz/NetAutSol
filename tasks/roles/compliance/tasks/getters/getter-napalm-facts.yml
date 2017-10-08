@@ -1,5 +1,5 @@
 # ---
-# - name: Gather common NAPALM facts about devices
+# - name: Getter - Gather common NAPALM facts about devices
 #   napalm_get_facts:
 #     hostname: "{{ inventory_hostname }}"
 #     username: "{{ ansible_user }}"

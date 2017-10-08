@@ -1,0 +1,39 @@
+- set_fact: test_name="Ping Test"
+# ----- Executed from facts obtained via fabric ----- #
+- name: Execute ping tests
+  napalm_ping:
+    hostname: "{{ inventory_hostname }}"
+    username: "{{ ansible_user }}"
+    dev_os: "{{ os }}"
+    password: "{{ ansible_ssh_pass }}"
+    provider: "{{ netconf }}"
+    destination: "{{ line_item.ping_dest }}"
+    count: 3
+  with_items:
+    - "{{ fabric_tests }}"
+  loop_control:
+    loop_var: line_item
+  register: ping_results
+
+- name: Check ping results and load into compliance_test_ facts
+  compliance_test:
+    fact_name: ping_result_{{ line_item.invocation.module_args.destination | regex_replace('\.','_') }}
+    test_name: "{{ test_name }}"
+    description: Check for successful ping to {{ line_item.invocation.module_args.destination }}
+    key: success
+    structured_data: "{{ line_item }}"
+    condition: key-exists
+  with_items:
+    - "{{ ping_results.results }}"
+  loop_control:
+    loop_var: line_item
+
+# - name: Cleanup ping test vars
+#   file:
+#     state: absent
+#     path: "{{ line_item }}"
+#   with_fileglob:
+#     - "roles/compliance/vars/*.yml"
+#   loop_control:
+#     loop_var: line_item
+#   run_once: true

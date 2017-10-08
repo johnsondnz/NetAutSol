@@ -1,0 +1,12 @@
+---
+- name: Getter - Generate MPLS fabric facts
+  template:
+    src: fabric-tests.j2
+    dest: roles/compliance/vars/fabric-tests-{{ inventory_hostname }}.yml
+  
+- name: Getter - Include MPLS ping facts
+  include_vars: "{{ line_item }}"
+  with_fileglob: [ "vars/fabric-tests*.yml" ]
+  loop_control:
+    loop_var: line_item
+  when: inventory_hostname in line_item

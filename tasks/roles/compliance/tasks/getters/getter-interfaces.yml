@@ -1,5 +1,5 @@
 # ---
-# - name: Interace media
+# - name: Getter - Interace media
 #   junos_command:
 #     commands: "{{ line_item }}"
 #     display: xml

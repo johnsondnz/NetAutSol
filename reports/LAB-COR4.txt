@@ -1,0 +1,31 @@
+Ansible Generated MPLS Report - Sun Oct  8 05:47:59 UTC 2017
+Hostname: LAB-COR4
+Serial: serial_number
+Software Version: software_ver
+
+TASK                                              TASK DESCRIPTION                                                           RESULT
+-----------------------------------------------------------------------------------------------------------------------------------
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em0'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [PASS]
+Ping Test                                         Check for successful ping to 169.254.0.10                                  [PASS]
+Ping Test                                         Check for successful ping to 169.254.0.12                                  [PASS]
+Ping Test                                         Check for successful ping to 169.254.0.18                                  [PASS]
+Ping Test                                         Check for successful ping to 169.254.0.24                                  [PASS]
+Ping Test                                         Check for successful ping to 169.254.0.26                                  [PASS]
+Ping Test                                         Check for successful ping to 169.254.0.28                                  [FAIL]
+
+
+TEST SUMMARY
+------------
+
+TESTS PASSED: 10
+TESTS FAILED: 2
+
+
+---------------------------------------------- END OF REPORT ---------------------------------------------------------
+
+

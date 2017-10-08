@@ -1,0 +1,16 @@
+{% macro write_line(name, index, is_left, peer, peer_node, peer_iface) %}
+{% set index = (index - 1) * 2 -%}
+{% set network = "{}.{}/31".format(fabric_link_ipv4_prefix, index) -%}
+{% set ip = network|ipaddr('0') if is_left else network|ipaddr('-1') -%}
+{% set peer_ip = network|ipaddr('-1') if is_left else network|ipaddr('0') %}
+  - { 'ping_dest': {{ peer_ip | regex_replace('/31','') }}, 'interface': {{ name }} }
+{% endmacro %}
+---
+fabric_tests:
+{% for link in fabric -%}
+{% if inventory_hostname == link.left -%}
+{{ write_line(link.left_port, loop.index, true, link.right, link.right, link.right_port) }}
+{%- elif inventory_hostname == link.right %}
+{{ write_line(link.right_port, loop.index, false, link.left, link.left, link.left_port) }}
+{%- endif %}
+{%- endfor %}

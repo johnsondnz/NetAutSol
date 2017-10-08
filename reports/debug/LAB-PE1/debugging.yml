@@ -1,0 +1,372 @@
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python
+ansible_ssh_pass: lab123
+ansible_user: lab
+ansible_version:
+    full: 2.4.0.0
+    major: 2
+    minor: 4
+    revision: 0
+    string: 2.4.0.0
+bfd_min_interval: 2500
+cisco_ssh:
+    auth_password: lab123
+    authorize: true
+    password: lab123
+    port: 22
+    username: lab
+commit_changes: '0'
+compliance_test_isis_adjacency_em1:
+    conditon: unstructured-data-text-search
+    key: null
+    search: em1.*?Up
+    test_description: Check for IS-IS neighbour on 'em1'
+    test_name: IS-IS Adjancency
+    test_result: '[PASS]'
+compliance_test_isis_adjacency_em2:
+    conditon: unstructured-data-text-search
+    key: null
+    search: em2.*?Up
+    test_description: Check for IS-IS neighbour on 'em2'
+    test_name: IS-IS Adjancency
+    test_result: '[PASS]'
+compliance_test_ping_result_169_254_0_1:
+    conditon: key-exists
+    key: success
+    search: null
+    test_description: Check for successful ping to 169.254.0.1
+    test_name: Ping Test
+    test_result: '[PASS]'
+compliance_test_ping_result_169_254_0_3:
+    conditon: key-exists
+    key: success
+    search: null
+    test_description: Check for successful ping to 169.254.0.3
+    test_name: Ping Test
+    test_result: '[PASS]'
+configs_dir: compiled
+debug_dir: debug
+domain_list: it-ninja.xyz
+fabric:
+-   left: LAB-PE1
+    left_port: em1
+    right: LAB-COR1
+    right_port: em1
+-   left: LAB-PE1
+    left_port: em2
+    right: LAB-COR2
+    right_port: em1
+-   left: LAB-PE2
+    left_port: em1
+    right: LAB-COR1
+    right_port: em2
+-   left: LAB-PE2
+    left_port: em2
+    right: LAB-COR2
+    right_port: em2
+-   left: LAB-PE3
+    left_port: em1
+    right: LAB-COR3
+    right_port: em3
+-   left: LAB-PE3
+    left_port: em2
+    right: LAB-COR4
+    right_port: em4
+-   left: LAB-PE4
+    left_port: em1
+    right: LAB-COR4
+    right_port: em3
+-   left: LAB-PE4
+    left_port: em2
+    right: LAB-COR3
+    right_port: em4
+-   left: LAB-COR1
+    left_port: em3
+    right: LAB-COR2
+    right_port: em3
+-   left: LAB-COR1
+    left_port: em5
+    right: LAB-COR4
+    right_port: em5
+-   left: LAB-COR1
+    left_port: em4
+    right: LAB-COR3
+    right_port: em1
+-   left: LAB-COR2
+    left_port: em5
+    right: LAB-COR3
+    right_port: em5
+-   left: LAB-COR2
+    left_port: em4
+    right: LAB-COR4
+    right_port: em1
+-   left: LAB-COR3
+    left_port: em2
+    right: LAB-COR4
+    right_port: em2
+-   left: LAB-COR1
+    left_port: em0
+    right: LAB-COR4
+    right_port: em0
+fabric_link_ipv4_prefix: 169.254.0
+fabric_mtu: 2000
+fabric_tests:
+-   interface: em1
+    ping_dest: 169.254.0.1
+-   interface: em2
+    ping_dest: 169.254.0.3
+fail_count:
+    changed: true
+    cmd: cat ../reports/LAB-PE1.txt | grep FAIL | wc -l
+    delta: '0:00:00.019356'
+    end: '2017-10-08 05:48:36.595215'
+    failed: false
+    rc: 0
+    start: '2017-10-08 05:48:36.575859'
+    stderr: ''
+    stderr_lines: []
+    stdout: '0'
+    stdout_lines:
+    - '0'
+getter_isis_adjacency:
+    changed: false
+    failed: false
+    stdout:
+    - 'Interface             System         L State        Hold (secs) SNPA
+
+        em1.0                 LAB-COR1       2  Up                  148
+
+        em2.0                 LAB-COR2       2  Up                  141'
+    stdout_lines:
+    -   - Interface             System         L State        Hold (secs) SNPA
+        - em1.0                 LAB-COR1       2  Up                  148
+        - em2.0                 LAB-COR2       2  Up                  141
+group_names:
+- junos
+- mpls
+- pe.nodes
+groups:
+    all:
+    - LAB-COR1
+    - LAB-COR2
+    - LAB-COR3
+    - LAB-COR4
+    - LAB-PE1
+    - LAB-PE2
+    - LAB-PE3
+    - LAB-PE4
+    cor.nodes:
+    - LAB-COR1
+    - LAB-COR2
+    - LAB-COR3
+    - LAB-COR4
+    junos:
+    - LAB-COR1
+    - LAB-COR2
+    - LAB-COR3
+    - LAB-COR4
+    - LAB-PE1
+    - LAB-PE2
+    - LAB-PE3
+    - LAB-PE4
+    mpls:
+    - LAB-COR1
+    - LAB-COR2
+    - LAB-COR3
+    - LAB-COR4
+    - LAB-PE1
+    - LAB-PE2
+    - LAB-PE3
+    - LAB-PE4
+    pe.nodes:
+    - LAB-PE1
+    - LAB-PE2
+    - LAB-PE3
+    - LAB-PE4
+    ungrouped: []
+host_keys:
+    changed: false
+    cmd:
+    - ssh-keyscan
+    - LAB-PE1
+    delta: '0:00:00.280287'
+    end: '2017-10-08 05:47:58.750188'
+    failed: false
+    rc: 0
+    start: '2017-10-08 05:47:58.469901'
+    stderr: '# LAB-PE1:22 SSH-2.0-OpenSSH_5.9
+
+        # LAB-PE1:22 SSH-2.0-OpenSSH_5.9
+
+        # LAB-PE1:22 SSH-2.0-OpenSSH_5.9'
+    stderr_lines:
+    - '# LAB-PE1:22 SSH-2.0-OpenSSH_5.9'
+    - '# LAB-PE1:22 SSH-2.0-OpenSSH_5.9'
+    - '# LAB-PE1:22 SSH-2.0-OpenSSH_5.9'
+    stdout: 'LAB-PE1 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxri28DTZ0rpunJg6YYW3wAAlKFerWgj3stQbh2+pLRqJArzHSsPdlVGs1/1C4evMZVeutzpnpE6FwpQxkU90U2oUcjko0ssPC7qttvk9S6TqETgZMNhE2Z8E8BnIrwd+1+z5b37HeAh6Hxj4pIuQiSCFMRy99BVasH9i+nLqcM0=
+
+        LAB-PE1 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL6eeHLEOFMOk5zB4clajvRKRB7GoyctQWOIuHdy4u/j6QyBoa/5Yi75lhQsi+vnnuYUVXfZETgsmPoT4LbLxVQ='
+    stdout_lines:
+    - LAB-PE1 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxri28DTZ0rpunJg6YYW3wAAlKFerWgj3stQbh2+pLRqJArzHSsPdlVGs1/1C4evMZVeutzpnpE6FwpQxkU90U2oUcjko0ssPC7qttvk9S6TqETgZMNhE2Z8E8BnIrwd+1+z5b37HeAh6Hxj4pIuQiSCFMRy99BVasH9i+nLqcM0=
+    - LAB-PE1 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL6eeHLEOFMOk5zB4clajvRKRB7GoyctQWOIuHdy4u/j6QyBoa/5Yi75lhQsi+vnnuYUVXfZETgsmPoT4LbLxVQ=
+ibgp_asn: '0.65535'
+id: 1
+inventory_dir: /coding/GitHub/NetAutSol
+inventory_file: hosts
+inventory_hostname: LAB-PE1
+inventory_hostname_short: LAB-PE1
+isis: true
+isis_default_cost: 10
+isis_hello_interval: 60
+iso_afi_area_system: 49.0000.0172.0016
+ldp_keepalive_timeout: 180
+log_dir: logs
+loopback_net: 10.1.1
+netconf:
+    port: 22
+    transport: netconf
+omit: __omit_place_holder__69377735392701cd26ef471107146b772275a6fe
+oob_management_next_hop: 192.168.1.237
+oob_management_range: 192.168.1
+os: junos
+ospf: false
+ospf_backbone_area: 0.0.0.0
+ospf_dead_interval: 180
+pass_count:
+    changed: true
+    cmd: cat ../reports/LAB-PE1.txt | grep PASS | wc -l
+    delta: '0:00:00.004123'
+    end: '2017-10-08 05:48:36.157562'
+    failed: false
+    rc: 0
+    start: '2017-10-08 05:48:36.153439'
+    stderr: ''
+    stderr_lines: []
+    stdout: '4'
+    stdout_lines:
+    - '4'
+ping_results:
+    changed: false
+    msg: All items completed
+    results:
+    -   _ansible_item_label:
+            interface: em1
+            ping_dest: 169.254.0.1
+        _ansible_item_result: true
+        _ansible_no_log: false
+        _ansible_parsed: true
+        changed: false
+        failed: false
+        invocation:
+            module_args:
+                count: '3'
+                destination: 169.254.0.1
+                dev_os: junos
+                hostname: LAB-PE1
+                optional_args: null
+                password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
+                ping_timeout: null
+                port: 22
+                provider:
+                    hostname: null
+                    port: 22
+                    transport: netconf
+                size: null
+                source: null
+                timeout: 60
+                transport: netconf
+                ttl: null
+                username: lab
+                vrf: null
+        line_item:
+            interface: em1
+            ping_dest: 169.254.0.1
+        results:
+            success:
+                packet_loss: 0
+                probes_sent: 3
+                results:
+                -   ip_address: 169.254.0.1
+                    rtt: 0.65
+                -   ip_address: 169.254.0.1
+                    rtt: 0.423
+                -   ip_address: 169.254.0.1
+                    rtt: 0.426
+                rtt_avg: 0.499
+                rtt_max: 0.65
+                rtt_min: 0.423
+                rtt_stddev: 0.106
+    -   _ansible_item_label:
+            interface: em2
+            ping_dest: 169.254.0.3
+        _ansible_item_result: true
+        _ansible_no_log: false
+        _ansible_parsed: true
+        changed: false
+        failed: false
+        invocation:
+            module_args:
+                count: '3'
+                destination: 169.254.0.3
+                dev_os: junos
+                hostname: LAB-PE1
+                optional_args: null
+                password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
+                ping_timeout: null
+                port: 22
+                provider:
+                    hostname: null
+                    port: 22
+                    transport: netconf
+                size: null
+                source: null
+                timeout: 60
+                transport: netconf
+                ttl: null
+                username: lab
+                vrf: null
+        line_item:
+            interface: em2
+            ping_dest: 169.254.0.3
+        results:
+            success:
+                packet_loss: 0
+                probes_sent: 3
+                results:
+                -   ip_address: 169.254.0.3
+                    rtt: 0.396
+                -   ip_address: 169.254.0.3
+                    rtt: 0.453
+                -   ip_address: 169.254.0.3
+                    rtt: 0.44
+                rtt_avg: 0.429
+                rtt_max: 0.453
+                rtt_min: 0.396
+                rtt_stddev: 0.024
+pkg_dir: packages
+play_run_datetime:
+    changed: true
+    cmd:
+    - date
+    delta: '0:00:00.001692'
+    end: '2017-10-08 05:47:59.715281'
+    failed: false
+    rc: 0
+    start: '2017-10-08 05:47:59.713589'
+    stderr: ''
+    stderr_lines: []
+    stdout: Sun Oct  8 05:47:59 UTC 2017
+    stdout_lines:
+    - Sun Oct  8 05:47:59 UTC 2017
+playbook_dir: /coding/GitHub/NetAutSol/tasks
+report_dir: reports
+report_type: full
+reports_children_dirs:
+- build
+- debug
+role: pe
+rollback_rescue: '0'
+software_version: 12.1R1.9
+system:
+    hostname: LAB-PE1
+test_name: Ping Test

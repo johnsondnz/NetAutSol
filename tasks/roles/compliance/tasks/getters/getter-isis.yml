@@ -1,14 +1,7 @@
 ---
-- name: IS-IS adjacency
+- name: Getter - IS-IS adjacency
   junos_command:
     commands: show isis adjacency
-    display: xml
+    display: text
     provider: "{{ netconf }}"
   register: getter_isis_adjacency
-
-- name: IS-IS interface
-  junos_command:
-    commands: show isis interface
-    display: xml
-    provider: "{{ netconf }}"
-  register: getter_isis_interface

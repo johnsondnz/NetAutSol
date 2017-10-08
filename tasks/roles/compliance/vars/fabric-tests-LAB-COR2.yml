@@ -1,0 +1,7 @@
+---
+fabric_tests:
+  - { 'ping_dest': 169.254.0.2, 'interface': em1 }
+  - { 'ping_dest': 169.254.0.6, 'interface': em2 }
+  - { 'ping_dest': 169.254.0.16, 'interface': em3 }
+  - { 'ping_dest': 169.254.0.23, 'interface': em5 }
+  - { 'ping_dest': 169.254.0.25, 'interface': em4 }
