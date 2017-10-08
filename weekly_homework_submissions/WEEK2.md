@@ -40,8 +40,8 @@
 * Finally An aggregated report is generated combining all hosts into a MEGA report, it too is placed into `./reports`
 
 ## Examples
-[00-full-report.txt](https://github.com/johnsondnz/NetAutSol/blob/master/examples/00-full-report.txt)
-[DEPLOY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/DEPLOY-OUTPUT.md)
-[GENERATE-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/GENERATE-OUTPUT.md)
-[ROLLBACK-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/ROLLBACK-OUTPUT.md)
-[VERIFY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/VERIFY-OUTPUT.md)
+- [00-full-report.txt](https://github.com/johnsondnz/NetAutSol/blob/master/examples/00-full-report.txt)
+- [DEPLOY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/DEPLOY-OUTPUT.md)
+- [GENERATE-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/GENERATE-OUTPUT.md)
+- [ROLLBACK-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/ROLLBACK-OUTPUT.md)
+- [VERIFY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/VERIFY-OUTPUT.md)
