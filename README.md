@@ -89,7 +89,8 @@ All roles start with `base.j2` which then calls the other templates as required.
 Defined in `./group_vars/all.yml`
 * `./build/`           # Used only to create device configurations.
 * `./compiled/`        # Assembled configrations appear here along with diff files.
-* `./reports/`         # Operational verification reports will appear here.
+* `./reports/`         # Compliance reports will appear here.
+* `./reports/debug`    # Compliance report debugs will appear here, both JSON and YAML file formats are generated.
 * `./.rescue-configs/` # used by rollback-rescue.sh script to return LAB to pre-automated state.
 
 # Running Playbook
