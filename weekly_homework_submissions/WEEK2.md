@@ -40,7 +40,7 @@
 * Each hosts assembled a report is placed into `./reports`
 * Summary report information is placed at the end of each host report, including passed and failed test counts.
 * An aggregated report is generated combining all hosts into a MEGA report, it too is placed into `./reports`
-* The last output is a search of generated reports (excluding the aggregated on) using bash and grep.  Script searches for `'[FAIL]'`, matches are printed to stdout
+* The last output is a search of generated reports (excluding the aggregated one) using bash and grep.  Script searches for `'[FAIL]'`, matches are printed to stdout
 
 ## Examples
 - [examples/00-full-report.txt](https://github.com/johnsondnz/NetAutSol/blob/master/examples/00-full-report.txt)
