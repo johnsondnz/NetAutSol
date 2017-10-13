@@ -1,6 +1,6 @@
 ---
 os: junos
-role: pe
+role: provider_edge
 system:
   hostname: LAB-PE1
 id: 1

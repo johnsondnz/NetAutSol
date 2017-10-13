@@ -28,22 +28,3 @@ netconf:
 
 commit_changes: '0'
 rollback_rescue: '0'
-
-software_version: '12.1R1.9'
-oob_management_range: '192.168.1'
-oob_management_next_hop: '192.168.1.237'
-
-fabric_link_ipv4_prefix: '169.254.0'
-loopback_net: '10.1.1'
-isis_default_cost: 10
-isis_hello_interval: 60
-ospf_dead_interval: 180
-ldp_keepalive_timeout: 180
-bfd_min_interval: 2500
-ibgp_asn: '0.65535'
-fabric_mtu: 2000
-
-ospf: false
-isis: true
-ospf_backbone_area: '0.0.0.0'
-iso_afi_area_system: '49.0000.0172.0016'

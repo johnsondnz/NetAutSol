@@ -1,0 +1,10 @@
+---
+- name: Generate device specific infrastructure data model
+  template:
+    src: infrastructure_data_model.j2
+    dest: vars/set_fact_{{ inventory_hostanme }}_fabric.yml
+
+- name: Import device data models to facts
+  include:
+  with_fileglob: [ "vars/set_fact_{{ inventory_hostanme }}_*.yml" ]
+

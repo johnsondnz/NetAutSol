@@ -1,4 +1,4 @@
-{% macro configure_interface(name, index, is_left, peer, peer_node, peer_iface) -%}
+{% macro configure_interface(name, index, is_left, peer, peer_node, peer_iface, cost) -%}
 {% set index = (index - 1) * 2 %}
 {% set network = "{}.{}/31".format(fabric_link_ipv4_prefix, index) %}
 {% set ip = network|ipaddr('0') if is_left else network|ipaddr('-1') %}
@@ -43,7 +43,7 @@ protocols {
             point-to-point;
             level 1 disable;
             level 2 {
-                metric {{ isis_default_cost }};
+                metric {{ cost | default(isis_default_cost) }};
                 hello-interval {{ isis_hello_interval }};
             }
         }
@@ -102,8 +102,8 @@ routing-options {
 
 {% for link in fabric %}
 {% if inventory_hostname == link.left %}
-{{ configure_interface(link.left_port, loop.index, true, link.right, link.right, link.right_port) }}
+{{ configure_interface(link.left_port, loop.index, true, link.right, link.right, link.right_port, link.cost) }}
 {% elif inventory_hostname == link.right %}
-{{ configure_interface(link.right_port, loop.index, false, link.left, link.left, link.left_port) }}
+{{ configure_interface(link.right_port, loop.index, false, link.left, link.left, link.left_port, link.cost) }}
 {% endif %}
 {% endfor %}

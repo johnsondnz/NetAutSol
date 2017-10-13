@@ -1,0 +1,6 @@
+---
+- name: Include services
+  include_vars: "{{ inner_item }}"
+  with_fileglob: [ "vars/services_*.yml" ]
+  loop_control:
+    loop_var: inner_item

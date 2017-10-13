@@ -3,4 +3,4 @@
   hosts: mpls
   gather_facts: no
   connection: local
-  roles: [ config_base, config_fabric, config_bgp ]
+  roles: [ config_base, config_fabric ]

@@ -1,24 +1,24 @@
-[cor.nodes]
+[provider_core]
 LAB-COR1
 LAB-COR2
 LAB-COR3
 LAB-COR4
 
-[pe.nodes]
+[provider_edge]
 LAB-PE1
 LAB-PE2
 LAB-PE3
 LAB-PE4
 
 [mpls:children]
-cor.nodes
-pe.nodes
+provider_core
+provider_edge
 
-# [vlan.switches]
+# [vlan_switch]
 # LAB-VLAN-SW1
 # LAB-VLAN-SW2
 
-# [ce.devices]
+# [customer_edge]
 # LAB-CUST-A-CE1
 # LAB-CUST-A-CE2
 # LAB-CUST-B-CE1
