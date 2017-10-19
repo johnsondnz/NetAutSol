@@ -1,0 +1,7818 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "circuits",
+    "model": "circuittype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "circuits",
+    "model": "circuittermination"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "circuits",
+    "model": "provider"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "circuits",
+    "model": "circuit"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "dcim",
+    "model": "rack"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "dcim",
+    "model": "rackrole"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "dcim",
+    "model": "region"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "dcim",
+    "model": "consoleport"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "dcim",
+    "model": "powerport"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "dcim",
+    "model": "poweroutlettemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "dcim",
+    "model": "poweroutlet"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "dcim",
+    "model": "devicetype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "dcim",
+    "model": "inventoryitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "dcim",
+    "model": "devicebaytemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "dcim",
+    "model": "devicerole"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "dcim",
+    "model": "interfaceconnection"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "dcim",
+    "model": "rackgroup"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "dcim",
+    "model": "consoleserverporttemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "dcim",
+    "model": "consoleserverport"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "dcim",
+    "model": "manufacturer"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 27,
+  "fields": {
+    "app_label": "dcim",
+    "model": "devicebay"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 28,
+  "fields": {
+    "app_label": "dcim",
+    "model": "interface"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 29,
+  "fields": {
+    "app_label": "dcim",
+    "model": "interfacetemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 30,
+  "fields": {
+    "app_label": "dcim",
+    "model": "platform"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 31,
+  "fields": {
+    "app_label": "dcim",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 32,
+  "fields": {
+    "app_label": "dcim",
+    "model": "device"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 33,
+  "fields": {
+    "app_label": "dcim",
+    "model": "consoleporttemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 34,
+  "fields": {
+    "app_label": "dcim",
+    "model": "rackreservation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 35,
+  "fields": {
+    "app_label": "dcim",
+    "model": "powerporttemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 36,
+  "fields": {
+    "app_label": "ipam",
+    "model": "vlan"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 37,
+  "fields": {
+    "app_label": "ipam",
+    "model": "prefix"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 38,
+  "fields": {
+    "app_label": "ipam",
+    "model": "service"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 39,
+  "fields": {
+    "app_label": "ipam",
+    "model": "vlangroup"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 40,
+  "fields": {
+    "app_label": "ipam",
+    "model": "ipaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 41,
+  "fields": {
+    "app_label": "ipam",
+    "model": "rir"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 42,
+  "fields": {
+    "app_label": "ipam",
+    "model": "role"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 43,
+  "fields": {
+    "app_label": "ipam",
+    "model": "aggregate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 44,
+  "fields": {
+    "app_label": "ipam",
+    "model": "vrf"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 45,
+  "fields": {
+    "app_label": "extras",
+    "model": "topologymap"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 46,
+  "fields": {
+    "app_label": "extras",
+    "model": "customfieldvalue"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 47,
+  "fields": {
+    "app_label": "extras",
+    "model": "useraction"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 48,
+  "fields": {
+    "app_label": "extras",
+    "model": "customfield"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 49,
+  "fields": {
+    "app_label": "extras",
+    "model": "reportresult"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 50,
+  "fields": {
+    "app_label": "extras",
+    "model": "imageattachment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 51,
+  "fields": {
+    "app_label": "extras",
+    "model": "graph"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 52,
+  "fields": {
+    "app_label": "extras",
+    "model": "exporttemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 53,
+  "fields": {
+    "app_label": "extras",
+    "model": "customfieldchoice"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 54,
+  "fields": {
+    "app_label": "secrets",
+    "model": "secretrole"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 55,
+  "fields": {
+    "app_label": "secrets",
+    "model": "secret"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 56,
+  "fields": {
+    "app_label": "secrets",
+    "model": "userkey"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 57,
+  "fields": {
+    "app_label": "secrets",
+    "model": "sessionkey"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 58,
+  "fields": {
+    "app_label": "tenancy",
+    "model": "tenant"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 59,
+  "fields": {
+    "app_label": "tenancy",
+    "model": "tenantgroup"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 60,
+  "fields": {
+    "app_label": "users",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 61,
+  "fields": {
+    "app_label": "virtualization",
+    "model": "clustertype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 62,
+  "fields": {
+    "app_label": "virtualization",
+    "model": "cluster"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 63,
+  "fields": {
+    "app_label": "virtualization",
+    "model": "virtualmachine"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 64,
+  "fields": {
+    "app_label": "virtualization",
+    "model": "clustergroup"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ofy86xkig5oi95s3qzxc0z7lx2fagjda",
+  "fields": {
+    "session_data": "YjNjN2FkNzFiMWRlYjIxODVhMjc5MWUxNWYwZGIyYjY1NmJmZjg0Yzp7Il9hdXRoX3VzZXJfaGFzaCI6ImE0NDZlZGE4Y2ZiODUwZTk2NWRkNWMxYzRhYzliM2E4MzIxM2YyMjAiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2017-11-02T20:35:41.051Z"
+  }
+},
+{
+  "model": "dcim.site",
+  "pk": 1,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:56:14.254Z",
+    "name": "NetAutSol",
+    "slug": "netautsol",
+    "region": null,
+    "tenant": null,
+    "facility": "",
+    "asn": 65050,
+    "physical_address": "",
+    "shipping_address": "",
+    "contact_name": "",
+    "contact_phone": "",
+    "contact_email": "",
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.manufacturer",
+  "pk": 1,
+  "fields": {
+    "name": "Juniper",
+    "slug": "juniper"
+  }
+},
+{
+  "model": "dcim.manufacturer",
+  "pk": 2,
+  "fields": {
+    "name": "Cisco",
+    "slug": "cisco"
+  }
+},
+{
+  "model": "dcim.devicetype",
+  "pk": 1,
+  "fields": {
+    "manufacturer": 1,
+    "model": "Olive",
+    "slug": "olive",
+    "part_number": "olive",
+    "u_height": 1,
+    "is_full_depth": true,
+    "interface_ordering": 1,
+    "is_console_server": false,
+    "is_pdu": false,
+    "is_network_device": true,
+    "subdevice_role": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.devicetype",
+  "pk": 2,
+  "fields": {
+    "manufacturer": 2,
+    "model": "C3725",
+    "slug": "c3725",
+    "part_number": "",
+    "u_height": 1,
+    "is_full_depth": true,
+    "interface_ordering": 1,
+    "is_console_server": false,
+    "is_pdu": false,
+    "is_network_device": true,
+    "subdevice_role": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.devicetype",
+  "pk": 3,
+  "fields": {
+    "manufacturer": 2,
+    "model": "vIOS_L2",
+    "slug": "vios_l2",
+    "part_number": "",
+    "u_height": 1,
+    "is_full_depth": true,
+    "interface_ordering": 1,
+    "is_console_server": false,
+    "is_pdu": false,
+    "is_network_device": true,
+    "subdevice_role": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.devicetype",
+  "pk": 4,
+  "fields": {
+    "manufacturer": 2,
+    "model": "Cloud",
+    "slug": "cloud",
+    "part_number": "",
+    "u_height": 1,
+    "is_full_depth": true,
+    "interface_ordering": 1,
+    "is_console_server": false,
+    "is_pdu": false,
+    "is_network_device": true,
+    "subdevice_role": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 20,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/1",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 21,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/2",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 22,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/3",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 23,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/4",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 24,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/5",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 25,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/6",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 26,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/7",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 27,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/8",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 28,
+  "fields": {
+    "device_type": 2,
+    "name": "Fa0/0",
+    "form_factor": 1000,
+    "mgmt_only": true
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 29,
+  "fields": {
+    "device_type": 2,
+    "name": "Fa0/1",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 30,
+  "fields": {
+    "device_type": 1,
+    "name": "em0",
+    "form_factor": 1000,
+    "mgmt_only": true
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 31,
+  "fields": {
+    "device_type": 1,
+    "name": "em1",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 32,
+  "fields": {
+    "device_type": 1,
+    "name": "em2",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 33,
+  "fields": {
+    "device_type": 1,
+    "name": "em3",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 34,
+  "fields": {
+    "device_type": 1,
+    "name": "em4",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 35,
+  "fields": {
+    "device_type": 1,
+    "name": "em5",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 36,
+  "fields": {
+    "device_type": 1,
+    "name": "em6",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 37,
+  "fields": {
+    "device_type": 1,
+    "name": "em7",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 38,
+  "fields": {
+    "device_type": 1,
+    "name": "em8",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 39,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi0/0",
+    "form_factor": 1000,
+    "mgmt_only": true
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 40,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/1",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 41,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/2",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 42,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/3",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 43,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/4",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 44,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/5",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 45,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/6",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 46,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/7",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 47,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/8",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 48,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/9",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 49,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/10",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 50,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/11",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 51,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/12",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 52,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/13",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 53,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/14",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 54,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/15",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 55,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/16",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 56,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/17",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 57,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/18",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 58,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/19",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 59,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/20",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 60,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/21",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 61,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/22",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 62,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/23",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 63,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/24",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 64,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/25",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 65,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/26",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 66,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/27",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 67,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/28",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 68,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/29",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 69,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/30",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 70,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/31",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 71,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/32",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 72,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/33",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 73,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/34",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 74,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/35",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 75,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/36",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 76,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/37",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 77,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/38",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 78,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/39",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 79,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/40",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 80,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/41",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 81,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/42",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 82,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/43",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 83,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/44",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 84,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/45",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 85,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/46",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 86,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/47",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 87,
+  "fields": {
+    "device_type": 4,
+    "name": "Gi0/48",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 88,
+  "fields": {
+    "device_type": 1,
+    "name": "lo0",
+    "form_factor": 0,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 89,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/0",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 90,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/1",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 91,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/2",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 92,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/3",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 93,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/4",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 94,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/5",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 95,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/6",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 96,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/7",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.interfacetemplate",
+  "pk": 97,
+  "fields": {
+    "device_type": 3,
+    "name": "Gi1/8",
+    "form_factor": 1000,
+    "mgmt_only": false
+  }
+},
+{
+  "model": "dcim.devicerole",
+  "pk": 1,
+  "fields": {
+    "name": "MPLS PE",
+    "slug": "mpls-pe",
+    "color": "f44336",
+    "vm_role": false
+  }
+},
+{
+  "model": "dcim.devicerole",
+  "pk": 2,
+  "fields": {
+    "name": "MPLS LSR",
+    "slug": "mpls-lsr",
+    "color": "2196f3",
+    "vm_role": false
+  }
+},
+{
+  "model": "dcim.devicerole",
+  "pk": 3,
+  "fields": {
+    "name": "VLAN Switch",
+    "slug": "vlan-switch",
+    "color": "4caf50",
+    "vm_role": false
+  }
+},
+{
+  "model": "dcim.devicerole",
+  "pk": 4,
+  "fields": {
+    "name": "Customer Edge",
+    "slug": "customer-edge",
+    "color": "ffc107",
+    "vm_role": false
+  }
+},
+{
+  "model": "dcim.devicerole",
+  "pk": 5,
+  "fields": {
+    "name": "Cloud",
+    "slug": "cloud",
+    "color": "c0c0c0",
+    "vm_role": false
+  }
+},
+{
+  "model": "dcim.platform",
+  "pk": 1,
+  "fields": {
+    "name": "Junos",
+    "slug": "junos",
+    "napalm_driver": "junos",
+    "rpc_client": "juniper-junos"
+  }
+},
+{
+  "model": "dcim.platform",
+  "pk": 2,
+  "fields": {
+    "name": "Cisco IOS",
+    "slug": "cisco-ios",
+    "napalm_driver": "ios",
+    "rpc_client": "cisco-ios"
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 1,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:54:01.069Z",
+    "device_type": 2,
+    "device_role": 4,
+    "tenant": 1,
+    "platform": 2,
+    "name": "CUST-A-CE1",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 2,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:57:32.442Z",
+    "device_type": 2,
+    "device_role": 4,
+    "tenant": 1,
+    "platform": 2,
+    "name": "CUST-A-CE2",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 3,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:57:13.901Z",
+    "device_type": 2,
+    "device_role": 4,
+    "tenant": 2,
+    "platform": 2,
+    "name": "CUST-B-CE1",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 4,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:57:13.928Z",
+    "device_type": 2,
+    "device_role": 4,
+    "tenant": 2,
+    "platform": 2,
+    "name": "CUST-B-CE2",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 5,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:57:13.950Z",
+    "device_type": 2,
+    "device_role": 4,
+    "tenant": 3,
+    "platform": 2,
+    "name": "CUST-C-CE1",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 6,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:57:13.971Z",
+    "device_type": 2,
+    "device_role": 4,
+    "tenant": 3,
+    "platform": 2,
+    "name": "CUST-C-CE2",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 7,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:59:42.669Z",
+    "device_type": 3,
+    "device_role": 3,
+    "tenant": 4,
+    "platform": 2,
+    "name": "LAB-VLAN-SW1",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 8,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:59:42.695Z",
+    "device_type": 3,
+    "device_role": 3,
+    "tenant": 4,
+    "platform": 2,
+    "name": "LAB-VLAN-SW2",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 14,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.346Z",
+    "device_type": 1,
+    "device_role": 1,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-PE1",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 15,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.371Z",
+    "device_type": 1,
+    "device_role": 1,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-PE2",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 16,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.393Z",
+    "device_type": 1,
+    "device_role": 1,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-PE3",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 17,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.415Z",
+    "device_type": 1,
+    "device_role": 1,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-PE4",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 18,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.439Z",
+    "device_type": 1,
+    "device_role": 2,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-COR1",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 19,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.462Z",
+    "device_type": 1,
+    "device_role": 2,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-COR2",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 20,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.482Z",
+    "device_type": 1,
+    "device_role": 2,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-COR3",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 21,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:00:58.501Z",
+    "device_type": 1,
+    "device_role": 2,
+    "tenant": 4,
+    "platform": 1,
+    "name": "LAB-COR4",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.device",
+  "pk": 23,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:07:15.303Z",
+    "device_type": 4,
+    "device_role": 5,
+    "tenant": 4,
+    "platform": null,
+    "name": "VLAN_22",
+    "serial": "",
+    "asset_tag": null,
+    "site": 1,
+    "rack": null,
+    "position": null,
+    "face": null,
+    "status": 1,
+    "primary_ip4": null,
+    "primary_ip6": null,
+    "cluster": null,
+    "comments": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 1,
+  "fields": {
+    "device": 1,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 2,
+  "fields": {
+    "device": 1,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 3,
+  "fields": {
+    "device": 2,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 4,
+  "fields": {
+    "device": 2,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 5,
+  "fields": {
+    "device": 3,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 6,
+  "fields": {
+    "device": 3,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 7,
+  "fields": {
+    "device": 4,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 8,
+  "fields": {
+    "device": 4,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 9,
+  "fields": {
+    "device": 5,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 10,
+  "fields": {
+    "device": 5,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 11,
+  "fields": {
+    "device": 6,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 12,
+  "fields": {
+    "device": 6,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Fa0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 13,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 14,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 15,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 16,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 17,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 18,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 19,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 20,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 21,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 22,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 23,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 24,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 25,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 26,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 27,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 28,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 29,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 30,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 76,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 77,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 78,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 79,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 80,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 81,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 82,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 83,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 84,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 85,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 86,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 87,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 88,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 89,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 90,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 91,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 92,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 93,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 94,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 95,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 96,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 97,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 98,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 99,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 100,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 101,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 102,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 103,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 104,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 105,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 106,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 107,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 108,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 109,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 110,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 111,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 112,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 113,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 114,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 115,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 116,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 117,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 118,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 119,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 120,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 121,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 122,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 123,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 124,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 125,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 126,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 127,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 128,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 129,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 130,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 131,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 132,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 133,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 134,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 135,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 136,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 137,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 138,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 139,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": true,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 140,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 141,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 142,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 143,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 144,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 145,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 146,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 147,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "em8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 150,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 151,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/10",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 152,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/11",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 153,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/12",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 154,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/13",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 155,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/14",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 156,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/15",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 157,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/16",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 158,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/17",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 159,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/18",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 160,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/19",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 161,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 162,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/20",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 163,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/21",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 164,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/22",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 165,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/23",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 166,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/24",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 167,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/25",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 168,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/26",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 169,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/27",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 170,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/28",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 171,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/29",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 172,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 173,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/30",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 174,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/31",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 175,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/32",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 176,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/33",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 177,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/34",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 178,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/35",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 179,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/36",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 180,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/37",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 181,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/38",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 182,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/39",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 183,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 184,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/40",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 185,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/41",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 186,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/42",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 187,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/43",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 188,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/44",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 189,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/45",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 190,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/46",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 191,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/47",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 192,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/48",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 193,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 194,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 195,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 196,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 197,
+  "fields": {
+    "device": 23,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi0/9",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 198,
+  "fields": {
+    "device": 18,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 199,
+  "fields": {
+    "device": 17,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 200,
+  "fields": {
+    "device": 16,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 201,
+  "fields": {
+    "device": 15,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 202,
+  "fields": {
+    "device": 14,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 203,
+  "fields": {
+    "device": 21,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 204,
+  "fields": {
+    "device": 20,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 205,
+  "fields": {
+    "device": 19,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "lo0",
+    "form_factor": 0,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 206,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 207,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 208,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 209,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 210,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 211,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 212,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 213,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 214,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/1",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 215,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/2",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 216,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/3",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 217,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/4",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 218,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/5",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 219,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/6",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 220,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/7",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 221,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/8",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 222,
+  "fields": {
+    "device": 7,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interface",
+  "pk": 223,
+  "fields": {
+    "device": 8,
+    "virtual_machine": null,
+    "lag": null,
+    "name": "Gi1/0",
+    "form_factor": 1000,
+    "enabled": true,
+    "mac_address": null,
+    "mtu": null,
+    "mgmt_only": false,
+    "description": ""
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 2,
+  "fields": {
+    "interface_a": 78,
+    "interface_b": 122,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 3,
+  "fields": {
+    "interface_a": 86,
+    "interface_b": 114,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 4,
+  "fields": {
+    "interface_a": 87,
+    "interface_b": 123,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 5,
+  "fields": {
+    "interface_a": 95,
+    "interface_b": 133,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 6,
+  "fields": {
+    "interface_a": 96,
+    "interface_b": 143,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 7,
+  "fields": {
+    "interface_a": 104,
+    "interface_b": 142,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 8,
+  "fields": {
+    "interface_a": 105,
+    "interface_b": 134,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 9,
+  "fields": {
+    "interface_a": 115,
+    "interface_b": 124,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 10,
+  "fields": {
+    "interface_a": 117,
+    "interface_b": 144,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 11,
+  "fields": {
+    "interface_a": 116,
+    "interface_b": 131,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 12,
+  "fields": {
+    "interface_a": 126,
+    "interface_b": 135,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 13,
+  "fields": {
+    "interface_a": 125,
+    "interface_b": 140,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 14,
+  "fields": {
+    "interface_a": 132,
+    "interface_b": 141,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 15,
+  "fields": {
+    "interface_a": 77,
+    "interface_b": 113,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 16,
+  "fields": {
+    "interface_a": 2,
+    "interface_b": 222,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 17,
+  "fields": {
+    "interface_a": 6,
+    "interface_b": 206,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 18,
+  "fields": {
+    "interface_a": 10,
+    "interface_b": 207,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 19,
+  "fields": {
+    "interface_a": 4,
+    "interface_b": 223,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 20,
+  "fields": {
+    "interface_a": 8,
+    "interface_b": 214,
+    "connection_status": true
+  }
+},
+{
+  "model": "dcim.interfaceconnection",
+  "pk": 21,
+  "fields": {
+    "interface_a": 12,
+    "interface_b": 215,
+    "connection_status": true
+  }
+},
+{
+  "model": "ipam.vrf",
+  "pk": 1,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:17:34.309Z",
+    "name": "CUST-A",
+    "rd": "65050:100",
+    "tenant": 1,
+    "enforce_unique": true,
+    "description": ""
+  }
+},
+{
+  "model": "ipam.vrf",
+  "pk": 2,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:17:44.005Z",
+    "name": "CUST-B",
+    "rd": "65050:200",
+    "tenant": 2,
+    "enforce_unique": true,
+    "description": ""
+  }
+},
+{
+  "model": "ipam.vrf",
+  "pk": 3,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:17:59.673Z",
+    "name": "CUST-C",
+    "rd": "65050:300",
+    "tenant": 3,
+    "enforce_unique": true,
+    "description": ""
+  }
+},
+{
+  "model": "ipam.role",
+  "pk": 1,
+  "fields": {
+    "name": "OOB Management",
+    "slug": "oob-management",
+    "weight": 1000
+  }
+},
+{
+  "model": "ipam.role",
+  "pk": 2,
+  "fields": {
+    "name": "MPLS Fabric",
+    "slug": "mpls-fabric",
+    "weight": 1000
+  }
+},
+{
+  "model": "ipam.prefix",
+  "pk": 1,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:46:40.593Z",
+    "family": 4,
+    "prefix": "192.168.1.0/24",
+    "site": 1,
+    "vrf": null,
+    "tenant": null,
+    "vlan": null,
+    "status": 1,
+    "role": 1,
+    "is_pool": false,
+    "description": ""
+  }
+},
+{
+  "model": "ipam.prefix",
+  "pk": 2,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:49:16.922Z",
+    "family": 4,
+    "prefix": "169.254.0.0/24",
+    "site": 1,
+    "vrf": null,
+    "tenant": null,
+    "vlan": null,
+    "status": 1,
+    "role": 2,
+    "is_pool": false,
+    "description": ""
+  }
+},
+{
+  "model": "ipam.vlangroup",
+  "pk": 1,
+  "fields": {
+    "name": "MPLS Customers",
+    "slug": "mpls-customers",
+    "site": 1
+  }
+},
+{
+  "model": "ipam.vlan",
+  "pk": 1,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:16:42.379Z",
+    "site": 1,
+    "group": 1,
+    "vid": 1101,
+    "name": "CUST-A",
+    "tenant": 1,
+    "status": 1,
+    "role": null,
+    "description": ""
+  }
+},
+{
+  "model": "ipam.vlan",
+  "pk": 2,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:16:19.323Z",
+    "site": 1,
+    "group": 1,
+    "vid": 1102,
+    "name": "CUST-B",
+    "tenant": 2,
+    "status": 1,
+    "role": null,
+    "description": ""
+  }
+},
+{
+  "model": "ipam.vlan",
+  "pk": 3,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:16:19.325Z",
+    "site": 1,
+    "group": 1,
+    "vid": 1201,
+    "name": "CUST-C",
+    "tenant": 3,
+    "status": 1,
+    "role": null,
+    "description": ""
+  }
+},
+{
+  "model": "tenancy.tenantgroup",
+  "pk": 1,
+  "fields": {
+    "name": "MPLS Customer",
+    "slug": "mpls-customer"
+  }
+},
+{
+  "model": "tenancy.tenantgroup",
+  "pk": 2,
+  "fields": {
+    "name": "MPLS Fabric",
+    "slug": "mpls-fabric"
+  }
+},
+{
+  "model": "tenancy.tenant",
+  "pk": 1,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:49:50.385Z",
+    "name": "Customer-A",
+    "slug": "customer-a",
+    "group": 1,
+    "description": "",
+    "comments": ""
+  }
+},
+{
+  "model": "tenancy.tenant",
+  "pk": 2,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:49:55.926Z",
+    "name": "Customer-B",
+    "slug": "customer-b",
+    "group": 1,
+    "description": "",
+    "comments": ""
+  }
+},
+{
+  "model": "tenancy.tenant",
+  "pk": 3,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T20:50:05.446Z",
+    "name": "Customer-C",
+    "slug": "customer-c",
+    "group": 1,
+    "description": "",
+    "comments": ""
+  }
+},
+{
+  "model": "tenancy.tenant",
+  "pk": 4,
+  "fields": {
+    "created": "2017-10-19",
+    "last_updated": "2017-10-19T21:12:52.419Z",
+    "name": "MPLS Fabric",
+    "slug": "mpls-fabric",
+    "group": 2,
+    "description": "",
+    "comments": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 2,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 2,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 2,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 3,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 3,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 3,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 4,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 4,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 4,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add circuit type",
+    "content_type": 7,
+    "codename": "add_circuittype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change circuit type",
+    "content_type": 7,
+    "codename": "change_circuittype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete circuit type",
+    "content_type": 7,
+    "codename": "delete_circuittype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can add circuit termination",
+    "content_type": 8,
+    "codename": "add_circuittermination"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can change circuit termination",
+    "content_type": 8,
+    "codename": "change_circuittermination"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can delete circuit termination",
+    "content_type": 8,
+    "codename": "delete_circuittermination"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add provider",
+    "content_type": 9,
+    "codename": "add_provider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change provider",
+    "content_type": 9,
+    "codename": "change_provider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete provider",
+    "content_type": 9,
+    "codename": "delete_provider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can add circuit",
+    "content_type": 10,
+    "codename": "add_circuit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can change circuit",
+    "content_type": 10,
+    "codename": "change_circuit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can delete circuit",
+    "content_type": 10,
+    "codename": "delete_circuit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can add rack",
+    "content_type": 11,
+    "codename": "add_rack"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can change rack",
+    "content_type": 11,
+    "codename": "change_rack"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can delete rack",
+    "content_type": 11,
+    "codename": "delete_rack"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can add rack role",
+    "content_type": 12,
+    "codename": "add_rackrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can change rack role",
+    "content_type": 12,
+    "codename": "change_rackrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can delete rack role",
+    "content_type": 12,
+    "codename": "delete_rackrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add region",
+    "content_type": 13,
+    "codename": "add_region"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change region",
+    "content_type": 13,
+    "codename": "change_region"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete region",
+    "content_type": 13,
+    "codename": "delete_region"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can add console port",
+    "content_type": 14,
+    "codename": "add_consoleport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can change console port",
+    "content_type": 14,
+    "codename": "change_consoleport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can delete console port",
+    "content_type": 14,
+    "codename": "delete_consoleport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can add power port",
+    "content_type": 15,
+    "codename": "add_powerport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can change power port",
+    "content_type": 15,
+    "codename": "change_powerport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can delete power port",
+    "content_type": 15,
+    "codename": "delete_powerport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can add power outlet template",
+    "content_type": 16,
+    "codename": "add_poweroutlettemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can change power outlet template",
+    "content_type": 16,
+    "codename": "change_poweroutlettemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can delete power outlet template",
+    "content_type": 16,
+    "codename": "delete_poweroutlettemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add power outlet",
+    "content_type": 17,
+    "codename": "add_poweroutlet"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change power outlet",
+    "content_type": 17,
+    "codename": "change_poweroutlet"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete power outlet",
+    "content_type": 17,
+    "codename": "delete_poweroutlet"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can add device type",
+    "content_type": 18,
+    "codename": "add_devicetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can change device type",
+    "content_type": 18,
+    "codename": "change_devicetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can delete device type",
+    "content_type": 18,
+    "codename": "delete_devicetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can add inventory item",
+    "content_type": 19,
+    "codename": "add_inventoryitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can change inventory item",
+    "content_type": 19,
+    "codename": "change_inventoryitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can delete inventory item",
+    "content_type": 19,
+    "codename": "delete_inventoryitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can add device bay template",
+    "content_type": 20,
+    "codename": "add_devicebaytemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can change device bay template",
+    "content_type": 20,
+    "codename": "change_devicebaytemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can delete device bay template",
+    "content_type": 20,
+    "codename": "delete_devicebaytemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add device role",
+    "content_type": 21,
+    "codename": "add_devicerole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change device role",
+    "content_type": 21,
+    "codename": "change_devicerole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete device role",
+    "content_type": 21,
+    "codename": "delete_devicerole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can add interface connection",
+    "content_type": 22,
+    "codename": "add_interfaceconnection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can change interface connection",
+    "content_type": 22,
+    "codename": "change_interfaceconnection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can delete interface connection",
+    "content_type": 22,
+    "codename": "delete_interfaceconnection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can add rack group",
+    "content_type": 23,
+    "codename": "add_rackgroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can change rack group",
+    "content_type": 23,
+    "codename": "change_rackgroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can delete rack group",
+    "content_type": 23,
+    "codename": "delete_rackgroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can add console server port template",
+    "content_type": 24,
+    "codename": "add_consoleserverporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can change console server port template",
+    "content_type": 24,
+    "codename": "change_consoleserverporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can delete console server port template",
+    "content_type": 24,
+    "codename": "delete_consoleserverporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add console server port",
+    "content_type": 25,
+    "codename": "add_consoleserverport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change console server port",
+    "content_type": 25,
+    "codename": "change_consoleserverport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete console server port",
+    "content_type": 25,
+    "codename": "delete_consoleserverport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can add manufacturer",
+    "content_type": 26,
+    "codename": "add_manufacturer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can change manufacturer",
+    "content_type": 26,
+    "codename": "change_manufacturer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can delete manufacturer",
+    "content_type": 26,
+    "codename": "delete_manufacturer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can add device bay",
+    "content_type": 27,
+    "codename": "add_devicebay"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can change device bay",
+    "content_type": 27,
+    "codename": "change_devicebay"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can delete device bay",
+    "content_type": 27,
+    "codename": "delete_devicebay"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can add interface",
+    "content_type": 28,
+    "codename": "add_interface"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can change interface",
+    "content_type": 28,
+    "codename": "change_interface"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can delete interface",
+    "content_type": 28,
+    "codename": "delete_interface"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add interface template",
+    "content_type": 29,
+    "codename": "add_interfacetemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change interface template",
+    "content_type": 29,
+    "codename": "change_interfacetemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete interface template",
+    "content_type": 29,
+    "codename": "delete_interfacetemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can add platform",
+    "content_type": 30,
+    "codename": "add_platform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can change platform",
+    "content_type": 30,
+    "codename": "change_platform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can delete platform",
+    "content_type": 30,
+    "codename": "delete_platform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 31,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 31,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 31,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can add device",
+    "content_type": 32,
+    "codename": "add_device"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can change device",
+    "content_type": 32,
+    "codename": "change_device"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can delete device",
+    "content_type": 32,
+    "codename": "delete_device"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Read-only access to devices via NAPALM",
+    "content_type": 32,
+    "codename": "napalm_read"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Read/write access to devices via NAPALM",
+    "content_type": 32,
+    "codename": "napalm_write"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can add console port template",
+    "content_type": 33,
+    "codename": "add_consoleporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can change console port template",
+    "content_type": 33,
+    "codename": "change_consoleporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 101,
+  "fields": {
+    "name": "Can delete console port template",
+    "content_type": 33,
+    "codename": "delete_consoleporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 102,
+  "fields": {
+    "name": "Can add rack reservation",
+    "content_type": 34,
+    "codename": "add_rackreservation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 103,
+  "fields": {
+    "name": "Can change rack reservation",
+    "content_type": 34,
+    "codename": "change_rackreservation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 104,
+  "fields": {
+    "name": "Can delete rack reservation",
+    "content_type": 34,
+    "codename": "delete_rackreservation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 105,
+  "fields": {
+    "name": "Can add power port template",
+    "content_type": 35,
+    "codename": "add_powerporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 106,
+  "fields": {
+    "name": "Can change power port template",
+    "content_type": 35,
+    "codename": "change_powerporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 107,
+  "fields": {
+    "name": "Can delete power port template",
+    "content_type": 35,
+    "codename": "delete_powerporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 108,
+  "fields": {
+    "name": "Can add VLAN",
+    "content_type": 36,
+    "codename": "add_vlan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 109,
+  "fields": {
+    "name": "Can change VLAN",
+    "content_type": 36,
+    "codename": "change_vlan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 110,
+  "fields": {
+    "name": "Can delete VLAN",
+    "content_type": 36,
+    "codename": "delete_vlan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 111,
+  "fields": {
+    "name": "Can add prefix",
+    "content_type": 37,
+    "codename": "add_prefix"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 112,
+  "fields": {
+    "name": "Can change prefix",
+    "content_type": 37,
+    "codename": "change_prefix"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 113,
+  "fields": {
+    "name": "Can delete prefix",
+    "content_type": 37,
+    "codename": "delete_prefix"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 114,
+  "fields": {
+    "name": "Can add service",
+    "content_type": 38,
+    "codename": "add_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 115,
+  "fields": {
+    "name": "Can change service",
+    "content_type": 38,
+    "codename": "change_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 116,
+  "fields": {
+    "name": "Can delete service",
+    "content_type": 38,
+    "codename": "delete_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 117,
+  "fields": {
+    "name": "Can add VLAN group",
+    "content_type": 39,
+    "codename": "add_vlangroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 118,
+  "fields": {
+    "name": "Can change VLAN group",
+    "content_type": 39,
+    "codename": "change_vlangroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 119,
+  "fields": {
+    "name": "Can delete VLAN group",
+    "content_type": 39,
+    "codename": "delete_vlangroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 120,
+  "fields": {
+    "name": "Can add IP address",
+    "content_type": 40,
+    "codename": "add_ipaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 121,
+  "fields": {
+    "name": "Can change IP address",
+    "content_type": 40,
+    "codename": "change_ipaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 122,
+  "fields": {
+    "name": "Can delete IP address",
+    "content_type": 40,
+    "codename": "delete_ipaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 123,
+  "fields": {
+    "name": "Can add RIR",
+    "content_type": 41,
+    "codename": "add_rir"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 124,
+  "fields": {
+    "name": "Can change RIR",
+    "content_type": 41,
+    "codename": "change_rir"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 125,
+  "fields": {
+    "name": "Can delete RIR",
+    "content_type": 41,
+    "codename": "delete_rir"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 126,
+  "fields": {
+    "name": "Can add role",
+    "content_type": 42,
+    "codename": "add_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 127,
+  "fields": {
+    "name": "Can change role",
+    "content_type": 42,
+    "codename": "change_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 128,
+  "fields": {
+    "name": "Can delete role",
+    "content_type": 42,
+    "codename": "delete_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 129,
+  "fields": {
+    "name": "Can add aggregate",
+    "content_type": 43,
+    "codename": "add_aggregate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 130,
+  "fields": {
+    "name": "Can change aggregate",
+    "content_type": 43,
+    "codename": "change_aggregate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 131,
+  "fields": {
+    "name": "Can delete aggregate",
+    "content_type": 43,
+    "codename": "delete_aggregate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 132,
+  "fields": {
+    "name": "Can add VRF",
+    "content_type": 44,
+    "codename": "add_vrf"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 133,
+  "fields": {
+    "name": "Can change VRF",
+    "content_type": 44,
+    "codename": "change_vrf"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 134,
+  "fields": {
+    "name": "Can delete VRF",
+    "content_type": 44,
+    "codename": "delete_vrf"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 135,
+  "fields": {
+    "name": "Can add topology map",
+    "content_type": 45,
+    "codename": "add_topologymap"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 136,
+  "fields": {
+    "name": "Can change topology map",
+    "content_type": 45,
+    "codename": "change_topologymap"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 137,
+  "fields": {
+    "name": "Can delete topology map",
+    "content_type": 45,
+    "codename": "delete_topologymap"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 138,
+  "fields": {
+    "name": "Can add custom field value",
+    "content_type": 46,
+    "codename": "add_customfieldvalue"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 139,
+  "fields": {
+    "name": "Can change custom field value",
+    "content_type": 46,
+    "codename": "change_customfieldvalue"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 140,
+  "fields": {
+    "name": "Can delete custom field value",
+    "content_type": 46,
+    "codename": "delete_customfieldvalue"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 141,
+  "fields": {
+    "name": "Can add user action",
+    "content_type": 47,
+    "codename": "add_useraction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 142,
+  "fields": {
+    "name": "Can change user action",
+    "content_type": 47,
+    "codename": "change_useraction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 143,
+  "fields": {
+    "name": "Can delete user action",
+    "content_type": 47,
+    "codename": "delete_useraction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 144,
+  "fields": {
+    "name": "Can add custom field",
+    "content_type": 48,
+    "codename": "add_customfield"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 145,
+  "fields": {
+    "name": "Can change custom field",
+    "content_type": 48,
+    "codename": "change_customfield"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 146,
+  "fields": {
+    "name": "Can delete custom field",
+    "content_type": 48,
+    "codename": "delete_customfield"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 147,
+  "fields": {
+    "name": "Can add report result",
+    "content_type": 49,
+    "codename": "add_reportresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 148,
+  "fields": {
+    "name": "Can change report result",
+    "content_type": 49,
+    "codename": "change_reportresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 149,
+  "fields": {
+    "name": "Can delete report result",
+    "content_type": 49,
+    "codename": "delete_reportresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 150,
+  "fields": {
+    "name": "Can add image attachment",
+    "content_type": 50,
+    "codename": "add_imageattachment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 151,
+  "fields": {
+    "name": "Can change image attachment",
+    "content_type": 50,
+    "codename": "change_imageattachment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 152,
+  "fields": {
+    "name": "Can delete image attachment",
+    "content_type": 50,
+    "codename": "delete_imageattachment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 153,
+  "fields": {
+    "name": "Can add graph",
+    "content_type": 51,
+    "codename": "add_graph"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 154,
+  "fields": {
+    "name": "Can change graph",
+    "content_type": 51,
+    "codename": "change_graph"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 155,
+  "fields": {
+    "name": "Can delete graph",
+    "content_type": 51,
+    "codename": "delete_graph"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 156,
+  "fields": {
+    "name": "Can add export template",
+    "content_type": 52,
+    "codename": "add_exporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 157,
+  "fields": {
+    "name": "Can change export template",
+    "content_type": 52,
+    "codename": "change_exporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 158,
+  "fields": {
+    "name": "Can delete export template",
+    "content_type": 52,
+    "codename": "delete_exporttemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 159,
+  "fields": {
+    "name": "Can add custom field choice",
+    "content_type": 53,
+    "codename": "add_customfieldchoice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 160,
+  "fields": {
+    "name": "Can change custom field choice",
+    "content_type": 53,
+    "codename": "change_customfieldchoice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 161,
+  "fields": {
+    "name": "Can delete custom field choice",
+    "content_type": 53,
+    "codename": "delete_customfieldchoice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 162,
+  "fields": {
+    "name": "Can add secret role",
+    "content_type": 54,
+    "codename": "add_secretrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 163,
+  "fields": {
+    "name": "Can change secret role",
+    "content_type": 54,
+    "codename": "change_secretrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 164,
+  "fields": {
+    "name": "Can delete secret role",
+    "content_type": 54,
+    "codename": "delete_secretrole"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 165,
+  "fields": {
+    "name": "Can add secret",
+    "content_type": 55,
+    "codename": "add_secret"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 166,
+  "fields": {
+    "name": "Can change secret",
+    "content_type": 55,
+    "codename": "change_secret"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 167,
+  "fields": {
+    "name": "Can delete secret",
+    "content_type": 55,
+    "codename": "delete_secret"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 168,
+  "fields": {
+    "name": "Can add user key",
+    "content_type": 56,
+    "codename": "add_userkey"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 169,
+  "fields": {
+    "name": "Can change user key",
+    "content_type": 56,
+    "codename": "change_userkey"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 170,
+  "fields": {
+    "name": "Can delete user key",
+    "content_type": 56,
+    "codename": "delete_userkey"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 171,
+  "fields": {
+    "name": "Can activate user keys for decryption",
+    "content_type": 56,
+    "codename": "activate_userkey"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 172,
+  "fields": {
+    "name": "Can add session key",
+    "content_type": 57,
+    "codename": "add_sessionkey"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 173,
+  "fields": {
+    "name": "Can change session key",
+    "content_type": 57,
+    "codename": "change_sessionkey"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 174,
+  "fields": {
+    "name": "Can delete session key",
+    "content_type": 57,
+    "codename": "delete_sessionkey"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 175,
+  "fields": {
+    "name": "Can add tenant",
+    "content_type": 58,
+    "codename": "add_tenant"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 176,
+  "fields": {
+    "name": "Can change tenant",
+    "content_type": 58,
+    "codename": "change_tenant"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 177,
+  "fields": {
+    "name": "Can delete tenant",
+    "content_type": 58,
+    "codename": "delete_tenant"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 178,
+  "fields": {
+    "name": "Can add tenant group",
+    "content_type": 59,
+    "codename": "add_tenantgroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 179,
+  "fields": {
+    "name": "Can change tenant group",
+    "content_type": 59,
+    "codename": "change_tenantgroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 180,
+  "fields": {
+    "name": "Can delete tenant group",
+    "content_type": 59,
+    "codename": "delete_tenantgroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 181,
+  "fields": {
+    "name": "Can add cluster type",
+    "content_type": 61,
+    "codename": "add_clustertype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 182,
+  "fields": {
+    "name": "Can change cluster type",
+    "content_type": 61,
+    "codename": "change_clustertype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 183,
+  "fields": {
+    "name": "Can delete cluster type",
+    "content_type": 61,
+    "codename": "delete_clustertype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 184,
+  "fields": {
+    "name": "Can add cluster",
+    "content_type": 62,
+    "codename": "add_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 185,
+  "fields": {
+    "name": "Can change cluster",
+    "content_type": 62,
+    "codename": "change_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 186,
+  "fields": {
+    "name": "Can delete cluster",
+    "content_type": 62,
+    "codename": "delete_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 187,
+  "fields": {
+    "name": "Can add virtual machine",
+    "content_type": 63,
+    "codename": "add_virtualmachine"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 188,
+  "fields": {
+    "name": "Can change virtual machine",
+    "content_type": 63,
+    "codename": "change_virtualmachine"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 189,
+  "fields": {
+    "name": "Can delete virtual machine",
+    "content_type": 63,
+    "codename": "delete_virtualmachine"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 190,
+  "fields": {
+    "name": "Can add cluster group",
+    "content_type": 64,
+    "codename": "add_clustergroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 191,
+  "fields": {
+    "name": "Can change cluster group",
+    "content_type": 64,
+    "codename": "change_clustergroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 192,
+  "fields": {
+    "name": "Can delete cluster group",
+    "content_type": 64,
+    "codename": "delete_clustergroup"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$F6ks8J1J8ZRg$MHaOfW7X9Ry4UWMjr/2V1GjTMmVH+r/8/LgOyEOells=",
+    "last_login": "2017-10-19T20:35:41.048Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-10-19T20:29:42.146Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 1,
+  "fields": {
+    "time": "2017-10-19T20:36:16.731Z",
+    "user": 1,
+    "content_type": 31,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created site <a href=\"/dcim/sites/netautsol/\">NEtAutSol</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 2,
+  "fields": {
+    "time": "2017-10-19T20:36:46.303Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created device role <a href=\"/dcim/devices/?role=mpls-pe\">MPLS-PE</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 3,
+  "fields": {
+    "time": "2017-10-19T20:36:59.679Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created device role <a href=\"/dcim/devices/?role=mpls-cor\">MPLS-COR</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 4,
+  "fields": {
+    "time": "2017-10-19T20:37:24.441Z",
+    "user": 1,
+    "content_type": 26,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created manufacturer <a href=\"/dcim/device-types/?manufacturer=juniper\">Juniper</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 5,
+  "fields": {
+    "time": "2017-10-19T20:37:42.393Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created device type <a href=\"/dcim/device-types/1/\">Olive</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 6,
+  "fields": {
+    "time": "2017-10-19T20:38:39.229Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created platform <a href=\"/dcim/devices/?platform=mpls\">MPLS</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 7,
+  "fields": {
+    "time": "2017-10-19T20:38:53.852Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created platform <a href=\"/dcim/devices/?platform=customer-edge\">Customer Edge</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 8,
+  "fields": {
+    "time": "2017-10-19T20:39:06.433Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 2,
+    "action": 3,
+    "message": "Modified device role <a href=\"/dcim/devices/?role=lsr\">LSR</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 9,
+  "fields": {
+    "time": "2017-10-19T20:39:14.221Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 1,
+    "action": 3,
+    "message": "Modified device role <a href=\"/dcim/devices/?role=mpls-pe\">MPLS PE</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 10,
+  "fields": {
+    "time": "2017-10-19T20:39:18.845Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 2,
+    "action": 3,
+    "message": "Modified device role <a href=\"/dcim/devices/?role=mpls-lsr\">MPLS LSR</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 11,
+  "fields": {
+    "time": "2017-10-19T20:39:40.839Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 3,
+    "action": 1,
+    "message": "Created device role <a href=\"/dcim/devices/?role=vlan-switch\">VLAN Switch</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 12,
+  "fields": {
+    "time": "2017-10-19T20:39:59.586Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 4,
+    "action": 1,
+    "message": "Created device role <a href=\"/dcim/devices/?role=customer-edge\">Customer Edge</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 13,
+  "fields": {
+    "time": "2017-10-19T20:40:07.639Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 4,
+    "action": 3,
+    "message": "Modified device role <a href=\"/dcim/devices/?role=customer-edge\">Customer Edge</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 14,
+  "fields": {
+    "time": "2017-10-19T20:40:13.573Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 4,
+    "action": 3,
+    "message": "Modified device role <a href=\"/dcim/devices/?role=customer-edge\">Customer Edge</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 15,
+  "fields": {
+    "time": "2017-10-19T20:41:07.911Z",
+    "user": 1,
+    "content_type": 26,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created manufacturer <a href=\"/dcim/device-types/?manufacturer=cisco\">Cisco</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 16,
+  "fields": {
+    "time": "2017-10-19T20:41:30.001Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created device type <a href=\"/dcim/device-types/2/\">C3725</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 17,
+  "fields": {
+    "time": "2017-10-19T20:43:15.186Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": 3,
+    "action": 1,
+    "message": "Created device type <a href=\"/dcim/device-types/3/\">vIOS_L2</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 18,
+  "fields": {
+    "time": "2017-10-19T20:43:41.588Z",
+    "user": 1,
+    "content_type": 29,
+    "object_id": null,
+    "action": 6,
+    "message": "Deleted 8 interface templates"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 19,
+  "fields": {
+    "time": "2017-10-19T20:44:06.464Z",
+    "user": 1,
+    "content_type": 29,
+    "object_id": null,
+    "action": 6,
+    "message": "Deleted 2 interface templates"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 20,
+  "fields": {
+    "time": "2017-10-19T20:44:21.964Z",
+    "user": 1,
+    "content_type": 29,
+    "object_id": null,
+    "action": 6,
+    "message": "Deleted 9 interface templates"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 21,
+  "fields": {
+    "time": "2017-10-19T20:44:38.185Z",
+    "user": 1,
+    "content_type": 29,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 1 interface templates"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 22,
+  "fields": {
+    "time": "2017-10-19T20:45:04.301Z",
+    "user": 1,
+    "content_type": 29,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 1 interface templates"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 23,
+  "fields": {
+    "time": "2017-10-19T20:46:26.135Z",
+    "user": 1,
+    "content_type": 42,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created role OOB Management"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 24,
+  "fields": {
+    "time": "2017-10-19T20:46:40.596Z",
+    "user": 1,
+    "content_type": 37,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created prefix <a href=\"/ipam/prefixes/1/\">192.168.1.0/24</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 25,
+  "fields": {
+    "time": "2017-10-19T20:47:00.940Z",
+    "user": 1,
+    "content_type": 42,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created role MPLS Fabric"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 26,
+  "fields": {
+    "time": "2017-10-19T20:47:19.309Z",
+    "user": 1,
+    "content_type": 37,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created prefix <a href=\"/ipam/prefixes/2/\">169.254.0.0/16</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 27,
+  "fields": {
+    "time": "2017-10-19T20:49:16.924Z",
+    "user": 1,
+    "content_type": 37,
+    "object_id": 2,
+    "action": 3,
+    "message": "Modified prefix <a href=\"/ipam/prefixes/2/\">169.254.0.0/24</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 28,
+  "fields": {
+    "time": "2017-10-19T20:49:42.262Z",
+    "user": 1,
+    "content_type": 59,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created tenant group <a href=\"/tenancy/tenants/?group=mpls-customer\">MPLS Customer</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 29,
+  "fields": {
+    "time": "2017-10-19T20:49:50.388Z",
+    "user": 1,
+    "content_type": 58,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created tenant <a href=\"/tenancy/tenants/customer-a/\">Customer-A</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 30,
+  "fields": {
+    "time": "2017-10-19T20:49:55.928Z",
+    "user": 1,
+    "content_type": 58,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created tenant <a href=\"/tenancy/tenants/customer-b/\">Customer-B</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 31,
+  "fields": {
+    "time": "2017-10-19T20:50:05.448Z",
+    "user": 1,
+    "content_type": 58,
+    "object_id": 3,
+    "action": 1,
+    "message": "Created tenant <a href=\"/tenancy/tenants/customer-c/\">Customer-C</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 32,
+  "fields": {
+    "time": "2017-10-19T20:51:44.742Z",
+    "user": 1,
+    "content_type": 54,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created secret role <a href=\"/secrets/secrets/?role=main\">Main</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 33,
+  "fields": {
+    "time": "2017-10-19T20:53:25.658Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": 2,
+    "action": 3,
+    "message": "Modified platform <a href=\"/dcim/devices/?platform=cisco-ios\">Cisco IOS</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 34,
+  "fields": {
+    "time": "2017-10-19T20:53:30.745Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": 1,
+    "action": 3,
+    "message": "Modified platform <a href=\"/dcim/devices/?platform=junos\">Junos</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 35,
+  "fields": {
+    "time": "2017-10-19T20:54:01.088Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created device <a href=\"/dcim/devices/1/\">CUST-A-CE1</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 36,
+  "fields": {
+    "time": "2017-10-19T20:54:20.484Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created device <a href=\"/dcim/devices/2/\">CUST-A-CE2</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 37,
+  "fields": {
+    "time": "2017-10-19T20:54:42.703Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 1 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 38,
+  "fields": {
+    "time": "2017-10-19T20:54:56.574Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": 2,
+    "action": 3,
+    "message": "Modified device <a href=\"/dcim/devices/2/\">CUST-A-CE2</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 39,
+  "fields": {
+    "time": "2017-10-19T20:56:14.257Z",
+    "user": 1,
+    "content_type": 31,
+    "object_id": 1,
+    "action": 3,
+    "message": "Modified site <a href=\"/dcim/sites/netautsol/\">NetAutSol</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 40,
+  "fields": {
+    "time": "2017-10-19T20:57:13.985Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 2,
+    "message": "Imported 4 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 41,
+  "fields": {
+    "time": "2017-10-19T20:57:32.447Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": 2,
+    "action": 3,
+    "message": "Modified device <a href=\"/dcim/devices/2/\">CUST-A-CE2</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 42,
+  "fields": {
+    "time": "2017-10-19T20:57:50.105Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 6 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 43,
+  "fields": {
+    "time": "2017-10-19T20:59:42.711Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 2,
+    "message": "Imported 2 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 44,
+  "fields": {
+    "time": "2017-10-19T20:59:55.238Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 2 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 45,
+  "fields": {
+    "time": "2017-10-19T21:00:58.516Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 2,
+    "message": "Imported 8 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 46,
+  "fields": {
+    "time": "2017-10-19T21:01:20.893Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 4 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 47,
+  "fields": {
+    "time": "2017-10-19T21:03:08.123Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": null,
+    "action": 2,
+    "message": "Imported 14 interface connections"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 48,
+  "fields": {
+    "time": "2017-10-19T21:04:39.230Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": 5,
+    "action": 1,
+    "message": "Created device role <a href=\"/dcim/devices/?role=cloud\">Cloud</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 49,
+  "fields": {
+    "time": "2017-10-19T21:05:06.435Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": 22,
+    "action": 1,
+    "message": "Created device <a href=\"/dcim/devices/22/\">VLAN_22</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 50,
+  "fields": {
+    "time": "2017-10-19T21:05:14.007Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 5,
+    "message": "Deleted device VLAN_22"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 51,
+  "fields": {
+    "time": "2017-10-19T21:06:24.588Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": 4,
+    "action": 1,
+    "message": "Created device type <a href=\"/dcim/device-types/4/\">Cloud</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 52,
+  "fields": {
+    "time": "2017-10-19T21:07:15.324Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": 23,
+    "action": 1,
+    "message": "Created device <a href=\"/dcim/devices/23/\">VLAN_22</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 53,
+  "fields": {
+    "time": "2017-10-19T21:11:01.447Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created rack group <a href=\"/dcim/racks/?group_id=1\">LAB</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 54,
+  "fields": {
+    "time": "2017-10-19T21:11:25.302Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created rack <a href=\"/dcim/racks/1/\">Rack #1</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 55,
+  "fields": {
+    "time": "2017-10-19T21:12:44.076Z",
+    "user": 1,
+    "content_type": 59,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created tenant group <a href=\"/tenancy/tenants/?group=mpls-fabric\">MPLS Fabric</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 56,
+  "fields": {
+    "time": "2017-10-19T21:12:52.421Z",
+    "user": 1,
+    "content_type": 58,
+    "object_id": 4,
+    "action": 1,
+    "message": "Created tenant <a href=\"/tenancy/tenants/mpls-fabric/\">MPLS Fabric</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 57,
+  "fields": {
+    "time": "2017-10-19T21:13:05.941Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 11 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 58,
+  "fields": {
+    "time": "2017-10-19T21:13:24.850Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": null,
+    "action": 6,
+    "message": "Deleted 1 racks"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 59,
+  "fields": {
+    "time": "2017-10-19T21:13:27.829Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": null,
+    "action": 6,
+    "message": "Deleted 1 rack groups"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 60,
+  "fields": {
+    "time": "2017-10-19T21:13:52.379Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created circuit type <a href=\"/circuits/circuits/?type=mpls\">MPLS</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 61,
+  "fields": {
+    "time": "2017-10-19T21:14:00.191Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created circuit type <a href=\"/circuits/circuits/?type=ce-pe\">CE-PE</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 62,
+  "fields": {
+    "time": "2017-10-19T21:14:20.910Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": null,
+    "action": 6,
+    "message": "Deleted 2 circuit types"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 63,
+  "fields": {
+    "time": "2017-10-19T21:14:46.806Z",
+    "user": 1,
+    "content_type": 39,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created VLAN group <a href=\"/ipam/vlans/?group_id=1\">MPLS Customers</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 64,
+  "fields": {
+    "time": "2017-10-19T21:16:19.327Z",
+    "user": 1,
+    "content_type": 36,
+    "object_id": null,
+    "action": 2,
+    "message": "Imported 3 VLANs"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 65,
+  "fields": {
+    "time": "2017-10-19T21:16:30.245Z",
+    "user": 1,
+    "content_type": 36,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 3 VLANs"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 66,
+  "fields": {
+    "time": "2017-10-19T21:16:42.382Z",
+    "user": 1,
+    "content_type": 36,
+    "object_id": 1,
+    "action": 3,
+    "message": "Modified VLAN <a href=\"/ipam/vlans/1/\">1101 (CUST-A)</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 67,
+  "fields": {
+    "time": "2017-10-19T21:16:50.801Z",
+    "user": 1,
+    "content_type": 36,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 1 VLANs"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 68,
+  "fields": {
+    "time": "2017-10-19T21:16:54.527Z",
+    "user": 1,
+    "content_type": 36,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 1 VLANs"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 69,
+  "fields": {
+    "time": "2017-10-19T21:17:34.313Z",
+    "user": 1,
+    "content_type": 44,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created VRF <a href=\"/ipam/vrfs/1/\">CUST-A (65050:100)</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 70,
+  "fields": {
+    "time": "2017-10-19T21:17:44.008Z",
+    "user": 1,
+    "content_type": 44,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created VRF <a href=\"/ipam/vrfs/2/\">CUST-B (65050:200)</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 71,
+  "fields": {
+    "time": "2017-10-19T21:17:59.676Z",
+    "user": 1,
+    "content_type": 44,
+    "object_id": 3,
+    "action": 1,
+    "message": "Created VRF <a href=\"/ipam/vrfs/3/\">CUST-C (65050:300)</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 72,
+  "fields": {
+    "time": "2017-10-19T21:18:42.275Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 48 interfaces"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 73,
+  "fields": {
+    "time": "2017-10-19T21:20:43.836Z",
+    "user": 1,
+    "content_type": 32,
+    "object_id": null,
+    "action": 4,
+    "message": "Updated 8 devices"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 74,
+  "fields": {
+    "time": "2017-10-19T21:25:04.765Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": null,
+    "action": 3,
+    "message": "Disconnected <a href=\"/dcim/devices/14/\">LAB-PE1</a> em1 from <a href=\"/dcim/devices/18/\">LAB-COR1</a> em1"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 75,
+  "fields": {
+    "time": "2017-10-19T21:25:22.397Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": null,
+    "action": 2,
+    "message": "Imported 1 interface connections"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 76,
+  "fields": {
+    "time": "2017-10-19T21:26:10.621Z",
+    "user": 1,
+    "content_type": 40,
+    "object_id": 1,
+    "action": 1,
+    "message": "Created IP address <a href=\"/ipam/ip-addresses/1/\">192.168.1.1/24</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 77,
+  "fields": {
+    "time": "2017-10-19T21:30:23.812Z",
+    "user": 1,
+    "content_type": 40,
+    "object_id": 2,
+    "action": 1,
+    "message": "Created IP address <a href=\"/ipam/ip-addresses/2/\">169.254.0.1/24</a>"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 78,
+  "fields": {
+    "time": "2017-10-19T21:33:21.622Z",
+    "user": 1,
+    "content_type": 40,
+    "object_id": null,
+    "action": 5,
+    "message": "Deleted IP address 169.254.0.1/24"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 79,
+  "fields": {
+    "time": "2017-10-19T21:33:33.743Z",
+    "user": 1,
+    "content_type": 40,
+    "object_id": null,
+    "action": 5,
+    "message": "Deleted IP address 192.168.1.1/24"
+  }
+},
+{
+  "model": "extras.useraction",
+  "pk": 80,
+  "fields": {
+    "time": "2017-10-19T21:38:17.534Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": null,
+    "action": 2,
+    "message": "Imported 6 interface connections"
+  }
+},
+{
+  "model": "secrets.secretrole",
+  "pk": 1,
+  "fields": {
+    "name": "Main",
+    "slug": "main",
+    "users": [],
+    "groups": []
+  }
+}
+]
