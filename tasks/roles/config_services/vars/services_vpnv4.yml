@@ -26,11 +26,3 @@ customers:
       { node: LAB-PE3, interface: em3, ip_prefix: 172.16.1.6/31, vlan_id: 1302, vlan_switch: LAB-VLAN-SW2 },
     ]
   }
-
-  - {
-    name: "Customer C",
-    provider_edge: [
-      { node: LAB-PE1, interface: em3, ip_prefix: 172.16.1.8/31, vlan_id: 1203, vlan_switch: LAB-VLAN-SW1 },
-      { node: LAB-PE4, interface: em3, ip_prefix: 172.16.1.10/31, vlan_id: 1403, vlan_switch: LAB-VLAN-SW2 },
-    ]
-  }
