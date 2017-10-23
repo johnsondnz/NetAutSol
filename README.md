@@ -53,4 +53,4 @@ MPLS network consisting of;
 em0 on all nodes connected to physical VLAN 22
 
 ### Topology
-![Topology](https://i.imgur.com/J4VCsYK.png)
+![Topology](https://i.imgur.com/T3AaoIQ.png)
