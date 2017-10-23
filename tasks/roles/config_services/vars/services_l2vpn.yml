@@ -1,8 +1,20 @@
 #
-# l2vpn Service definition
+# vpnv4 Service definition
 #
-# l2vpn_custa:
-#   service_id: 999
-#   vlan: 100
-#   ports:
-#     - { left_node: xxxxx, left_port: xxxxx, right_node: xxxxx, right_port: xxxxx, vlan_switch: xxx, edge_port: xxx }
+# customers:
+#   - {
+#     name: "Customer A",
+#     provider_edge: [
+#       { node: LAB-PE1, interface: em3, vlan_id: 1101, vlan_switch: LAB-VLAN-SW1 },
+#       { node: LAB-PE3, interface: em3, vlan_id: 1301, vlan_switch: LAB-VLAN-SW2 },
+#     ]
+#   }
+
+customers:
+  - {
+    name: "Customer C",
+    provider_edge: [
+      { node: LAB-PE1, interface: em3, vlan_id: 1203, vlan_switch: LAB-VLAN-SW1 },
+      { node: LAB-PE4, interface: em3, vlan_id: 1403, vlan_switch: LAB-VLAN-SW2 },
+    ]
+  }
