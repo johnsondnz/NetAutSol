@@ -1,6 +1,6 @@
 # Changes
 * Fixed file names for `./tasks/roles/config_services/vars/*.yml` - spelling error corrected.
-* Corrected diagramt vlan_ids for CE-PE peering.
+* Corrected diagrams vlan_ids for CE-PE peering.
   * vlan_id second digit now corresponds correctly to match the PE number.
   * 11xx = PE1
   * 12xx = PE2
