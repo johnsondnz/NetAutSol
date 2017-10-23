@@ -1,8 +1,0 @@
-#
-# vpnv4 Service definition
-#
-# vpnv4_custa:
-#   vlan: 100
-#   ports:
-#     - { provider_edge: xxx, interface: xxx/yyy, ip_prefix: xxx/yy, vlan_switch: xxx, edge_port: xxx }
-#     - { provider_edgenode: xxx, interface: xxx/yyy, ip_prefix: xxx/yy, vlan_switch: xxx, edge_port: xxx }

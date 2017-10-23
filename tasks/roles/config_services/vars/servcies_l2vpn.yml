@@ -1,8 +1,0 @@
-#
-# l2vpn Service definition
-#
-# l2vpn_custa:
-#   service_id: 999
-#   vlan: 100
-#   ports:
-#     - { left_node: xxxxx, left_port: xxxxx, right_node: xxxxx, right_port: xxxxx, vlan_switch: xxx, edge_port: xxx }
