@@ -8,6 +8,8 @@
   * 14xx = PE4
 * Updated todo.md - fixed roles name not matching implimentation.
 
+
 # Newly implimented
-* added datamodel `./tasks/roles/config_services/vars/services_vpnv4.yml`
-* added datamodel `./tasks/roles/config_services/vars/services_l2vpn.yml`
+* defined data models in ![config_services](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/config_services/vars) role.
+  * added datamodel `./tasks/roles/config_services/vars/services_vpnv4.yml`
+  * added datamodel `./tasks/roles/config_services/vars/services_l2vpn.yml`
