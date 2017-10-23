@@ -5,4 +5,4 @@
 - [x] `config_base`              # base configurations
 - [ ] `config_bgp`               # dynamic bgp configurations
 - [x] `config_fabric`            # dynamic mpls fabric
-- [ ] `config_customer`          # dynamic customer interface provisioning, includes VLAN-SW, PEs and CEs
+- [ ] `config_services`          # dynamic customer interface provisioning, includes VLAN-SW, PEs and CEs
