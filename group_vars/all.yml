@@ -1,4 +1,6 @@
 ---
+ansible_python_interpreter: ~/venvs/ansible/bin/python2.7
+
 pkg_dir: packages
 log_dir: logs
 configs_dir: compiled
