@@ -1,7 +1,8 @@
 ---
 - name: Populate hostfile
   blockinfile:
-    path: /home/johnsond/.hosts
+    path: /etc/hosts
+    insertafter: ff02::2 ip6-allrouters
     marker: "# ----- {mark} ANSIBLE MANAGED BLOCK ----- #"
     block: |
       192.168.1.1 LAB-PE1
@@ -14,12 +15,5 @@
       192.168.1.14 LAB-COR4
   run_once: yes
   tags: [ rollback ]
-  register: hostfile
-  
-- service:
-    name: dnsmasq
-    state: restarted
-  delegate_to: localhost
   become: yes
-  run_once: yes
-  when: hostfile|changed
+  register: hostfile

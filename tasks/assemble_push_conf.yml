@@ -10,17 +10,20 @@
       assemble: src=../{{ configs_dir }}/{{ inventory_hostname }}/ dest=../{{ configs_dir }}/{{ inventory_hostname }}/999-candidate.conf
       changed_when: False
       when: commit_changes | match('0')
-
-      tags:
-        - deploy
+      tags: [ deploy ]
 
     - name: Remove temporary configuration files
       file: path=../{{ configs_dir }}/{{ inventory_hostname }}/*.out state=absent
       changed_when: False
       when: commit_changes | match('0')
+      tags: [ deploy ]
 
-      tags:
-        - deploy
+    - name: Remove lines beginning with '#'
+      lineinfile:
+        path: "../{{ configs_dir }}/{{ inventory_hostname }}/999-candidate.conf"
+        regexp: '^#.+$'
+        state: absent
+      when: commit_changes | match('0')
 
     - name: Executing Napalm Tasks
       napalm_install_config:
@@ -29,10 +32,8 @@
         dev_os={{ os }}
         password={{ ansible_ssh_pass }}
         config_file=../{{ configs_dir }}/{{ inventory_hostname }}/999-candidate.conf
+        replace_config=true
         commit_changes={{ commit_changes }}
         diff_file=../{{ configs_dir }}/{{ inventory_hostname }}/show-compare.diff
       #no_log: true
-
-      tags:
-        - deploy
-        - print_action
+      tags: [ deploy, print_action ]

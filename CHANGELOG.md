@@ -6,7 +6,6 @@
   * Updated `./main.yml` to import all variables from `./vars` using fileglob
   * Deleted `./tasks/roles/config_base/vars/` directory, main.yml was empty.
   * Deleted `./tasks/roles/config_services/vars/`, directory was empty.
-  * Deleted `./tasks/roles/transform_to_device/vars/`.
 * Enabled previously commented out cleanup task in `./tasks/roles/compliance/tasks/tests/verify-ping.yml`.
 * Removed the Cisco IOS devices, objective changed to automate a Junos MPLS fabric.
   * I was biting off more than I could chew.
@@ -20,10 +19,27 @@
 * Removed duplicated include of `./tasks/clearnup.yml` task from `./main.yml`.
 * Updated `./tasks/hostfile.yml`.  now updated `~/.hosts` which is imported dnsmasq on start.
   * Tasks also restarts dnsmasq to effect changes.
+* Removed OSPF from fabric, changed to purely ISIS IGP.
+* Added *#jinja2: lstrip_blocks: "True"* to all jinja2 templates to handle indents
+* Added task to remove all lines from candidate configurations that start with '#' prior to deploying with napalm.
+* Added *Bugs* heading to `./TODO.md`.
+* Imported latest code from from [napalm-ansible](https://github.com/napalm-automation/napalm-ansible) for compatibility with new napalm version.
+  * `./library/napalm_install_config.py` 
+  * `./tasks/roles/compliance/library/napalm_get_facts.py`
+  * `./tasks/roles/compliance/library/napalm_ping.py`
+* Updated BGP TODO item to completed.
+* Added *replace_config=true* to `./tasks/assemble_push_conf.yml` due to extra knob now being required for idempotent configurations with napalm.
 
 ## Newly implimented
 * Added brownfiles to role `./tasks/roles/config_base`.  Those items which are not yet automated.  (There should be none!)
 * Added BGP templates and tasks to `./tasks/roles/config_fabric/` role.  This is to prepare the network for VPN customers.
+* Dynamic `vars` for roles.  Cleanup tasks commented out to show examples such as
+  * Fabric data model to device data models. `./tasks/roles/device_datamodel/vars/`.
+  * Compliance testing models. `./tasks/roles/compliance/vars/`
+* New role ``./tasks/roles/config_bgp/` for configuring BGP clients and router reflectors.
+  * Makes uses of the `bgp_config` fact.
+  * Dynamically configures BGP peers for the fabric with the only attributes required being the route reflector node names and ASN.
+  * Defines CLIENTS, INTERNAL and REFLECTOR-PEER stanzas.
 * Merged all WEEK*.md files into [CHANGELOG.md](https://github.com/johnsondnz/NetAutSol/tree/master/CHANGELOG.md).
   * Deleted `./weekly_homework_submissions` directory.
 * Created new role `./tasks/roles/device_datamodel` to create per device data model.

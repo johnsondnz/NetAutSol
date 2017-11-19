@@ -1,0 +1,114 @@
+groups { 
+    VPN_CUSTOMER_A {
+        routing-instances {
+            VPN_CUSTOMER_A {
+                description "CUSTOMER_A";
+                instance-type vrf;                             
+                interface em3.10;
+                route-distinguisher 10.1.1.1:10;
+                vrf-import RP-CUSTOMER_A-IMPORT;
+                vrf-export RP-CUSTOMER_A-EXPORT;   
+                vrf-target target:65535:10;
+                vrf-table-label;
+            }
+        }
+        interfaces {
+            em3 {
+                description "Customer_A";
+                vlan-tagging;
+                unit 10 {
+                    vlan-id 10;
+                    family inet {
+                        address 172.16.1.0/31;
+                    }
+                }
+            }
+        }
+        policy-options {
+            policy-statement RP-CUSTOMER_A-IMPORT {
+                term IMPORT-CUSTOMER-PREFIXES {
+                    from {
+                        protocol [ direct static ospf isis bgp ];
+                        community CM-CUSTOMER_A;
+                    }
+                    then accept;
+                }
+                term DENY-ALL-OTHERS {
+                    then reject;
+                }
+            }
+            policy-statement RP-CUSTOMER_A-EXPORT {
+                term EXPORT-CUSTOMER-PREFIXES {
+                    from protocol [ direct static ospf isis bgp ];
+                    then {
+                        community add CM-CUSTOMER_A;
+                        accept;
+                    }
+                }
+                term DENY-ALL-OTHERS {
+                    then reject;
+                }
+            }
+            community CM-CUSTOMER_A members target:65535:10;
+        }
+    }
+}
+apply-groups VPN_CUSTOMER_A;
+
+groups { 
+    VPN_CUSTOMER_B {
+        routing-instances {
+            VPN_CUSTOMER_B {
+                description "CUSTOMER_B";
+                instance-type vrf;                             
+                interface em3.11;
+                route-distinguisher 10.1.1.1:11;
+                vrf-import RP-CUSTOMER_B-IMPORT;
+                vrf-export RP-CUSTOMER_B-EXPORT;   
+                vrf-target target:65535:11;
+                vrf-table-label;
+            }
+        }
+        interfaces {
+            em3 {
+                description "Customer_B";
+                vlan-tagging;
+                unit 11 {
+                    vlan-id 11;
+                    family inet {
+                        address 172.16.1.4/31;
+                    }
+                }
+            }
+        }
+        policy-options {
+            policy-statement RP-CUSTOMER_B-IMPORT {
+                term IMPORT-CUSTOMER-PREFIXES {
+                    from {
+                        protocol [ direct static ospf isis bgp ];
+                        community CM-CUSTOMER_B;
+                    }
+                    then accept;
+                }
+                term DENY-ALL-OTHERS {
+                    then reject;
+                }
+            }
+            policy-statement RP-CUSTOMER_B-EXPORT {
+                term EXPORT-CUSTOMER-PREFIXES {
+                    from protocol [ direct static ospf isis bgp ];
+                    then {
+                        community add CM-CUSTOMER_B;
+                        accept;
+                    }
+                }
+                term DENY-ALL-OTHERS {
+                    then reject;
+                }
+            }
+            community CM-CUSTOMER_B members target:65535:11;
+        }
+    }
+}
+apply-groups VPN_CUSTOMER_B;
+

@@ -1,0 +1,34 @@
+#jinja2: lstrip_blocks: "True"
+protocols {
+    bgp {
+        local-address {{ routing_options.router_id }};
+        {% if bgp_config.route_reflector %}
+        {# Configure clients of this route reflector -#}
+        group RR-CLIENTS {            
+            {% for bgp_peer in bgp_config.peers %}
+            {% if bgp_peer.type == 'INTERNAL' %}
+            neighbor {{ bgp_peer.peer_ip }};
+            {% endif %}
+            {% endfor %}
+            cluster 1.1.1.1;
+        }
+        {# Configure cluster peers of this route reflector -#}
+        group RR-PARTNER {
+            {% for bgp_peer in bgp_config.peers %}
+            {% if bgp_peer.type == 'REFLECTOR-PEER' %}
+            neighbor {{ bgp_peer.peer_ip }};
+            {% endif %}
+            {% endfor %}
+        }
+        {% else %}
+        {# This device is a route reflector client -#}
+        group INTERNAL {
+            {% for bgp_peer in bgp_config.peers %}
+            {% if bgp_peer.type == 'INTERNAL' %}
+            neighbor {{ bgp_peer.peer_ip }};
+            {% endif %}
+            {% endfor %}
+        }
+        {% endif %}
+    }
+}

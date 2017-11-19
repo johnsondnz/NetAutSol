@@ -2,9 +2,10 @@
 # ----- Stuff needed to get EVE-NG stable ----- #
 isis_default_cost: 10
 isis_hello_interval: 60
-ospf_dead_interval: 180
+isis_reference_bandwidth: 10g
 ldp_keepalive_timeout: 180
 bfd_min_interval: 2500
+rsvp_subscription: 60
 # ----------------------------------------------#
 
 software_version: '12.1R1.9'
@@ -19,18 +20,10 @@ fabric_mtu: 2000
 ospf: false
 isis: true
 
-bgp_asn:
-  0.65535:
-    members:
-      - LAB-COR1
-      - LAB-COR2
-      - LAB-COR3
-      - LAB-COR4
-      - LAB-PE1
-      - LAB-PE2
-      - LAB-PE3
-      - LAB-PE4
-    rr: [ LAB-COR1, LAB-COR2 ]
+ibgp_asn: 0.65535
+ibgp_route_reflectors: [ LAB-COR1, LAB-COR2 ]
+rt_prefix: 65535
+vpn_uuid_start: 10
 
 fabric:
   - { left: 'LAB-PE1', left_port: 'em1', right: 'LAB-COR1', right_port: 'em1', cost: 5 }

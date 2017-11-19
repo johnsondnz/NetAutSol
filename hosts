@@ -14,28 +14,6 @@ LAB-PE4
 provider_core
 provider_edge
 
-# [vlan_switch]
-# LAB-VLAN-SW1
-# LAB-VLAN-SW2
-
-# [customer_edge]
-# LAB-CUST-A-CE1
-# LAB-CUST-A-CE2
-# LAB-CUST-B-CE1
-# LAB-CUST-B-CE2
-# LAB-CUST-C-CE1
-# LAB-CUST-C-CE2
-
-# [ios]
-# LAB-VLAN-SW1
-# LAB-VLAN-SW2
-# LAB-CUST-A-CE1
-# LAB-CUST-A-CE2
-# LAB-CUST-B-CE1
-# LAB-CUST-B-CE2
-# LAB-CUST-C-CE1
-# LAB-CUST-C-CE2
-
 [junos]
 LAB-COR1
 LAB-COR2

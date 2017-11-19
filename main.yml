@@ -2,8 +2,6 @@
 - name: EVE-NG MPLS Topology - Ansible Playbook Test
   hosts: all
   connection: local
-
-  vars:
  
   pre_tasks:
 
@@ -21,8 +19,9 @@
       tags: [ rollback, print_action ]
 
     - name: Include variables
-      include: "{{ item }}"
+      include_vars: "{{ item }}"
       with_fileglob: [ "vars/*.yml" ]
+      run_once: yes
 
   tasks:
 

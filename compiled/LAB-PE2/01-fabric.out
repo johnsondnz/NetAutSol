@@ -1,6 +1,23 @@
-
+#jinja2: lstrip_blocks: "True"
+routing-options {
+	router-id 10.1.1.2;
+	autonomous-system 0.65535;
+        dynamic-tunnels {
+        dt-1 {
+            rsvp-te rsvp-te-1 {
+                label-switched-path-template {
+                    default-template;
+                }
+                destination-networks {
+                    10.1.1/24;
+                }
+            }
+        }
+    }
+    }
+#jinja2: lstrip_blocks: "True"
 interfaces {
-	lo0 {
+    	lo0 {
         unit 0 {
             description "PEERING INTERFACE --- DO NOT DELETE";
             family inet {
@@ -11,97 +28,55 @@ interfaces {
             }
                     }
     }
-}
-routing-options {
-	router-id 10.1.1.2;
-	autonomous-system 0.65535;
-    dynamic-tunnels {
-        dt-1 {
-            rsvp-te rsvp-te-1 {
-                label-switched-path-template {
-                    default-template;
-                }
-                destination-networks {
-                    10.1.1.0/24;
-                }
-            }
-        }
-    }
-}
-
-
-interfaces {
-	/* link_index: 4 | LAB-PE2 em1.0 169.254.0.4/31 --> 169.254.0.5/31 em2.0 LAB-COR1 */
+    /* link_index: 4 | LAB-PE2 em1.0 169.254.0.4/31 --> 169.254.0.5/31 em2.0 LAB-COR1 */
 	em1 {
 		mtu 2000;
 		description "WAN | LAB-COR1 em2";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.4/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
-protocols {
-	rsvp {
-        interface em1.0;
-	}
-	mpls {
-		        interface em1.0;
-            }
-    ldp {
-    	interface em1.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em1.0 {
-            point-to-point;
-            level 1 disable;
-            level 2 {
-                metric 10;
-                hello-interval 60;
-            }
-        }
-    }
-        }
-
-
-interfaces {
-	/* link_index: 6 | LAB-PE2 em2.0 169.254.0.6/31 --> 169.254.0.7/31 em2.0 LAB-COR2 */
+    /* link_index: 6 | LAB-PE2 em2.0 169.254.0.6/31 --> 169.254.0.7/31 em2.0 LAB-COR2 */
 	em2 {
 		mtu 2000;
 		description "WAN | LAB-COR2 em2";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.6/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
+    }
+#jinja2: lstrip_blocks: "True"
 protocols {
 	rsvp {
+        interface em1.0;
         interface em2.0;
-	}
+        	}
 	mpls {
-		        interface em2.0;
+        interface em1.0;
+        interface em2.0;
             }
     ldp {
-    	interface em2.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em2.0 {
-            point-to-point;
-            level 1 disable;
+        interface em1.0;
+        interface em2.0;
+            }
+    isis {
+        interface em1.0 {
             level 2 {
-                metric 10;
-                hello-interval 60;
+                metric 5;
             }
         }
-    }
+        interface em2.0 {
+            level 2 {
+                metric 5;
+            }
         }
-
+            }
+}

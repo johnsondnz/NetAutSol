@@ -1,0 +1,62 @@
+---
+routing_options:
+  router_id: 10.1.1.4
+  autonomous_system: 0.65535
+  dynamic_tunnels: true
+
+loopback:
+  name: lo0
+  logical_attributes: {
+    sub_iface: 0,
+    inet: {
+      enabled: true,
+      address: 10.1.1.4
+    },
+    iso: {
+      enabled: true,
+      address: 49.0000.0172.0016.0004.00
+    }
+  }
+
+
+fabric_interfaces:
+  - { 
+      name: em1,
+      annotatation: 'link_index: 12 | LAB-PE4 em1.0 169.254.0.12/31 --> 169.254.0.13/31 em3.0 LAB-COR4',
+      physical_attributes: {
+        mtu: 2000,
+        descr: WAN | LAB-COR4 em3,
+      },
+      logical_attributes: {
+        sub_iface: 0,
+        inet: {
+          enabled: true,
+          address: 169.254.0.12/31
+        },
+        iso: {
+          enabled: true
+        },
+        cost: 5
+      }
+    }
+
+  - { 
+      name: em2,
+      annotatation: 'link_index: 14 | LAB-PE4 em2.0 169.254.0.14/31 --> 169.254.0.15/31 em4.0 LAB-COR3',
+      physical_attributes: {
+        mtu: 2000,
+        descr: WAN | LAB-COR3 em4,
+      },
+      logical_attributes: {
+        sub_iface: 0,
+        inet: {
+          enabled: true,
+          address: 169.254.0.14/31
+        },
+        iso: {
+          enabled: true
+        },
+        cost: 5
+      }
+    }
+

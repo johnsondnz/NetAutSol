@@ -1,0 +1,27 @@
+#jinja2: lstrip_blocks: "True"
+protocols {
+	rsvp {
+        {% for iface in fabric_interfaces -%}
+        interface {{ iface.name }}.{{ iface.logical_attributes.sub_iface }};
+        {% endfor %}
+	}
+	mpls {
+        {% for iface in fabric_interfaces -%}
+        interface {{ iface.name }}.{{ iface.logical_attributes.sub_iface }};
+        {% endfor %}
+    }
+    ldp {
+        {% for iface in fabric_interfaces -%}
+    	interface {{ iface.name }}.{{ iface.logical_attributes.sub_iface }};
+        {% endfor %}
+    }
+    isis {
+        {% for iface in fabric_interfaces -%}
+        interface {{ iface.name }}.{{ iface.logical_attributes.sub_iface }} {
+            level 2 {
+                metric {{ iface.logical_attributes.cost | default(isis_default_cost) }};
+            }
+        }
+        {% endfor %}
+    }
+}

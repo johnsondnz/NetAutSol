@@ -1,0 +1,19 @@
+#jinja2: lstrip_blocks: "True"
+routing-options {
+	router-id {{ routing_options.router_id }};
+	autonomous-system {{ routing_options.autonomous_system }};
+    {% if routing_options.dynamic_tunnels %}
+    dynamic-tunnels {
+        dt-1 {
+            rsvp-te rsvp-te-1 {
+                label-switched-path-template {
+                    default-template;
+                }
+                destination-networks {
+                    {{ loopback_net }}/24;
+                }
+            }
+        }
+    }
+    {% endif %}
+}

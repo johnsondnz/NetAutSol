@@ -1,0 +1,19 @@
+#jinja2: lstrip_blocks: "True"
+{% set route_reflector = true if inventory_hostname in ibgp_route_reflectors else false %}
+{% set my_rid = routing_options.router_id %}
+bgp_config:
+  route_reflector: {{ route_reflector }}
+  peers:
+  {# Route reflector pairs with other route reflectors #}
+  {% for bgp_peer in groups['mpls'] %}
+  {% set peer_rid = hostvars[bgp_peer].routing_options.router_id %}
+  {% if route_reflector and bgp_peer in ibgp_route_reflectors and my_rid != peer_rid %}
+  - { peer_ip: {{ peer_rid }}, type: REFLECTOR-PEER }
+  {# Route reflector pairs with clients #}
+  {% elif route_reflector and bgp_peer not in ibgp_route_reflectors and my_rid != peer_rid %}
+  - { peer_ip: {{ peer_rid }}, type: INTERNAL }
+  {# Non route reflectors pair only with route reflectors #}
+  {% elif route_reflector == false and bgp_peer in ibgp_route_reflectors and my_rid != peer_rid %}
+  - { peer_ip: {{ peer_rid }}, type: INTERNAL }
+  {% endif %}
+  {% endfor %}

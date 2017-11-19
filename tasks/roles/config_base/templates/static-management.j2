@@ -1,8 +1,9 @@
+#jinja2: lstrip_blocks: "True"
 groups {
 	OUT-OF-BAND-MANAGEMENT {
 		interfaces {
 			em0 {
-			  description "OOOB MANAGEMENT INTERFACE --- DO NOT DELETE";
+			  description "OOB MANAGEMENT INTERFACE --- DO NOT DELETE";
 			  unit 0 {
 			      family inet {
 			          address {{ oob_management_range }}.{{ id }}/24;
