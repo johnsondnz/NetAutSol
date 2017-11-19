@@ -1,0 +1,1 @@
+*This direcotry is used for the dynamic generation and distruction of ansible_facts.*

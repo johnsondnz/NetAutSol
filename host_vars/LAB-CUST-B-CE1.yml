@@ -1,5 +1,0 @@
----
-os: ios
-role: customer_edge
-system:
-  hostname: LAB-CUST-B-CE1

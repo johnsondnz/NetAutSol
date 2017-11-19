@@ -1,0 +1,17 @@
+protocols {
+    bgp {
+        local-address 10.1.1.12;
+group RR-CLIENTS {            
+            neighbor 10.1.1.13;
+            neighbor 10.1.1.14;
+            neighbor 10.1.1.1;
+            neighbor 10.1.1.2;
+            neighbor 10.1.1.3;
+            neighbor 10.1.1.4;
+            cluster 1.1.1.1;
+        }
+group RR-PARTNER {
+            neighbor 10.1.1.11;
+        }
+    }
+}

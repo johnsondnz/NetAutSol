@@ -4,14 +4,10 @@
   register: baseconfdir
   changed_when: False
   when: commit_changes | match('0')
-
-  tags:
-    - base
+  tags: [ base ]
 
 - name: Create Empty Build Directory
   file: path={{ baseconfdir.path }} state=directory
   changed_when: False
   when: commit_changes | match('0') and rollback_rescue | match('0')
-
-  tags:
-    - base
+  tags: [ base ]

@@ -1,0 +1,20 @@
+#
+# vpnv4 Service definition
+#
+# customers:
+#   - {
+#     name: "Customer A",
+#     provider_edge: [
+#       { node: LAB-PE1, interface: em3, vlan_id: 1101, vlan_switch: LAB-VLAN-SW1 },
+#       { node: LAB-PE3, interface: em3, vlan_id: 1301, vlan_switch: LAB-VLAN-SW2 },
+#     ]
+#   }
+
+l2vpn_customers:
+  - {
+    name: "Customer_C",
+    provider_edge: [
+      { node: LAB-PE1, interface: em3, vlan_id: 1203, vlan_switch: LAB-VLAN-SW1 },
+      { node: LAB-PE4, interface: em3, vlan_id: 1403, vlan_switch: LAB-VLAN-SW2 },
+    ]
+  }

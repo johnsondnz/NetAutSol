@@ -1,0 +1,8 @@
+---
+- name: Configure mBGP
+  template:
+    src: base.j2
+    dest: ../compiled/{{ inventory_hostname }}/02-bgp.out
+  when: commit_changes | match('0')
+  tags: [ print_action ]
+  

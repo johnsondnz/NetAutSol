@@ -15,9 +15,7 @@
       vars:
         known_hosts: ~/.ssh/known_hosts
       name: Grab SSH keys
-
-      tags:
-        - rollback
+      tags: [ rollback ]
 
     - command: date
       register: play_run_datetime

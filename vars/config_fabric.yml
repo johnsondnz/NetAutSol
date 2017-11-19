@@ -1,0 +1,43 @@
+---
+# ----- Stuff needed to get EVE-NG stable ----- #
+isis_default_cost: 10
+isis_hello_interval: 60
+isis_reference_bandwidth: 10g
+ldp_keepalive_timeout: 180
+bfd_min_interval: 2500
+rsvp_subscription: 60
+# ----------------------------------------------#
+
+software_version: '12.1R1.9'
+oob_management_range: '192.168.1'
+oob_management_next_hop: '192.168.1.237'
+
+fabric_link_ipv4_prefix: '169.254.0'
+loopback_net: '10.1.1'
+ospf_backbone_area: '0.0.0.0'
+iso_afi_area_system: '49.0000.0172.0016'
+fabric_mtu: 2000
+ospf: false
+isis: true
+
+ibgp_asn: 0.65535
+ibgp_route_reflectors: [ LAB-COR1, LAB-COR2 ]
+rt_prefix: 65535
+vpn_uuid_start: 10
+
+fabric:
+  - { left: 'LAB-PE1', left_port: 'em1', right: 'LAB-COR1', right_port: 'em1', cost: 5 }
+  - { left: 'LAB-PE1', left_port: 'em2', right: 'LAB-COR2', right_port: 'em1', cost: 5 }
+  - { left: 'LAB-PE2', left_port: 'em1', right: 'LAB-COR1', right_port: 'em2', cost: 5 }
+  - { left: 'LAB-PE2', left_port: 'em2', right: 'LAB-COR2', right_port: 'em2', cost: 5 }
+  - { left: 'LAB-PE3', left_port: 'em1', right: 'LAB-COR3', right_port: 'em3', cost: 5 }
+  - { left: 'LAB-PE3', left_port: 'em2', right: 'LAB-COR4', right_port: 'em4', cost: 5 }
+  - { left: 'LAB-PE4', left_port: 'em1', right: 'LAB-COR4', right_port: 'em3', cost: 5 }
+  - { left: 'LAB-PE4', left_port: 'em2', right: 'LAB-COR3', right_port: 'em4', cost: 5 }
+  - { left: 'LAB-COR1', left_port: 'em3', right: 'LAB-COR2', right_port: 'em3', cost: 5 }
+  - { left: 'LAB-COR1', left_port: 'em5', right: 'LAB-COR4', right_port: 'em5', cost: 5 }
+  - { left: 'LAB-COR1', left_port: 'em4', right: 'LAB-COR3', right_port: 'em1', cost: 5 }
+  - { left: 'LAB-COR2', left_port: 'em5', right: 'LAB-COR3', right_port: 'em5', cost: 5 }
+  - { left: 'LAB-COR2', left_port: 'em4', right: 'LAB-COR4', right_port: 'em1', cost: 5 }
+  - { left: 'LAB-COR3', left_port: 'em2', right: 'LAB-COR4', right_port: 'em2', cost: 5 }
+  - { left: 'LAB-COR1', left_port: 'em0', right: 'LAB-COR4', right_port: 'em0', cost: 5 }

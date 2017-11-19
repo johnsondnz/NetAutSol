@@ -1,3 +1,4 @@
+#jinja2: lstrip_blocks: "True"
 version 12.1R1.9;
 system {
     host-name LAB-COR4;
@@ -41,11 +42,12 @@ system {
         server 192.168.1.237;
     }
 }
+#jinja2: lstrip_blocks: "True"
 groups {
 	OUT-OF-BAND-MANAGEMENT {
 		interfaces {
 			em0 {
-			  description "OOOB MANAGEMENT INTERFACE --- DO NOT DELETE";
+			  description "OOB MANAGEMENT INTERFACE --- DO NOT DELETE";
 			  unit 0 {
 			      family inet {
 			          address 192.168.1.14/24;
@@ -61,7 +63,29 @@ groups {
 	}
 }
 apply-groups OUT-OF-BAND-MANAGEMENT;
+#jinja2: lstrip_blocks: "True"
 groups {
+    PROTOCOL-DEFAULTS-BGP {
+        protocols {
+            bgp {
+                group <*> {
+                    type internal;
+                    family inet {
+                        unicast;
+                    }
+                    family inet-vpn {
+                        unicast;
+                    }
+                    family l2vpn {
+                        signaling;
+                    }
+                    family inet-mvpn {
+                        signaling;
+                    }
+                }
+            }
+        }
+    }
     PROTOCOL-DEFAULTS-MPLS {
         protocols {
             mpls {
@@ -89,12 +113,6 @@ groups {
                 interface em0.0 {
                     disable;
                 }
-                interface <ge-*> {
-                    aggregate;
-                    reliable;
-                    subscription 60;
-                    link-protection;
-                }
                 interface <em*> {
                     aggregate;
                     reliable;
@@ -112,6 +130,7 @@ groups {
     PROTOCOL-DEFAULTS-LDP {
         protocols {
             ldp {
+                keepalive-timeout 180;
                 interface fxp0.0 {
                     disable;
                 }
@@ -122,7 +141,7 @@ groups {
             }
         }
     }
-            PROTOCOL-DEFAULTS-ISIS {
+    PROTOCOL-DEFAULTS-ISIS {
         protocols {
             isis {
                 traffic-engineering {
@@ -143,13 +162,18 @@ groups {
                 interface em0.0 {
                     disable;
                 }
-                interface <em-*> {
+                interface <em*> {
                     node-link-protection;
+                    point-to-point;
+                    level 1 disable;
+                    level 2 {
+                        hello-interval 60;
+                    }
                 }
             }
         }
     }
-    }
+}
 /* Best Practice: You must configure per-packet load-balancing routing policy when using ospf/isis node-link-protection */
 policy-options {
     policy-statement load-balancing-policy {
@@ -165,6 +189,9 @@ routing-options {
     }
 }
 protocols {
+    bgp {
+        apply-groups PROTOCOL-DEFAULTS-BGP;
+    }
     rsvp {
         apply-groups PROTOCOL-DEFAULTS-RSVP;
     }
@@ -174,10 +201,10 @@ protocols {
     ldp {
         apply-groups PROTOCOL-DEFAULTS-LDP;
     }
-            isis {
+    isis {
         apply-groups PROTOCOL-DEFAULTS-ISIS;
     }
-        lldp {
+    lldp {
         interface all;
     }
 }

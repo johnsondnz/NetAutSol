@@ -1,0 +1,68 @@
+{% macro configure_l3vpn(index, name, interface, ip_prefix) %}
+{% set uuid = index - 1 + vpn_uuid_start %}
+groups { 
+    VPN_{{ name|upper }} {
+        routing-instances {
+            VPN_{{ name|upper }} {
+                description "{{ name|upper }}";
+                instance-type vrf;                             
+                interface {{ interface }}.{{ uuid }};
+                route-distinguisher {{ routing_options.router_id }}:{{ uuid }};
+                vrf-import RP-{{ name|upper }}-IMPORT;
+                vrf-export RP-{{ name|upper }}-EXPORT;   
+                vrf-target target:{{ rt_prefix }}:{{ uuid }};
+                vrf-table-label;
+            }
+        }
+        interfaces {
+            {{ interface }} {
+                description "{{ name }}";
+                vlan-tagging;
+                unit {{ uuid }} {
+                    vlan-id {{ uuid }};
+                    family inet {
+                        address {{ ip_prefix }};
+                    }
+                }
+            }
+        }
+        policy-options {
+            policy-statement RP-{{ name|upper }}-IMPORT {
+                term IMPORT-CUSTOMER-PREFIXES {
+                    from {
+                        protocol [ direct static ospf isis bgp ];
+                        community CM-{{ name|upper }};
+                    }
+                    then accept;
+                }
+                term DENY-ALL-OTHERS {
+                    then reject;
+                }
+            }
+            policy-statement RP-{{ name|upper }}-EXPORT {
+                term EXPORT-CUSTOMER-PREFIXES {
+                    from protocol [ direct static ospf isis bgp ];
+                    then {
+                        community add CM-{{ name|upper }};
+                        accept;
+                    }
+                }
+                term DENY-ALL-OTHERS {
+                    then reject;
+                }
+            }
+            community CM-{{ name|upper }} members target:{{ rt_prefix }}:{{ uuid }};
+        }
+    }
+}
+apply-groups VPN_{{ name|upper }};
+{% endmacro %}
+
+{%- for customer in vpnv4_customers %}
+{% set index = loop.index %}
+{% for peer in customer.provider_edge %}
+{% if peer.node == inventory_hostname %}
+{{ configure_l3vpn(index, customer.name, peer.interface, peer.ip_prefix) }}
+{% endif %}
+{% endfor %}
+{% endfor %}

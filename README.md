@@ -3,18 +3,16 @@
 Network in configured using *Ansible and NAPALM.*
 MPLS network consisting of;
 * 8 x Junos Olives in EVE-NG.
-* 6 x C3725
-* 2 x vIOS L2
+Note: *IOS devices shown for reference only*
 
 ## Playbook Details
 [Playbook Information](https://github.com/johnsondnz/NetAutSol/blob/master/DETAILS.md)
 
 ## Homework submissions
-- [Week 1](https://github.com/johnsondnz/NetAutSol/blob/master/weekly_homework_submissions/WEEK1.md)
-- [Week 2](https://github.com/johnsondnz/NetAutSol/blob/master/weekly_homework_submissions/WEEK2.md)
+- [CHANGELOG](https://github.com/johnsondnz/NetAutSol/blob/master/CHANGELOG.md)
 
 ## Todo
-- [Todo List](https://github.com/johnsondnz/NetAutSol/blob/master/weekly_homework_submissions/todo.md)
+- [TODO](https://github.com/johnsondnz/NetAutSol/blob/master/TODO.md)
 
 ## Current Objectives
 * Provision all services via automated solution.
@@ -29,7 +27,6 @@ MPLS network consisting of;
 - [ ] Network state verification.
   - [x] IS-IS Adjacencies
   - [x] Ping Tests
-- [ ] Network diagram generation.
 
 # LAB Information
 ## Network Setup

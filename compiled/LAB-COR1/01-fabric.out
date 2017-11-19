@@ -1,6 +1,23 @@
-
+#jinja2: lstrip_blocks: "True"
+routing-options {
+	router-id 10.1.1.11;
+	autonomous-system 0.65535;
+        dynamic-tunnels {
+        dt-1 {
+            rsvp-te rsvp-te-1 {
+                label-switched-path-template {
+                    default-template;
+                }
+                destination-networks {
+                    10.1.1/24;
+                }
+            }
+        }
+    }
+    }
+#jinja2: lstrip_blocks: "True"
 interfaces {
-	lo0 {
+    	lo0 {
         unit 0 {
             description "PEERING INTERFACE --- DO NOT DELETE";
             family inet {
@@ -11,249 +28,135 @@ interfaces {
             }
                     }
     }
-}
-routing-options {
-	router-id 10.1.1.11;
-	autonomous-system 0.65535;
-    dynamic-tunnels {
-        dt-1 {
-            rsvp-te rsvp-te-1 {
-                label-switched-path-template {
-                    default-template;
-                }
-                destination-networks {
-                    10.1.1.0/24;
-                }
-            }
-        }
-    }
-}
-
-
-interfaces {
-	/* link_index: 0 | LAB-COR1 em1.0 169.254.0.1/31 --> 169.254.0.0/31 em1.0 LAB-PE1 */
+    /* link_index: 0 | LAB-COR1 em1.0 169.254.0.1/31 --> 169.254.0.0/31 em1.0 LAB-PE1 */
 	em1 {
 		mtu 2000;
 		description "WAN | LAB-PE1 em1";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.1/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
-protocols {
-	rsvp {
-        interface em1.0;
-	}
-	mpls {
-		        interface em1.0;
-            }
-    ldp {
-    	interface em1.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em1.0 {
-            point-to-point;
-            level 1 disable;
-            level 2 {
-                metric 10;
-                hello-interval 60;
-            }
-        }
-    }
-        }
-
-
-interfaces {
-	/* link_index: 4 | LAB-COR1 em2.0 169.254.0.5/31 --> 169.254.0.4/31 em1.0 LAB-PE2 */
+    /* link_index: 4 | LAB-COR1 em2.0 169.254.0.5/31 --> 169.254.0.4/31 em1.0 LAB-PE2 */
 	em2 {
 		mtu 2000;
 		description "WAN | LAB-PE2 em1";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.5/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
-protocols {
-	rsvp {
-        interface em2.0;
-	}
-	mpls {
-		        interface em2.0;
-            }
-    ldp {
-    	interface em2.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em2.0 {
-            point-to-point;
-            level 1 disable;
-            level 2 {
-                metric 10;
-                hello-interval 60;
-            }
-        }
-    }
-        }
-
-
-interfaces {
-	/* link_index: 16 | LAB-COR1 em3.0 169.254.0.16/31 --> 169.254.0.17/31 em3.0 LAB-COR2 */
+    /* link_index: 16 | LAB-COR1 em3.0 169.254.0.16/31 --> 169.254.0.17/31 em3.0 LAB-COR2 */
 	em3 {
 		mtu 2000;
 		description "WAN | LAB-COR2 em3";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.16/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
-protocols {
-	rsvp {
-        interface em3.0;
-	}
-	mpls {
-		        interface em3.0;
-            }
-    ldp {
-    	interface em3.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em3.0 {
-            point-to-point;
-            level 1 disable;
-            level 2 {
-                metric 10;
-                hello-interval 60;
-            }
-        }
-    }
-        }
-
-
-interfaces {
-	/* link_index: 18 | LAB-COR1 em5.0 169.254.0.18/31 --> 169.254.0.19/31 em5.0 LAB-COR4 */
+    /* link_index: 18 | LAB-COR1 em5.0 169.254.0.18/31 --> 169.254.0.19/31 em5.0 LAB-COR4 */
 	em5 {
 		mtu 2000;
 		description "WAN | LAB-COR4 em5";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.18/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
-protocols {
-	rsvp {
-        interface em5.0;
-	}
-	mpls {
-		        interface em5.0;
-            }
-    ldp {
-    	interface em5.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em5.0 {
-            point-to-point;
-            level 1 disable;
-            level 2 {
-                metric 10;
-                hello-interval 60;
-            }
-        }
-    }
-        }
-
-
-interfaces {
-	/* link_index: 20 | LAB-COR1 em4.0 169.254.0.20/31 --> 169.254.0.21/31 em1.0 LAB-COR3 */
+    /* link_index: 20 | LAB-COR1 em4.0 169.254.0.20/31 --> 169.254.0.21/31 em1.0 LAB-COR3 */
 	em4 {
 		mtu 2000;
 		description "WAN | LAB-COR3 em1";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.20/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
-protocols {
-	rsvp {
-        interface em4.0;
-	}
-	mpls {
-		        interface em4.0;
-            }
-    ldp {
-    	interface em4.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em4.0 {
-            point-to-point;
-            level 1 disable;
-            level 2 {
-                metric 10;
-                hello-interval 60;
-            }
-        }
-    }
-        }
-
-
-interfaces {
-	/* link_index: 28 | LAB-COR1 em0.0 169.254.0.28/31 --> 169.254.0.29/31 em0.0 LAB-COR4 */
+    /* link_index: 28 | LAB-COR1 em0.0 169.254.0.28/31 --> 169.254.0.29/31 em0.0 LAB-COR4 */
 	em0 {
 		mtu 2000;
 		description "WAN | LAB-COR4 em0";
 		unit 0 {
-			family inet {
+            family inet {
 				address 169.254.0.28/31;
 			}
-			family mpls;
-                        family iso;
+            family mpls;
+            family iso;
             		}
 	}
-}
+    }
+#jinja2: lstrip_blocks: "True"
 protocols {
 	rsvp {
+        interface em1.0;
+        interface em2.0;
+        interface em3.0;
+        interface em5.0;
+        interface em4.0;
         interface em0.0;
-	}
+        	}
 	mpls {
-		        interface em0.0;
+        interface em1.0;
+        interface em2.0;
+        interface em3.0;
+        interface em5.0;
+        interface em4.0;
+        interface em0.0;
             }
     ldp {
-    	interface em0.0;
-        keepalive-timeout 180;
-    }
-        isis {
-        interface em0.0 {
-            point-to-point;
-            level 1 disable;
+        interface em1.0;
+        interface em2.0;
+        interface em3.0;
+        interface em5.0;
+        interface em4.0;
+        interface em0.0;
+            }
+    isis {
+        interface em1.0 {
             level 2 {
-                metric 10;
-                hello-interval 60;
+                metric 5;
             }
         }
-    }
+        interface em2.0 {
+            level 2 {
+                metric 5;
+            }
         }
-
+        interface em3.0 {
+            level 2 {
+                metric 5;
+            }
+        }
+        interface em5.0 {
+            level 2 {
+                metric 5;
+            }
+        }
+        interface em4.0 {
+            level 2 {
+                metric 5;
+            }
+        }
+        interface em0.0 {
+            level 2 {
+                metric 5;
+            }
+        }
+            }
+}

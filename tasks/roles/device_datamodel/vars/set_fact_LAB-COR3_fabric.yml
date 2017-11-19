@@ -1,0 +1,122 @@
+---
+routing_options:
+  router_id: 10.1.1.13
+  autonomous_system: 0.65535
+  dynamic_tunnels: true
+
+loopback:
+  name: lo0
+  logical_attributes: {
+    sub_iface: 0,
+    inet: {
+      enabled: true,
+      address: 10.1.1.13
+    },
+    iso: {
+      enabled: true,
+      address: 49.0000.0172.0016.0013.00
+    }
+  }
+
+
+fabric_interfaces:
+  - { 
+      name: em3,
+      annotatation: 'link_index: 8 | LAB-COR3 em3.0 169.254.0.9/31 --> 169.254.0.8/31 em1.0 LAB-PE3',
+      physical_attributes: {
+        mtu: 2000,
+        descr: WAN | LAB-PE3 em1,
+      },
+      logical_attributes: {
+        sub_iface: 0,
+        inet: {
+          enabled: true,
+          address: 169.254.0.9/31
+        },
+        iso: {
+          enabled: true
+        },
+        cost: 5
+      }
+    }
+
+  - { 
+      name: em4,
+      annotatation: 'link_index: 14 | LAB-COR3 em4.0 169.254.0.15/31 --> 169.254.0.14/31 em2.0 LAB-PE4',
+      physical_attributes: {
+        mtu: 2000,
+        descr: WAN | LAB-PE4 em2,
+      },
+      logical_attributes: {
+        sub_iface: 0,
+        inet: {
+          enabled: true,
+          address: 169.254.0.15/31
+        },
+        iso: {
+          enabled: true
+        },
+        cost: 5
+      }
+    }
+
+  - { 
+      name: em1,
+      annotatation: 'link_index: 20 | LAB-COR3 em1.0 169.254.0.21/31 --> 169.254.0.20/31 em4.0 LAB-COR1',
+      physical_attributes: {
+        mtu: 2000,
+        descr: WAN | LAB-COR1 em4,
+      },
+      logical_attributes: {
+        sub_iface: 0,
+        inet: {
+          enabled: true,
+          address: 169.254.0.21/31
+        },
+        iso: {
+          enabled: true
+        },
+        cost: 5
+      }
+    }
+
+  - { 
+      name: em5,
+      annotatation: 'link_index: 22 | LAB-COR3 em5.0 169.254.0.23/31 --> 169.254.0.22/31 em5.0 LAB-COR2',
+      physical_attributes: {
+        mtu: 2000,
+        descr: WAN | LAB-COR2 em5,
+      },
+      logical_attributes: {
+        sub_iface: 0,
+        inet: {
+          enabled: true,
+          address: 169.254.0.23/31
+        },
+        iso: {
+          enabled: true
+        },
+        cost: 5
+      }
+    }
+
+  - { 
+      name: em2,
+      annotatation: 'link_index: 26 | LAB-COR3 em2.0 169.254.0.26/31 --> 169.254.0.27/31 em2.0 LAB-COR4',
+      physical_attributes: {
+        mtu: 2000,
+        descr: WAN | LAB-COR4 em2,
+      },
+      logical_attributes: {
+        sub_iface: 0,
+        inet: {
+          enabled: true,
+          address: 169.254.0.26/31
+        },
+        iso: {
+          enabled: true
+        },
+        cost: 5
+      }
+    }
+

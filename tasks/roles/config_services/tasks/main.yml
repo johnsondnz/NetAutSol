@@ -1,6 +1,7 @@
 ---
-- name: Include services
-  include_vars: "{{ inner_item }}"
-  with_fileglob: [ "vars/services_*.yml" ]
-  loop_control:
-    loop_var: inner_item
+- name: Configure L3VPN customers
+  template:
+    src: l3vpn.j2
+    dest: ../compiled/{{ inventory_hostname }}/10-l3vpn.out
+  when: commit_changes | match('0')
+  tags: [ print_action ]

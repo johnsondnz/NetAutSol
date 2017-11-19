@@ -2,8 +2,6 @@
 - name: EVE-NG MPLS Topology - Ansible Playbook Test
   hosts: all
   connection: local
-
-  vars:
  
   pre_tasks:
 
@@ -14,12 +12,16 @@
       vars:
         known_hosts: ~/.ssh/known_hosts
       name: Grab SSH keys
-
-      tags:
-        - rollback
+      tags: [ rollback ]
 
     - include: tasks/cleanup.yml
       name: Cleanup
+      tags: [ rollback, print_action ]
+
+    - name: Include variables
+      include_vars: "{{ item }}"
+      with_fileglob: [ "vars/*.yml" ]
+      run_once: yes
 
   tasks:
 
@@ -30,18 +32,7 @@
         update: replace
         provider: "{{ netconf }}"
       when: rollback_rescue == '1'
+      tags: [ rollback, print_action ]
 
-      tags:
-        - rollback
-        - print_action
-
-    - include: tasks/cleanup.yml
-      name: Cleanup
-
-      tags:
-        - rollback
-        - print_action
-
-# - include: tasks/get_facts.yml
 - include: tasks/def_roles.yml
 - include: tasks/assemble_push_conf.yml

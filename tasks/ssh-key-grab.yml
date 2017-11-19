@@ -14,7 +14,7 @@
 - name: Add keys to known_hosts
   blockinfile:
     dest: "{{ known_hosts }}"
-    marker: "# {mark} This part is managed by Ansible"
+    marker: "# ----- {mark} This part is managed by Ansible ----- #"
     # for every host in the playook check if the hostvars['hostname'].host_keys is defined
     # if it is defined then save the key, do this in a loop before saving
     block: |

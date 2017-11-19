@@ -1,0 +1,36 @@
+---
+
+- name: Generate device specific fabric data model
+  template:
+    src: fabric_data_model.j2
+    dest: roles/device_datamodel/vars/set_fact_{{ inventory_hostname }}_fabric.yml
+  when: commit_changes | match('0')
+  tags: [ print_action ]
+
+- name: Import device fabric data models to facts
+  include_vars: "{{ item }}"
+  with_fileglob: [ "roles/device_datamodel/vars/set_fact_{{ inventory_hostname }}_fabric.yml" ]
+  when: commit_changes | match('0')
+  tags: [ print_action ]
+
+- name: Generate device specific bgp model
+  template:
+    src: bgp_data_model.j2
+    dest: roles/device_datamodel/vars/set_fact_{{ inventory_hostname }}_bgp.yml
+  when: commit_changes | match('0')
+  tags: [ print_action ]
+
+- name: Import device bgp data models to facts
+  include_vars: "{{ item }}"
+  with_fileglob: [ "roles/device_datamodel/vars/set_fact_{{ inventory_hostname }}_bgp.yml" ]
+  when: commit_changes | match('0')
+  tags: [ print_action ]
+
+# - name: Cleanup fabric data models
+#   file:
+#     state: absent
+#     path: "{{ line_item }}"
+#   with_fileglob: [ "roles/device_datamodel/vars/set_fact_{{ inventory_hostname }}.yml" ]
+#   loop_control:
+#     loop_var: line_item
+#   run_once: true
