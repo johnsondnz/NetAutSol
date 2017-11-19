@@ -22,7 +22,7 @@ Note: *IOS devices shown for reference only*
 
 ## Implimented
 - [x] MPLS Fabric and associated core routing protocols.
-- [ ] MP-BGP.
+- [x] mBGP.
 - [ ] Layer-2 and Layer-3 VPNs for customer access.
 - [ ] Network state verification.
   - [x] IS-IS Adjacencies
