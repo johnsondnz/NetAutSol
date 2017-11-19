@@ -1,6 +1,13 @@
 #
 # vpnv4 Service definition
 #
+# Each customer has a uuid assigned which is obtained using `vpn_uuid_start` from `./vars/config_fabric.yml`
+# `vpn_uuid_start` fact.  loop.index is added to the `vpn_uuid_start` to generate unique identifiers.
+# They aren't truely universially unqiue as loop.index cannot account for removed customers
+# uuids therefore get reused.  For the purposes of this lab it works okay.
+#
+# The uuid is used for vlan_id and sub-interface number generation.
+#
 vpnv4_customers:
   - {
     name: "Customer_A",
