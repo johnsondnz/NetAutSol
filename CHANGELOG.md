@@ -1,6 +1,6 @@
 # WEEK 4
 ## Services Data Model (as defined in Week 3)
-* defined data models in [config_services](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/config_services/vars) role.
+* defined data models in [config_services](https://github.com/johnsondnz/NetAutSol/tree/master/vars).
   * added datamodel `./tasks/roles/config_services/vars/services_vpnv4.yml`
   * added datamodel `./tasks/roles/config_services/vars/services_l2vpn.yml`
   
