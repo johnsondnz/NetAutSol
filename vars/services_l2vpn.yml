@@ -10,7 +10,7 @@
 #     ]
 #   }
 
-customers:
+l2vpn_customers:
   - {
     name: "Customer C",
     provider_edge: [

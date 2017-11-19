@@ -1,4 +1,4 @@
 ---
 # ----- This role depends on these roles ----- #
 dependencies:
-  - { role: transform_to_device }
+  - { role: device_datamodel }

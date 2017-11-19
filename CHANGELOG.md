@@ -1,14 +1,64 @@
-# Easy Wins
+# WEEK 4
+## Changes
+* Moved all role variables into root `./vars/`
+  * Moved `./tasks/roles/config_fabric/vars/main.yml` to `./vars/config_fabric.yml`.
+  * Moved `./tasks/roles/config_services/*.yml` to `./vars/*.yml`.
+  * Updated `./main.yml` to import all variables from `./vars` using fileglob
+  * Deleted `./tasks/roles/config_base/vars/` directory, main.yml was empty.
+  * Deleted `./tasks/roles/config_services/vars/`, directory was empty.
+  * Deleted `./tasks/roles/transform_to_device/vars/`.
+* Enabled previously commented out cleanup task in `./tasks/roles/compliance/tasks/tests/verify-ping.yml`.
+* Removed the Cisco IOS devices, objective changed to automate a Junos MPLS fabric.
+  * I was biting off more than I could chew.
+  * Diagram not yet updated.
+  * Deleted `./host_vars/` files related to IOS devices.
+* Moved `./weekly_homework_submissions/todo.md` to `./TODO.md`.
+* Minor updates to `./README.md`.
+* Removed dynamic diagram generation as an objective.
+* Updated `./DETAILS.md` to reflect new variable file usage.
+* Added tasks for role `config_services` to `./tasks/def_roles.yml`.  This will configure customer services.
+* Removed duplicated include of `./tasks/clearnup.yml` task from `./main.yml`.
+* Updated `./tasks/hostfile.yml`.  now updated `~/.hosts` which is imported dnsmasq on start.
+  * Tasks also restarts dnsmasq to effect changes.
 
-## New Roles
+## Newly implimented
+* Added brownfiles to role `./tasks/roles/config_base`.  Those items which are not yet automated.  (There should be none!)
+* Added BGP templates and tasks to `./tasks/roles/config_fabric/` role.  This is to prepare the network for VPN customers.
+* Merged all WEEK*.md files into [CHANGELOG.md](https://github.com/johnsondnz/NetAutSol/tree/master/CHANGELOG.md).
+  * Deleted `./weekly_homework_submissions` directory.
+* Created new role `./tasks/roles/device_datamodel` to create per device data model.
+  * Role `./tasks/roles/config_base/` has dependency on this new role using `meta/main.yml`.
+  * Previously the jinja2 templates created fabric config from `./vars/config_fabric.yml` model directly.
+  * Transitioned all jinja2 templates to make use of the per device data model.
+
+# WEEK 3
+## Changes
+* Fixed file names for `./tasks/roles/config_services/vars/*.yml` - spelling error corrected.
+* Corrected diagrams vlan_ids for CE-PE peering.
+  * vlan_id second digit now corresponds correctly to match the PE number.
+  * 11xx = PE1
+  * 12xx = PE2
+  * 13xx = PE3
+  * 14xx = PE4
+* Updated todo.md - fixed roles name not matching implimentation.
+
+## Newly implimented
+* defined data models in [config_services](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/config_services/vars) role.
+  * added datamodel `./tasks/roles/config_services/vars/services_vpnv4.yml`
+  * added datamodel `./tasks/roles/config_services/vars/services_l2vpn.yml`
+
+# WEEK 2
+## Easy Wins
+
+### New Roles
 * [tasks/roles/compliance](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance)
 * [tasks/roles/compliance_reports](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance_reports)
 
-## New Plays
+### New Plays
 * [tasks/compliance_play.yml](https://github.com/johnsondnz/NetAutSol/blob/master/tasks/compliance_play.yml)
   * Inherits `compliance` and `compliance_report` roles.
 
-## Compliance Role
+### Compliance Role
 * [verify.sh](https://github.com/johnsondnz/NetAutSol/blob/master/verify.sh) will call [tasks/compliance_play.yml](https://github.com/johnsondnz/NetAutSol/blob/master/tasks/compliance_play.yml).
 * `tasks/compliance_play.yml` triggers the roles `compliance` and `compliance_reports`.
 * The play uses `include_vars` to import variables from the `config_fabric` role.  
@@ -28,7 +78,7 @@
   * `fabric_tests.ping_dest` is passed to `naplam_ping` with results stored in `ping_results`
   * `ping_results` is passed to `compliance_test` module and results ouput standardised into ansible_facts.
 
-## Tasks
+### Tasks
 - [tasks/roles/compliance/tasks/main.yml](https://github.com/johnsondnz/NetAutSol/blob/master/tasks/roles/compliance/tasks/main.yml)
   - Dynamically includes `getter` and `test` modules.
   - [tasks/roles/compliance/tasks/getters/](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance/tasks/getters)
@@ -39,7 +89,7 @@
   - Dynamically calls the ordered tasks in [tasks/roles/compliance_reports/tasks/includes/](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/compliance_reports/tasks/includes)
   - Each tasks file is prefixed with a index to esnure order of operation is as expected for report generation
 
-## Compliance Reporting Role
+### Compliance Reporting Role
 * Triggered with running [verify.sh](https://github.com/johnsondnz/NetAutSol/blob/master/verify.sh).
 * Play creates [reports](https://github.com/johnsondnz/NetAutSol/tree/master/reports) directory.
   * subdirectories `build` and `debug` are also created.
@@ -54,9 +104,25 @@
 * Debugging information is saved to [reports/debug](https://github.com/johnsondnz/NetAutSol/tree/master/reports/debug) in JSON and YAML format.
 * The last output is a search of generated reports (excluding the aggregated one) using bash and grep.  Script searches for `'[FAIL]'`, matches are printed to stdout
 
-## Examples
+### Examples
 - [examples/00-full-report.txt](https://github.com/johnsondnz/NetAutSol/blob/master/examples/00-full-report.txt)
 - [examples/DEPLOY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/DEPLOY-OUTPUT.md)
 - [examples/GENERATE-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/GENERATE-OUTPUT.md)
 - [examples/ROLLBACK-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/ROLLBACK-OUTPUT.md)
 - [examples/VERIFY-OUTPUT.md](https://github.com/johnsondnz/NetAutSol/blob/master/examples/VERIFY-OUTPUT.md)
+
+# WEEK 1
+## Getting Started
+- [Playbook Information](https://github.com/johnsondnz/NetAutSol/blob/master/DETAILS.md)
+
+Uploaded (with a few tweaks) a play that I had been playing with since doing the Ansible for Network Enngeerss webinar.
+
+### Roles
+* [tasks/roles/config_base](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/config_base)
+* [tasks/roles/config_fabric](https://github.com/johnsondnz/NetAutSol/tree/master/tasks/roles/config_fabric)
+  * vars/main.yml is used to create the fabric and later also check for compliance.
+
+### New Plays
+* [main.yml](https://github.com/johnsondnz/NetAutSol/blob/master/main.yml)
+  * Generates or deploys configurations
+  * Can rollback configurations to rescue configurations as stored in [.rescue-configs](https://github.com/johnsondnz/NetAutSol/tree/master/.rescue-configs)

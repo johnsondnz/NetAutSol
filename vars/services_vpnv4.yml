@@ -10,7 +10,7 @@
 #     ]
 #   }
 
-customers:
+vpnv4_customers:
   - {
     name: "Customer A",
     provider_edge: [

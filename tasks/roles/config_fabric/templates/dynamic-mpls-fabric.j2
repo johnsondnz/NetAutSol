@@ -83,8 +83,9 @@ interfaces {
         }
     }
 }
+{% set router_id = loopback_ip|split('/') %}
 routing-options {
-	router-id {{ loopback_ip }};
+	router-id {{ loopback_ip[0] }};
 	autonomous-system {{ ibgp_asn }};
     dynamic-tunnels {
         dt-1 {

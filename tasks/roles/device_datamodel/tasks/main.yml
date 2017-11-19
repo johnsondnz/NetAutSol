@@ -3,8 +3,12 @@
   template:
     src: infrastructure_data_model.j2
     dest: vars/set_fact_{{ inventory_hostanme }}_fabric.yml
+  tags: [ print_action ]
 
 - name: Import device data models to facts
   include:
   with_fileglob: [ "vars/set_fact_{{ inventory_hostanme }}_*.yml" ]
+  where: inventory_hostname in item
+  tags: [ print_action ]
 
+- debug: var=vars

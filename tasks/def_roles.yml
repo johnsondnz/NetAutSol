@@ -4,3 +4,9 @@
   gather_facts: no
   connection: local
   roles: [ config_base, config_fabric ]
+
+# - name: Configure Customers
+#   hosts: mpls
+#   gather_facts: no
+#   connection: local
+#   roles: [ config_services ]

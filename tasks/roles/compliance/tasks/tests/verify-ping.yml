@@ -28,12 +28,12 @@
   loop_control:
     loop_var: line_item
 
-# - name: Cleanup ping test vars
-#   file:
-#     state: absent
-#     path: "{{ line_item }}"
-#   with_fileglob:
-#     - "roles/compliance/vars/*.yml"
-#   loop_control:
-#     loop_var: line_item
-#   run_once: true
+- name: Cleanup ping test vars
+  file:
+    state: absent
+    path: "{{ line_item }}"
+  with_fileglob:
+    - "roles/compliance/vars/*.yml"
+  loop_control:
+    loop_var: line_item
+  run_once: true

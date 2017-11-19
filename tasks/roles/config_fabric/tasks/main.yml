@@ -6,6 +6,5 @@
   when: commit_changes | match('0')
   with_items:
     - "{{ fabric }}"
+  tags: [ print_action ]
 
-  tags:
-    - print_action

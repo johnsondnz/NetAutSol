@@ -1,5 +1,0 @@
----
-os: ios
-role: vlan_switch
-system:
-  hostname: LAB-VLAN-SW2
