@@ -1,7 +1,7 @@
 ---
 - name: Configure L3VPN customers
   template:
-    src: l3vpn.j2
+    src: base.j2
     dest: ../compiled/{{ inventory_hostname }}/10-l3vpn.out
   when: commit_changes | match('0')
   tags: [ print_action ]
