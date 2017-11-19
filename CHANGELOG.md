@@ -41,7 +41,7 @@
 * Dynamic `vars` for roles.  Cleanup tasks commented out to show examples such as
   * Fabric data model to device data models. `./tasks/roles/device_datamodel/vars/`.
   * Compliance testing models. `./tasks/roles/compliance/vars/`
-* New role ``./tasks/roles/config_bgp/` for configuring BGP clients and router reflectors.
+* New role `./tasks/roles/config_bgp/` for configuring BGP clients and router reflectors.
   * Makes uses of the `bgp_config` fact.
   * Dynamically configures BGP peers for the fabric with the only attributes required being the route reflector node names and ASN.
   * Defines CLIENTS, INTERNAL and REFLECTOR-PEER stanzas.
