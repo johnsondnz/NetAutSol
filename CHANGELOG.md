@@ -5,7 +5,7 @@
   * added datamodel `./tasks/roles/config_services/vars/services_l2vpn.yml`
   
 ## Changes
-* Moved all role variables into root `./vars/`
+* Moved all role variables into root `./vars/`, with the exception of dynamically generated facts.
   * Moved `./tasks/roles/config_fabric/vars/main.yml` to `./vars/config_fabric.yml`.
   * Moved `./tasks/roles/config_services/*.yml` to `./vars/*.yml`.
   * Updated `./main.yml` to import all variables from `./vars` using fileglob
