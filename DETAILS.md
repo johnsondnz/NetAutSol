@@ -23,6 +23,7 @@ For anything not yet abstracted with goal to abstract.
 All roles start with `base.j2` which then calls the other templates as required.
 * `./tasks/roles/config_base/templates/`
 * `./tasks/roles/config_fabric/templates/`
+* `./tasks/roles/config_bgp/templates/`
 * `./tasks/roles/config_services/templates/{{ role }}`
 * `./tasks/roles/compliance_reports/templates/output.j2`
 
