@@ -1,29 +1,28 @@
-Ansible Generated MPLS Report - Sun Oct  8 05:47:59 UTC 2017
+Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
 Hostname: LAB-COR1
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em0'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [PASS]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [FAIL]
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.0                                   [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.17                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.19                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.21                                  [PASS]
-Ping Test                                         Check for successful ping to 169.254.0.29                                  [FAIL]
+Ping Test                                         Check for successful ping to 169.254.0.29                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.4                                   [PASS]
 
 
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 10
-TESTS FAILED: 2
+TESTS PASSED: 7
+TESTS FAILED: 4
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------

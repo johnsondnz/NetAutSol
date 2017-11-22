@@ -88,10 +88,10 @@ interfaces {
             family iso;
             		}
 	}
-    /* link_index: 28 | LAB-COR1 em0.0 169.254.0.28/31 --> 169.254.0.29/31 em0.0 LAB-COR4 */
-	em0 {
+    /* link_index: 28 | LAB-COR1 em5.0 169.254.0.28/31 --> 169.254.0.29/31 em5.0 LAB-COR4 */
+	em5 {
 		mtu 2000;
-		description "WAN | LAB-COR4 em0";
+		description "WAN | LAB-COR4 em5";
 		unit 0 {
             family inet {
 				address 169.254.0.28/31;
@@ -109,7 +109,7 @@ protocols {
         interface em3.0;
         interface em5.0;
         interface em4.0;
-        interface em0.0;
+        interface em5.0;
         	}
 	mpls {
         interface em1.0;
@@ -117,7 +117,7 @@ protocols {
         interface em3.0;
         interface em5.0;
         interface em4.0;
-        interface em0.0;
+        interface em5.0;
             }
     ldp {
         interface em1.0;
@@ -125,7 +125,7 @@ protocols {
         interface em3.0;
         interface em5.0;
         interface em4.0;
-        interface em0.0;
+        interface em5.0;
             }
     isis {
         interface em1.0 {
@@ -153,7 +153,7 @@ protocols {
                 metric 5;
             }
         }
-        interface em0.0 {
+        interface em5.0 {
             level 2 {
                 metric 5;
             }

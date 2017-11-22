@@ -1,6 +1,0 @@
-- name: Create the aggregated report
-  assemble:
-    src: "../{{ report_dir }}/"
-    dest: "../{{ report_dir }}/00-full-report.txt"
-  run_once: true
-  tags: [print_action]

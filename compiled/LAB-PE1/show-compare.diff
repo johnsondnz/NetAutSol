@@ -1,236 +1,364 @@
-[edit groups]
-   OUT-OF-BAND-MANAGEMENT { ... }
-+  PROTOCOL-DEFAULTS-BGP {
-+      protocols {
-+          bgp {
-+              group <*> {
-+                  type internal;
-+                  family inet {
-+                      unicast;
-+                  }
-+                  family inet-vpn {
-+                      unicast;
-+                  }
-+                  family l2vpn {
-+                      signaling;
-+                  }
-+                  family inet-mvpn {
-+                      signaling;
-+                  }
-+              }
-+          }
-+      }
-+  }
-   PROTOCOL-DEFAULTS-MPLS { ... }
-[edit groups]
-   PROTOCOL-DEFAULTS-ISIS { ... }
-+  VPN_CUSTOMER_A {
-+      interfaces {
-+          em3 {
-+              description Customer_A;
-+              vlan-tagging;
-+              unit 10 {
-+                  vlan-id 10;
-+                  family inet {
-+                      address 172.16.1.0/31;
-+                  }
-+              }
-+          }
-+      }
-+      policy-options {
-+          policy-statement RP-CUSTOMER_A-IMPORT {
-+              term IMPORT-CUSTOMER-PREFIXES {
-+                  from {
-+                      protocol [ direct static ospf isis bgp ];
-+                      community CM-CUSTOMER_A;
-+                  }
-+                  then accept;
-+              }
-+              term DENY-ALL-OTHERS {
-+                  then reject;
-+              }
-+          }
-+          policy-statement RP-CUSTOMER_A-EXPORT {
-+              term EXPORT-CUSTOMER-PREFIXES {
-+                  from protocol [ direct static ospf isis bgp ];
-+                  then {
-+                      community add CM-CUSTOMER_A;
-+                      accept;
-+                  }
-+              }
-+              term DENY-ALL-OTHERS {
-+                  then reject;
-+              }
-+          }
-+          community CM-CUSTOMER_A members target:65535:10;
-+      }
-+      routing-instances {
-+          VPN_CUSTOMER_A {
-+              description CUSTOMER_A;
-+              instance-type vrf;
-+              interface em3.10;
-+              route-distinguisher 10.1.1.1:10;
-+              vrf-import RP-CUSTOMER_A-IMPORT;
-+              vrf-export RP-CUSTOMER_A-EXPORT;
-+              vrf-target target:65535:10;
-+              vrf-table-label;
-+          }
-+      }
-+  }
-+  VPN_CUSTOMER_B {
-+      interfaces {
-+          em3 {
-+              description Customer_B;
-+              vlan-tagging;
-+              unit 11 {
-+                  vlan-id 11;
-+                  family inet {
-+                      address 172.16.1.4/31;
-+                  }
-+              }
-+          }
-+      }
-+      policy-options {
-+          policy-statement RP-CUSTOMER_B-IMPORT {
-+              term IMPORT-CUSTOMER-PREFIXES {
-+                  from {
-+                      protocol [ direct static ospf isis bgp ];
-+                      community CM-CUSTOMER_B;
-+                  }
-+                  then accept;
-+              }
-+              term DENY-ALL-OTHERS {
-+                  then reject;
-+              }
-+          }
-+          policy-statement RP-CUSTOMER_B-EXPORT {
-+              term EXPORT-CUSTOMER-PREFIXES {
-+                  from protocol [ direct static ospf isis bgp ];
-+                  then {
-+                      community add CM-CUSTOMER_B;
-+                      accept;
-+                  }
-+              }
-+              term DENY-ALL-OTHERS {
-+                  then reject;
-+              }
-+          }
-+          community CM-CUSTOMER_B members target:65535:11;
-+      }
-+      routing-instances {
-+          VPN_CUSTOMER_B {
-+              description CUSTOMER_B;
-+              instance-type vrf;
-+              interface em3.11;
-+              route-distinguisher 10.1.1.1:11;
-+              vrf-import RP-CUSTOMER_B-IMPORT;
-+              vrf-export RP-CUSTOMER_B-EXPORT;
-+              vrf-target target:65535:11;
-+              vrf-table-label;
-+          }
-+      }
-+  }
 [edit]
-- apply-groups OUT-OF-BAND-MANAGEMENT;
++ groups {
++     OUT-OF-BAND-MANAGEMENT {
++         interfaces {
++             em0 {
++                 description "OOB MANAGEMENT INTERFACE --- DO NOT DELETE";
++                 unit 0 {
++                     family inet {
++                         address 192.168.1.1/24;
++                     }
++                 }
++             }
++         }
++         routing-options {
++             static {
++                 route 0.0.0.0/0 next-hop 192.168.1.237;
++             }
++         }
++     }
++     PROTOCOL-DEFAULTS-BGP {
++         protocols {
++             bgp {
++                 group <*> {
++                     type internal;
++                     family inet {
++                         unicast;
++                     }
++                     family inet-vpn {
++                         unicast;
++                     }
++                     family l2vpn {
++                         signaling;
++                     }
++                     family inet-mvpn {
++                         signaling;
++                     }
++                 }
++             }
++         }
++     }
++     PROTOCOL-DEFAULTS-MPLS {
++         protocols {
++             mpls {
++                 log-updown {
++                     syslog;
++                     trap;
++                     trap-path-down;
++                     trap-path-up;
++                 }
++                 interface fxp0.0 {
++                     disable;
++                 }
++                 interface em0.0 {
++                     disable;
++                 }
++             }
++         }
++     }
++     PROTOCOL-DEFAULTS-RSVP {
++         protocols {
++             rsvp {
++                 interface fxp0.0 {
++                     disable;
++                 }
++                 interface em0.0 {
++                     disable;
++                 }
++                 interface <em*> {
++                     aggregate;
++                     reliable;
++                     subscription 60;
++                     link-protection;
++                 }
++                 interface lo0.0 {
++                     aggregate;
++                     reliable;
++                     link-protection;
++                 }
++             }
++         }
++     }
++     PROTOCOL-DEFAULTS-LDP {
++         protocols {
++             ldp {
++                 keepalive-timeout 180;
++                 interface fxp0.0 {
++                     disable;
++                 }
++                 interface em0.0 {
++                     disable;
++                 }
++                 interface lo0.0;
++             }
++         }
++     }
++     PROTOCOL-DEFAULTS-ISIS {
++         protocols {
++             isis {
++                 reference-bandwidth 10g;
++                 traffic-engineering {
++                     family inet {
++                         shortcuts;
++                     }
++                     family inet6 {
++                         shortcuts;
++                     }
++                 }
++                 interface lo0.0 {
++                     passive;
++                 }
++                 interface fxp0.0 {
++                     disable;
++                 }
++                 interface em0.0 {
++                     disable;
++                 }
++                 interface <em*> {
++                     point-to-point;
++                     node-link-protection;
++                     level 1 disable;
++                     level 2 hello-interval 90;
++                 }
++             }
++         }
++     }
++     VPN_CUSTOMER_A {
++         interfaces {
++             em3 {
++                 description Customer_A;
++                 vlan-tagging;
++                 unit 10 {
++                     vlan-id 10;
++                     family inet {
++                         address 172.16.1.0/31;
++                     }
++                 }
++             }
++         }
++         policy-options {
++             policy-statement RP-CUSTOMER_A-IMPORT {
++                 term IMPORT-CUSTOMER-PREFIXES {
++                     from {
++                         protocol [ direct static ospf isis bgp ];
++                         community CM-CUSTOMER_A;
++                     }
++                     then accept;
++                 }
++                 term DENY-ALL-OTHERS {
++                     then reject;
++                 }
++             }
++             policy-statement RP-CUSTOMER_A-EXPORT {
++                 term EXPORT-CUSTOMER-PREFIXES {
++                     from protocol [ direct static ospf isis bgp ];
++                     then {
++                         community add CM-CUSTOMER_A;
++                         accept;
++                     }
++                 }
++                 term DENY-ALL-OTHERS {
++                     then reject;
++                 }
++             }
++             community CM-CUSTOMER_A members target:65535:10;
++         }
++         routing-instances {
++             VPN_CUSTOMER_A {
++                 description CUSTOMER_A;
++                 instance-type vrf;
++                 interface em3.10;
++                 route-distinguisher 10.1.1.1:10;
++                 vrf-import RP-CUSTOMER_A-IMPORT;
++                 vrf-export RP-CUSTOMER_A-EXPORT;
++                 vrf-target target:65535:10;
++                 vrf-table-label;
++             }
++         }
++     }
++     VPN_CUSTOMER_B {
++         interfaces {
++             em3 {
++                 description Customer_B;
++                 vlan-tagging;
++                 unit 11 {
++                     vlan-id 11;
++                     family inet {
++                         address 172.16.1.4/31;
++                     }
++                 }
++             }
++         }
++         policy-options {
++             policy-statement RP-CUSTOMER_B-IMPORT {
++                 term IMPORT-CUSTOMER-PREFIXES {
++                     from {
++                         protocol [ direct static ospf isis bgp ];
++                         community CM-CUSTOMER_B;
++                     }
++                     then accept;
++                 }
++                 term DENY-ALL-OTHERS {
++                     then reject;
++                 }
++             }
++             policy-statement RP-CUSTOMER_B-EXPORT {
++                 term EXPORT-CUSTOMER-PREFIXES {
++                     from protocol [ direct static ospf isis bgp ];
++                     then {
++                         community add CM-CUSTOMER_B;
++                         accept;
++                     }
++                 }
++                 term DENY-ALL-OTHERS {
++                     then reject;
++                 }
++             }
++             community CM-CUSTOMER_B members target:65535:11;
++         }
++         routing-instances {
++             VPN_CUSTOMER_B {
++                 description CUSTOMER_B;
++                 instance-type vrf;
++                 interface em3.11;
++                 route-distinguisher 10.1.1.1:11;
++                 vrf-import RP-CUSTOMER_B-IMPORT;
++                 vrf-export RP-CUSTOMER_B-EXPORT;
++                 vrf-target target:65535:11;
++                 vrf-table-label;
++             }
++         }
++     }
++ }
 + apply-groups [ OUT-OF-BAND-MANAGEMENT VPN_CUSTOMER_A VPN_CUSTOMER_B ];
+[edit system]
+-  host-name LAB-PE1_bootstrap;
++  host-name LAB-PE1;
++  syslog {
++      user * {
++          any emergency;
++      }
++      file messages {
++          any notice;
++          authorization info;
++      }
++      file interactive-commands {
++          interactive-commands any;
++      }
++  }
++  ntp {
++      boot-server 192.168.1.237;
++      server 192.168.1.237;
++  }
 [edit interfaces]
--   em3 {
--       description Customer_B;
--       vlan-tagging;
--       unit 10 {
--           vlan-id 10;
+-   em0 {
+-       description "MANAGEMENT INTERFACE --- DO NOT DELETE";
+-       unit 0 {
 -           family inet {
--               address 172.16.1.0/31;
--           }
--       }
--       unit 11 {
--           vlan-id 11;
--           family inet {
--               address 172.16.1.4/31;
+-               address 192.168.1.1/24;
 -           }
 -       }
 -   }
-[edit protocols bgp]
-+   apply-groups PROTOCOL-DEFAULTS-BGP;
-+   local-address 10.1.1.1;
-[edit protocols bgp group INTERNAL]
--    type internal;
--    local-address 10.1.1.1;
--    family inet-vpn {
--        unicast;
--    }
-[edit policy-options]
--   policy-statement RP-CUSTOMER_A-EXPORT {
--       term EXPORT-CUSTOMER-PREFIXES {
--           from protocol [ direct static ospf isis bgp ];
--           then {
--               community add CM-CUSTOMER_A;
--               accept;
--           }
--       }
--       term DENY-ALL-OTHERS {
--           then reject;
--       }
++   /* link_index: 0 | LAB-PE1 em1.0 169.254.0.0/31 --> 169.254.0.1/31 em1.0 LAB-COR1 */
++   em1 {
++       description "WAN | LAB-COR1 em1";
++       mtu 2000;
++       unit 0 {
++           family inet {
++               address 169.254.0.0/31;
++           }
++           family iso;
++           family mpls;
++       }
++   }
++   /* link_index: 2 | LAB-PE1 em2.0 169.254.0.2/31 --> 169.254.0.3/31 em1.0 LAB-COR2 */
++   em2 {
++       description "WAN | LAB-COR2 em1";
++       mtu 2000;
++       unit 0 {
++           family inet {
++               address 169.254.0.2/31;
++           }
++           family iso;
++           family mpls;
++       }
++   }
++   lo0 {
++       unit 0 {
++           description "PEERING INTERFACE --- DO NOT DELETE";
++           family inet {
++               address 10.1.1.1/32;
++           }
++           family iso {
++               address 49.0000.0172.0016.0001.00;
++           }
++       }
++   }
+[edit routing-options]
+-   static {
+-       route 0.0.0.0/0 next-hop 192.168.1.237;
 -   }
--   policy-statement RP-CUSTOMER_A-IMPORT {
--       term IMPORT-CUSTOMER-PREFIXES {
--           from {
--               protocol [ direct static ospf isis bgp ];
--               community CM-CUSTOMER_A;
--           }
--           then accept;
--       }
--       term DENY-ALL-OTHERS {
--           then reject;
--       }
--   }
--   policy-statement RP-CUSTOMER_B-EXPORT {
--       term EXPORT-CUSTOMER-PREFIXES {
--           from protocol [ direct static ospf isis bgp ];
--           then {
--               community add CM-CUSTOMER_B;
--               accept;
--           }
--       }
--       term DENY-ALL-OTHERS {
--           then reject;
--       }
--   }
--   policy-statement RP-CUSTOMER_B-IMPORT {
--       term IMPORT-CUSTOMER-PREFIXES {
--           from {
--               protocol [ direct static ospf isis bgp ];
--               community CM-CUSTOMER_B;
--           }
--           then accept;
--       }
--       term DENY-ALL-OTHERS {
--           then reject;
--       }
--   }
-[edit policy-options]
--   community CM-CUSTOMER_A members target:65535:10;
--   community CM-CUSTOMER_B members target:65535:11;
++   router-id 10.1.1.1;
++   autonomous-system 0.65535;
++   forwarding-table {
++       /* Best Practice: You must configure per-packet load-balancing routing policy when using ospf/isis node-link-protection */
++       export load-balancing-policy;
++   }
++   dynamic-tunnels {
++       dt-1 {
++           rsvp-te rsvp-te-1 {
++               label-switched-path-template {
++                   default-template;
++               }
++               destination-networks {
++                   10.1.1.0/24;
++               }
++           }
++       }
++   }
 [edit]
--  routing-instances {
--      VPN_CUSTOMER_A {
--          description CUSTOMER_A;
--          instance-type vrf;
--          interface em3.10;
--          route-distinguisher 10.1.1.1:10;
--          vrf-import RP-CUSTOMER_A-IMPORT;
--          vrf-export RP-CUSTOMER_A-EXPORT;
--          vrf-target target:65535:10;
--          vrf-table-label;
--      }
--      VPN_CUSTOMER_B {
--          description CUSTOMER_B;
--          instance-type vrf;
--          interface em3.11;
--          route-distinguisher 10.1.1.1:11;
--          vrf-import RP-CUSTOMER_B-IMPORT;
--          vrf-export RP-CUSTOMER_B-EXPORT;
--          vrf-target target:65535:11;
--          vrf-table-label;
--      }
--  }
++  protocols {
++      rsvp {
++          apply-groups PROTOCOL-DEFAULTS-RSVP;
++          interface em1.0;
++          interface em2.0;
++      }
++      mpls {
++          apply-groups PROTOCOL-DEFAULTS-MPLS;
++          interface em1.0;
++          interface em2.0;
++      }
++      bgp {
++          apply-groups PROTOCOL-DEFAULTS-BGP;
++          local-address 10.1.1.1;
++          group INTERNAL {
++              neighbor 10.1.1.11;
++              neighbor 10.1.1.12;
++          }
++      }
++      isis {
++          apply-groups PROTOCOL-DEFAULTS-ISIS;
++          interface em1.0 {
++              level 2 metric 5;
++          }
++          interface em2.0 {
++              level 2 metric 5;
++          }
++      }
++      ldp {
++          apply-groups PROTOCOL-DEFAULTS-LDP;
++          interface em1.0;
++          interface em2.0;
++      }
++      lldp {
++          interface all;
++      }
++  }
++  /* Best Practice: You must configure per-packet load-balancing routing policy when using ospf/isis node-link-protection */
++  policy-options {
++      policy-statement load-balancing-policy {
++          then {
++              load-balance per-packet;
++          }
++      }
++  }

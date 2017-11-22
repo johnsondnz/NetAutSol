@@ -167,7 +167,7 @@ groups {
                     point-to-point;
                     level 1 disable;
                     level 2 {
-                        hello-interval 60;
+                        hello-interval 90;
                     }
                 }
             }
