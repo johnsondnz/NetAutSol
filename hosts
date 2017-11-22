@@ -1,14 +1,14 @@
 [provider_core]
-LAB-COR1
-LAB-COR2
-LAB-COR3
-LAB-COR4
+LAB-COR1 ansible_host=192.168.1.11
+LAB-COR2 ansible_host=192.168.1.12
+LAB-COR3 ansible_host=192.168.1.13
+LAB-COR4 ansible_host=192.168.1.14
 
 [provider_edge]
-LAB-PE1
-LAB-PE2
-LAB-PE3
-LAB-PE4
+LAB-PE1 ansible_host=192.168.1.1
+LAB-PE2 ansible_host=192.168.1.2
+LAB-PE3 ansible_host=192.168.1.3
+LAB-PE4 ansible_host=192.168.1.4
 
 [mpls:children]
 provider_core
