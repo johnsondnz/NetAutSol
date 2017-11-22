@@ -5,8 +5,8 @@
  
   pre_tasks:
 
-#    - include: tasks/hostfile.yml
-#      name: Build hostfile
+    # - include: tasks/hostfile.yml
+    #   name: Build hostfile
 
     - include: tasks/ssh-key-grab.yml
       vars:
