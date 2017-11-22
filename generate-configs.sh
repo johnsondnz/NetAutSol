@@ -3,7 +3,7 @@
 clear
 echo ""
 echo "----- Generating Configurations -----"
-ansible-playbook -i hosts main.yml -e "commit_changes=0" -K
+ansible-playbook -i hosts main.yml -e "commit_changes=0"
 #find compiled/ -name 'diff' -exec subl {} \;
 echo ""
 echo ""
