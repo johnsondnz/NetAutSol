@@ -1,5 +1,5 @@
 ---
-- include_vars: ../config_fabric/vars/main.yml
+- include_vars: ../../../vars/config_fabric.yml
 
 - name: Include getter modules
   include: "{{ item }}"
