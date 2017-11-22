@@ -40,4 +40,4 @@ fabric:
   - { left: 'LAB-COR2', left_port: 'em5', right: 'LAB-COR3', right_port: 'em5', cost: 5 }
   - { left: 'LAB-COR2', left_port: 'em4', right: 'LAB-COR4', right_port: 'em1', cost: 5 }
   - { left: 'LAB-COR3', left_port: 'em2', right: 'LAB-COR4', right_port: 'em2', cost: 5 }
-  - { left: 'LAB-COR1', left_port: 'em0', right: 'LAB-COR4', right_port: 'em0', cost: 5 }
+  - { left: 'LAB-COR1', left_port: 'em5', right: 'LAB-COR4', right_port: 'em5', cost: 5 }
