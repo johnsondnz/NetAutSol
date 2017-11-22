@@ -5,6 +5,7 @@ configs_dir: compiled
 report_dir: reports
 reports_children_dirs: [ build, debug ]
 
+ansible_python_interpreter: /home/johnsond/venvs/ansible/bin/python2.7
 
 debug_dir: debug
 
