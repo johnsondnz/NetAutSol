@@ -123,6 +123,18 @@ routing-options {
         export load-balancing-policy;
     }
 }
+policy-options {
+    policy-statement CORE-RP-EXPORT {
+        term PERMIT-LOOPBACKS {
+            from interface lo0.0;
+            then accept;
+        }
+        term BLOCK-FABRIC {
+            from protocol direct;
+            then reject;
+        }
+    }
+}
 protocols {
     bgp {
         apply-groups PROTOCOL-DEFAULTS-BGP;
@@ -138,6 +150,7 @@ protocols {
     }
     isis {
         apply-groups PROTOCOL-DEFAULTS-ISIS;
+        export CORE-RP-EXPORT;
     }
     lldp {
         interface all;
