@@ -1,0 +1,12 @@
+---
+- name: EVE-NG MPLS Bootstrap Network
+  hosts: all
+  connection: local
+
+  tasks:
+
+    - include: tasks/ssh_key_grab.yml
+      vars:
+        known_hosts: ~/.ssh/known_hosts
+      
+- include: tasks/roles_bootstrap.yml

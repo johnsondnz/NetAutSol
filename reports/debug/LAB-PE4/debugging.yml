@@ -1,4 +1,5 @@
 ansible_check_mode: false
+ansible_host: 192.168.1.4
 ansible_playbook_python: /home/johnsond/venvs/ansible/bin/python2
 ansible_python_interpreter: /home/johnsond/venvs/ansible/bin/python2.7
 ansible_ssh_pass: lab123
@@ -16,7 +17,6 @@ cisco_ssh:
     password: lab123
     port: 22
     username: lab
-commit_changes: '0'
 compliance_test_isis_adjacency_em1:
     conditon: unstructured-data-text-search
     key: null
@@ -30,7 +30,7 @@ compliance_test_isis_adjacency_em2:
     search: em2.*?Up
     test_description: Check for IS-IS neighbour on 'em2'
     test_name: IS-IS Adjancency
-    test_result: '[FAIL]'
+    test_result: '[PASS]'
 compliance_test_ping_result_169_254_0_13:
     conditon: key-exists
     key: success
@@ -134,29 +134,29 @@ fabric_tests:
 fail_count:
     changed: true
     cmd: cat ../reports/LAB-PE4.txt | grep FAIL | wc -l
-    delta: '0:00:00.002596'
-    end: '2017-11-22 17:37:38.290036'
+    delta: '0:00:00.002221'
+    end: '2017-11-25 13:42:12.468391'
     failed: false
     rc: 0
-    start: '2017-11-22 17:37:38.287440'
+    start: '2017-11-25 13:42:12.466170'
     stderr: ''
     stderr_lines: []
-    stdout: '1'
+    stdout: '0'
     stdout_lines:
-    - '1'
+    - '0'
 getter_isis_adjacency:
     changed: false
     failed: false
     stdout:
     - 'Interface             System         L State        Hold (secs) SNPA
 
-        em1.0                 LAB-COR4       2  Up                  124
+        em1.0                 LAB-COR4       2  Up                  178
 
-        em2.0                 LAB-COR3       2  Down                  0'
+        em2.0                 LAB-COR3       2  Up                  179'
     stdout_lines:
     -   - Interface             System         L State        Hold (secs) SNPA
-        - em1.0                 LAB-COR4       2  Up                  124
-        - em2.0                 LAB-COR3       2  Down                  0
+        - em1.0                 LAB-COR4       2  Up                  178
+        - em2.0                 LAB-COR3       2  Up                  179
 group_names:
 - junos
 - mpls
@@ -205,44 +205,27 @@ host_keys:
     cmd:
     - ssh-keyscan
     - LAB-PE4
-    delta: '0:00:00.843250'
-    end: '2017-11-22 17:36:46.483256'
+    delta: '0:00:00.135450'
+    end: '2017-11-25 13:41:27.721868'
     failed: false
     rc: 0
-    start: '2017-11-22 17:36:45.640006'
-    stderr: '# LAB-PE4:22 SSH-2.0-OpenSSH_5.9
-
-        # LAB-PE4:22 SSH-2.0-OpenSSH_5.9
-
-        # LAB-PE4:22 SSH-2.0-OpenSSH_5.9'
+    start: '2017-11-25 13:41:27.586418'
+    stderr: "getaddrinfo LAB-PE4: No address associated with hostname\r\ngetaddrinfo\
+        \ LAB-PE4: No address associated with hostname\r\ngetaddrinfo LAB-PE4: No\
+        \ address associated with hostname"
     stderr_lines:
-    - '# LAB-PE4:22 SSH-2.0-OpenSSH_5.9'
-    - '# LAB-PE4:22 SSH-2.0-OpenSSH_5.9'
-    - '# LAB-PE4:22 SSH-2.0-OpenSSH_5.9'
-    stdout: 'LAB-PE4 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxri28DTZ0rpunJg6YYW3wAAlKFerWgj3stQbh2+pLRqJArzHSsPdlVGs1/1C4evMZVeutzpnpE6FwpQxkU90U2oUcjko0ssPC7qttvk9S6TqETgZMNhE2Z8E8BnIrwd+1+z5b37HeAh6Hxj4pIuQiSCFMRy99BVasH9i+nLqcM0=
-
-        LAB-PE4 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL6eeHLEOFMOk5zB4clajvRKRB7GoyctQWOIuHdy4u/j6QyBoa/5Yi75lhQsi+vnnuYUVXfZETgsmPoT4LbLxVQ='
-    stdout_lines:
-    - LAB-PE4 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxri28DTZ0rpunJg6YYW3wAAlKFerWgj3stQbh2+pLRqJArzHSsPdlVGs1/1C4evMZVeutzpnpE6FwpQxkU90U2oUcjko0ssPC7qttvk9S6TqETgZMNhE2Z8E8BnIrwd+1+z5b37HeAh6Hxj4pIuQiSCFMRy99BVasH9i+nLqcM0=
-    - LAB-PE4 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL6eeHLEOFMOk5zB4clajvRKRB7GoyctQWOIuHdy4u/j6QyBoa/5Yi75lhQsi+vnnuYUVXfZETgsmPoT4LbLxVQ=
-hostfile:
-    changed: false
-    diff:
-    -   after: ''
-        after_header: /etc/hosts (content)
-        before: ''
-        before_header: /etc/hosts (content)
-    -   after_header: /etc/hosts (file attributes)
-        before_header: /etc/hosts (file attributes)
-    failed: false
-    msg: ''
+    - 'getaddrinfo LAB-PE4: No address associated with hostname'
+    - 'getaddrinfo LAB-PE4: No address associated with hostname'
+    - 'getaddrinfo LAB-PE4: No address associated with hostname'
+    stdout: ''
+    stdout_lines: []
 ibgp_asn: 0.65535
 ibgp_route_reflectors:
 - LAB-COR1
 - LAB-COR2
 id: 4
 inventory_dir: /home/johnsond/Coding/GitHub/NetAutSol
-inventory_file: /home/johnsond/Coding/GitHub/NetAutSol/hosts
+inventory_file: /home/johnsond/Coding/GitHub/NetAutSol/inventory
 inventory_hostname: LAB-PE4
 inventory_hostname_short: LAB-PE4
 isis: true
@@ -250,13 +233,24 @@ isis_default_cost: 10
 isis_hello_interval: 60
 isis_reference_bandwidth: 10g
 iso_afi_area_system: 49.0000.0172.0016
+l2vpn_customers:
+-   name: Customer_C
+    provider_edge:
+    -   interface: em3
+        node: LAB-PE1
+        vlan_id: 1203
+        vlan_switch: LAB-VLAN-SW1
+    -   interface: em3
+        node: LAB-PE4
+        vlan_id: 1403
+        vlan_switch: LAB-VLAN-SW2
 ldp_keepalive_timeout: 180
 log_dir: logs
 loopback_net: 10.1.1
 netconf:
     port: 22
     transport: netconf
-omit: __omit_place_holder__7b41911e11ec48883b059a73cb0a2bc59610fd95
+omit: __omit_place_holder__61f8fb13d22c57c68a872fd17bef2cda7eab9135
 oob_management_next_hop: 192.168.1.237
 oob_management_range: 192.168.1
 os: junos
@@ -265,16 +259,16 @@ ospf_backbone_area: 0.0.0.0
 pass_count:
     changed: true
     cmd: cat ../reports/LAB-PE4.txt | grep PASS | wc -l
-    delta: '0:00:00.002424'
-    end: '2017-11-22 17:37:37.860008'
+    delta: '0:00:00.003279'
+    end: '2017-11-25 13:42:11.981638'
     failed: false
     rc: 0
-    start: '2017-11-22 17:37:37.857584'
+    start: '2017-11-25 13:42:11.978359'
     stderr: ''
     stderr_lines: []
-    stdout: '3'
+    stdout: '4'
     stdout_lines:
-    - '3'
+    - '4'
 ping_results:
     changed: false
     msg: All items completed
@@ -292,7 +286,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.13
                 dev_os: junos
-                hostname: LAB-PE4
+                hostname: 192.168.1.4
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -317,15 +311,15 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.13
-                    rtt: 0.5
+                    rtt: 0.755
                 -   ip_address: 169.254.0.13
-                    rtt: 0.591
+                    rtt: 0.704
                 -   ip_address: 169.254.0.13
-                    rtt: 0.471
-                rtt_avg: 0.52
-                rtt_max: 0.591
-                rtt_min: 0.471
-                rtt_stddev: 0.051
+                    rtt: 0.552
+                rtt_avg: 0.67
+                rtt_max: 0.755
+                rtt_min: 0.552
+                rtt_stddev: 0.086
     -   _ansible_item_label:
             interface: em2
             ping_dest: 169.254.0.15
@@ -339,7 +333,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.15
                 dev_os: junos
-                hostname: LAB-PE4
+                hostname: 192.168.1.4
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -364,30 +358,30 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.15
-                    rtt: 0.541
+                    rtt: 0.454
                 -   ip_address: 169.254.0.15
-                    rtt: 0.56
+                    rtt: 0.641
                 -   ip_address: 169.254.0.15
-                    rtt: 0.631
-                rtt_avg: 0.577
-                rtt_max: 0.631
-                rtt_min: 0.541
-                rtt_stddev: 0.038
+                    rtt: 0.854
+                rtt_avg: 0.649
+                rtt_max: 0.854
+                rtt_min: 0.454
+                rtt_stddev: 0.163
 pkg_dir: packages
 play_run_datetime:
     changed: true
     cmd:
     - date
-    delta: '0:00:00.001420'
-    end: '2017-11-22 17:36:46.945319'
+    delta: '0:00:00.001508'
+    end: '2017-11-25 13:41:28.396989'
     failed: false
     rc: 0
-    start: '2017-11-22 17:36:46.943899'
+    start: '2017-11-25 13:41:28.395481'
     stderr: ''
     stderr_lines: []
-    stdout: Wed Nov 22 17:36:46 NZDT 2017
+    stdout: Sat Nov 25 13:41:28 NZDT 2017
     stdout_lines:
-    - Wed Nov 22 17:36:46 NZDT 2017
+    - Sat Nov 25 13:41:28 NZDT 2017
 playbook_dir: /home/johnsond/Coding/GitHub/NetAutSol/tasks
 report_dir: reports
 report_type: full
@@ -395,7 +389,6 @@ reports_children_dirs:
 - build
 - debug
 role: provider_edge
-rollback_rescue: '0'
 rsvp_subscription: 60
 rt_prefix: 65535
 software_version: 12.1R1.9
@@ -403,3 +396,20 @@ system:
     hostname: LAB-PE4
 test_name: Ping Test
 vpn_uuid_start: 10
+vpnv4_customers:
+-   name: Customer_A
+    provider_edge:
+    -   interface: em3
+        ip_prefix: 172.16.1.0/31
+        node: LAB-PE1
+    -   interface: em3
+        ip_prefix: 172.16.1.2/31
+        node: LAB-PE3
+-   name: Customer_B
+    provider_edge:
+    -   interface: em3
+        ip_prefix: 172.16.1.4/31
+        node: LAB-PE1
+    -   interface: em3
+        ip_prefix: 172.16.1.6/31
+        node: LAB-PE3

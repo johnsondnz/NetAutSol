@@ -1,0 +1,16 @@
+---
+- name: EVE-NG MPLS Configure Network
+  hosts: mpls
+  connection: local
+ 
+  tasks:
+    - include: tasks/ssh_key_grab.yml
+      vars:
+        known_hosts: ~/.ssh/known_hosts
+    
+    - include: tasks/import_vars.yml
+      run_once: yes
+
+    - include: tasks/setup.yml
+
+- include: tasks/roles_configure_fabric.yml

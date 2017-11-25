@@ -1,0 +1,7 @@
+---
+dependencies:
+  - device_datamodel
+  - config_base
+  - config_fabric
+  - config_bgp
+  - config_services

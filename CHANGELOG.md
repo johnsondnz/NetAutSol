@@ -1,3 +1,22 @@
+# Interim Changes
+## Based on week 4 feeback from Ivan
+* migrated away from shell scripts.
+* created new top level plays `./play_*.yml`.
+* removed most tags.
+* aggragted many `./tasks/*.yml` files.
+* moved `/.tasks/assemble_push_config/yml` into two new roles:
+  * `napalm_assemble_configs`.
+  * `napalm_deploy_configs`.
+* created role depenecies to simplify role triggering.
+* check_mode can be used to prevent deviceconfiguration deployment in `./roles/napalm_deploy_configs/tasks.main.yml`.
+  * doing so will also prevent `compliance*` roles from triggering.
+* removed all reference *when: commit_changes | match('0')* in tasks, now utilising check_mode.
+* cleanup of `./group_vars/all.yml`.
+* `./.gitignore` now omits `./reports` and `./compiled` directories.
+* added some config examples.
+* renamed `./hosts/` to `./inventory`.
+* multiple role calling tasks now exist. `./tasks/role_*.yml`.
+
 # WEEK 4
 ## Services Data Model (as defined in Week 3)
 * defined data models in [config_services](https://github.com/johnsondnz/NetAutSol/tree/master/vars).

@@ -1,0 +1,6 @@
+---
+- name: Verify MPLS fabric
+  hosts: mpls
+  gather_facts: no
+  connection: local
+  roles: [ compliance_reports ]

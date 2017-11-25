@@ -1,0 +1,6 @@
+---
+- name: Configure MPLS fabric
+  hosts: mpls
+  gather_facts: no
+  connection: local
+  roles: [ napalm_assemble_configs, napalm_deploy_configs ]

@@ -1,0 +1,4 @@
+---
+- name: Include fabric variables
+  include_vars: "{{ item }}"
+  with_fileglob: [ "../vars/*.yml" ]

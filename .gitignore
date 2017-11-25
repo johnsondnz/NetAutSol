@@ -101,5 +101,5 @@ ENV/
 .mypy_cache/
 
 # ignore compiled, reports
-#/compiled
-#/reports
+compiled/
+reports/

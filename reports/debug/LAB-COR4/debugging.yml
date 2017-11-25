@@ -1,4 +1,5 @@
 ansible_check_mode: false
+ansible_host: 192.168.1.14
 ansible_playbook_python: /home/johnsond/venvs/ansible/bin/python2
 ansible_python_interpreter: /home/johnsond/venvs/ansible/bin/python2.7
 ansible_ssh_pass: lab123
@@ -16,7 +17,6 @@ cisco_ssh:
     password: lab123
     port: 22
     username: lab
-commit_changes: '0'
 compliance_test_isis_adjacency_em1:
     conditon: unstructured-data-text-search
     key: null
@@ -30,21 +30,21 @@ compliance_test_isis_adjacency_em2:
     search: em2.*?Up
     test_description: Check for IS-IS neighbour on 'em2'
     test_name: IS-IS Adjancency
-    test_result: '[FAIL]'
+    test_result: '[PASS]'
 compliance_test_isis_adjacency_em3:
     conditon: unstructured-data-text-search
     key: null
     search: em3.*?Up
     test_description: Check for IS-IS neighbour on 'em3'
     test_name: IS-IS Adjancency
-    test_result: '[PASS]'
+    test_result: '[FAIL]'
 compliance_test_isis_adjacency_em4:
     conditon: unstructured-data-text-search
     key: null
     search: em4.*?Up
     test_description: Check for IS-IS neighbour on 'em4'
     test_name: IS-IS Adjancency
-    test_result: '[PASS]'
+    test_result: '[FAIL]'
 compliance_test_isis_adjacency_em5:
     conditon: unstructured-data-text-search
     key: null
@@ -191,38 +191,38 @@ fabric_tests:
 fail_count:
     changed: true
     cmd: cat ../reports/LAB-COR4.txt | grep FAIL | wc -l
-    delta: '0:00:00.020945'
-    end: '2017-11-22 17:37:38.128077'
+    delta: '0:00:00.003536'
+    end: '2017-11-25 13:42:12.199216'
     failed: false
     rc: 0
-    start: '2017-11-22 17:37:38.107132'
+    start: '2017-11-25 13:42:12.195680'
     stderr: ''
     stderr_lines: []
-    stdout: '1'
+    stdout: '2'
     stdout_lines:
-    - '1'
+    - '2'
 getter_isis_adjacency:
     changed: false
     failed: false
     stdout:
     - 'Interface             System         L State        Hold (secs) SNPA
 
-        em1.0                 LAB-COR2       2  Up                  129
+        em1.0                 LAB-COR2       2  Up                  137
 
-        em2.0                 LAB-COR3       2  New                   8
+        em2.0                 LAB-COR3       2  Up                  165
 
-        em3.0                 LAB-PE4        2  Up                  147
+        em3.0                 0172.0016.0004 2  New                 140
 
-        em4.0                 LAB-PE3        2  Up                  147
+        em4.0                 LAB-PE3        2  New                 144
 
-        em5.0                 LAB-COR1       2  Up                  134'
+        em5.0                 LAB-COR1       2  Up                  166'
     stdout_lines:
     -   - Interface             System         L State        Hold (secs) SNPA
-        - em1.0                 LAB-COR2       2  Up                  129
-        - em2.0                 LAB-COR3       2  New                   8
-        - em3.0                 LAB-PE4        2  Up                  147
-        - em4.0                 LAB-PE3        2  Up                  147
-        - em5.0                 LAB-COR1       2  Up                  134
+        - em1.0                 LAB-COR2       2  Up                  137
+        - em2.0                 LAB-COR3       2  Up                  165
+        - em3.0                 0172.0016.0004 2  New                 140
+        - em4.0                 LAB-PE3        2  New                 144
+        - em5.0                 LAB-COR1       2  Up                  166
 group_names:
 - junos
 - mpls
@@ -271,44 +271,27 @@ host_keys:
     cmd:
     - ssh-keyscan
     - LAB-COR4
-    delta: '0:00:01.349440'
-    end: '2017-11-22 17:36:45.449731'
+    delta: '0:00:00.144891'
+    end: '2017-11-25 13:41:27.327088'
     failed: false
     rc: 0
-    start: '2017-11-22 17:36:44.100291'
-    stderr: '# LAB-COR4:22 SSH-2.0-OpenSSH_5.9
-
-        # LAB-COR4:22 SSH-2.0-OpenSSH_5.9
-
-        # LAB-COR4:22 SSH-2.0-OpenSSH_5.9'
+    start: '2017-11-25 13:41:27.182197'
+    stderr: "getaddrinfo LAB-COR4: No address associated with hostname\r\ngetaddrinfo\
+        \ LAB-COR4: No address associated with hostname\r\ngetaddrinfo LAB-COR4: No\
+        \ address associated with hostname"
     stderr_lines:
-    - '# LAB-COR4:22 SSH-2.0-OpenSSH_5.9'
-    - '# LAB-COR4:22 SSH-2.0-OpenSSH_5.9'
-    - '# LAB-COR4:22 SSH-2.0-OpenSSH_5.9'
-    stdout: 'LAB-COR4 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxri28DTZ0rpunJg6YYW3wAAlKFerWgj3stQbh2+pLRqJArzHSsPdlVGs1/1C4evMZVeutzpnpE6FwpQxkU90U2oUcjko0ssPC7qttvk9S6TqETgZMNhE2Z8E8BnIrwd+1+z5b37HeAh6Hxj4pIuQiSCFMRy99BVasH9i+nLqcM0=
-
-        LAB-COR4 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL6eeHLEOFMOk5zB4clajvRKRB7GoyctQWOIuHdy4u/j6QyBoa/5Yi75lhQsi+vnnuYUVXfZETgsmPoT4LbLxVQ='
-    stdout_lines:
-    - LAB-COR4 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxri28DTZ0rpunJg6YYW3wAAlKFerWgj3stQbh2+pLRqJArzHSsPdlVGs1/1C4evMZVeutzpnpE6FwpQxkU90U2oUcjko0ssPC7qttvk9S6TqETgZMNhE2Z8E8BnIrwd+1+z5b37HeAh6Hxj4pIuQiSCFMRy99BVasH9i+nLqcM0=
-    - LAB-COR4 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL6eeHLEOFMOk5zB4clajvRKRB7GoyctQWOIuHdy4u/j6QyBoa/5Yi75lhQsi+vnnuYUVXfZETgsmPoT4LbLxVQ=
-hostfile:
-    changed: false
-    diff:
-    -   after: ''
-        after_header: /etc/hosts (content)
-        before: ''
-        before_header: /etc/hosts (content)
-    -   after_header: /etc/hosts (file attributes)
-        before_header: /etc/hosts (file attributes)
-    failed: false
-    msg: ''
+    - 'getaddrinfo LAB-COR4: No address associated with hostname'
+    - 'getaddrinfo LAB-COR4: No address associated with hostname'
+    - 'getaddrinfo LAB-COR4: No address associated with hostname'
+    stdout: ''
+    stdout_lines: []
 ibgp_asn: 0.65535
 ibgp_route_reflectors:
 - LAB-COR1
 - LAB-COR2
 id: 14
 inventory_dir: /home/johnsond/Coding/GitHub/NetAutSol
-inventory_file: /home/johnsond/Coding/GitHub/NetAutSol/hosts
+inventory_file: /home/johnsond/Coding/GitHub/NetAutSol/inventory
 inventory_hostname: LAB-COR4
 inventory_hostname_short: LAB-COR4
 isis: true
@@ -316,13 +299,24 @@ isis_default_cost: 10
 isis_hello_interval: 60
 isis_reference_bandwidth: 10g
 iso_afi_area_system: 49.0000.0172.0016
+l2vpn_customers:
+-   name: Customer_C
+    provider_edge:
+    -   interface: em3
+        node: LAB-PE1
+        vlan_id: 1203
+        vlan_switch: LAB-VLAN-SW1
+    -   interface: em3
+        node: LAB-PE4
+        vlan_id: 1403
+        vlan_switch: LAB-VLAN-SW2
 ldp_keepalive_timeout: 180
 log_dir: logs
 loopback_net: 10.1.1
 netconf:
     port: 22
     transport: netconf
-omit: __omit_place_holder__7b41911e11ec48883b059a73cb0a2bc59610fd95
+omit: __omit_place_holder__61f8fb13d22c57c68a872fd17bef2cda7eab9135
 oob_management_next_hop: 192.168.1.237
 oob_management_range: 192.168.1
 os: junos
@@ -331,16 +325,16 @@ ospf_backbone_area: 0.0.0.0
 pass_count:
     changed: true
     cmd: cat ../reports/LAB-COR4.txt | grep PASS | wc -l
-    delta: '0:00:00.003842'
-    end: '2017-11-22 17:37:37.750842'
+    delta: '0:00:00.020513'
+    end: '2017-11-25 13:42:11.711780'
     failed: false
     rc: 0
-    start: '2017-11-22 17:37:37.747000'
+    start: '2017-11-25 13:42:11.691267'
     stderr: ''
     stderr_lines: []
-    stdout: '10'
+    stdout: '9'
     stdout_lines:
-    - '10'
+    - '9'
 ping_results:
     changed: false
     msg: All items completed
@@ -358,7 +352,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.10
                 dev_os: junos
-                hostname: LAB-COR4
+                hostname: 192.168.1.14
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -383,15 +377,15 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.10
-                    rtt: 0.297
+                    rtt: 0.523
                 -   ip_address: 169.254.0.10
-                    rtt: 0.553
+                    rtt: 0.459
                 -   ip_address: 169.254.0.10
-                    rtt: 0.471
-                rtt_avg: 0.44
-                rtt_max: 0.553
-                rtt_min: 0.297
-                rtt_stddev: 0.106
+                    rtt: 0.312
+                rtt_avg: 0.431
+                rtt_max: 0.523
+                rtt_min: 0.312
+                rtt_stddev: 0.088
     -   _ansible_item_label:
             interface: em3
             ping_dest: 169.254.0.12
@@ -405,7 +399,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.12
                 dev_os: junos
-                hostname: LAB-COR4
+                hostname: 192.168.1.14
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -430,15 +424,15 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.12
-                    rtt: 0.453
+                    rtt: 0.41
                 -   ip_address: 169.254.0.12
-                    rtt: 0.518
+                    rtt: 0.362
                 -   ip_address: 169.254.0.12
-                    rtt: 0.338
-                rtt_avg: 0.436
-                rtt_max: 0.518
-                rtt_min: 0.338
-                rtt_stddev: 0.074
+                    rtt: 0.432
+                rtt_avg: 0.401
+                rtt_max: 0.432
+                rtt_min: 0.362
+                rtt_stddev: 0.029
     -   _ansible_item_label:
             interface: em5
             ping_dest: 169.254.0.18
@@ -452,7 +446,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.18
                 dev_os: junos
-                hostname: LAB-COR4
+                hostname: 192.168.1.14
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -477,15 +471,15 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.18
-                    rtt: 0.809
+                    rtt: 0.52
                 -   ip_address: 169.254.0.18
-                    rtt: 0.518
+                    rtt: 0.338
                 -   ip_address: 169.254.0.18
-                    rtt: 0.443
-                rtt_avg: 0.59
-                rtt_max: 0.809
-                rtt_min: 0.443
-                rtt_stddev: 0.157
+                    rtt: 0.395
+                rtt_avg: 0.417
+                rtt_max: 0.52
+                rtt_min: 0.338
+                rtt_stddev: 0.076
     -   _ansible_item_label:
             interface: em1
             ping_dest: 169.254.0.24
@@ -499,7 +493,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.24
                 dev_os: junos
-                hostname: LAB-COR4
+                hostname: 192.168.1.14
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -524,15 +518,15 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.24
-                    rtt: 0.883
+                    rtt: 0.379
                 -   ip_address: 169.254.0.24
-                    rtt: 0.581
+                    rtt: 0.3
                 -   ip_address: 169.254.0.24
-                    rtt: 0.384
-                rtt_avg: 0.616
-                rtt_max: 0.883
-                rtt_min: 0.384
-                rtt_stddev: 0.205
+                    rtt: 0.321
+                rtt_avg: 0.333
+                rtt_max: 0.379
+                rtt_min: 0.3
+                rtt_stddev: 0.033
     -   _ansible_item_label:
             interface: em2
             ping_dest: 169.254.0.26
@@ -546,7 +540,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.26
                 dev_os: junos
-                hostname: LAB-COR4
+                hostname: 192.168.1.14
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -571,15 +565,15 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.26
-                    rtt: 0.471
-                -   ip_address: 169.254.0.26
-                    rtt: 0.444
-                -   ip_address: 169.254.0.26
                     rtt: 0.409
-                rtt_avg: 0.441
-                rtt_max: 0.471
+                -   ip_address: 169.254.0.26
+                    rtt: 0.43
+                -   ip_address: 169.254.0.26
+                    rtt: 0.475
+                rtt_avg: 0.438
+                rtt_max: 0.475
                 rtt_min: 0.409
-                rtt_stddev: 0.025
+                rtt_stddev: 0.027
     -   _ansible_item_label:
             interface: em5
             ping_dest: 169.254.0.28
@@ -593,7 +587,7 @@ ping_results:
                 count: '3'
                 destination: 169.254.0.28
                 dev_os: junos
-                hostname: LAB-COR4
+                hostname: 192.168.1.14
                 optional_args: null
                 password: VALUE_SPECIFIED_IN_NO_LOG_PARAMETER
                 ping_timeout: null
@@ -618,37 +612,36 @@ ping_results:
                 probes_sent: 3
                 results:
                 -   ip_address: 169.254.0.28
-                    rtt: 0.409
+                    rtt: 0.664
                 -   ip_address: 169.254.0.28
-                    rtt: 0.48
+                    rtt: 0.435
                 -   ip_address: 169.254.0.28
-                    rtt: 0.581
-                rtt_avg: 0.49
-                rtt_max: 0.581
-                rtt_min: 0.409
-                rtt_stddev: 0.07
+                    rtt: 0.386
+                rtt_avg: 0.494
+                rtt_max: 0.664
+                rtt_min: 0.386
+                rtt_stddev: 0.121
 pkg_dir: packages
 play_run_datetime:
     changed: true
     cmd:
     - date
-    delta: '0:00:00.001420'
-    end: '2017-11-22 17:36:46.945319'
+    delta: '0:00:00.001508'
+    end: '2017-11-25 13:41:28.396989'
     failed: false
     rc: 0
-    start: '2017-11-22 17:36:46.943899'
+    start: '2017-11-25 13:41:28.395481'
     stderr: ''
     stderr_lines: []
-    stdout: Wed Nov 22 17:36:46 NZDT 2017
+    stdout: Sat Nov 25 13:41:28 NZDT 2017
     stdout_lines:
-    - Wed Nov 22 17:36:46 NZDT 2017
+    - Sat Nov 25 13:41:28 NZDT 2017
 playbook_dir: /home/johnsond/Coding/GitHub/NetAutSol/tasks
 report_dir: reports
 report_type: full
 reports_children_dirs:
 - build
 - debug
-rollback_rescue: '0'
 rsvp_subscription: 60
 rt_prefix: 65535
 software_version: 12.1R1.9
@@ -656,3 +649,20 @@ system:
     hostname: LAB-COR4
 test_name: Ping Test
 vpn_uuid_start: 10
+vpnv4_customers:
+-   name: Customer_A
+    provider_edge:
+    -   interface: em3
+        ip_prefix: 172.16.1.0/31
+        node: LAB-PE1
+    -   interface: em3
+        ip_prefix: 172.16.1.2/31
+        node: LAB-PE3
+-   name: Customer_B
+    provider_edge:
+    -   interface: em3
+        ip_prefix: 172.16.1.4/31
+        node: LAB-PE1
+    -   interface: em3
+        ip_prefix: 172.16.1.6/31
+        node: LAB-PE3

@@ -1,12 +1,12 @@
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-PE1
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.1                                   [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.3                                   [PASS]
 
@@ -14,8 +14,8 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 2
-TESTS FAILED: 2
+TESTS PASSED: 4
+TESTS FAILED: 0
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------

@@ -26,6 +26,3 @@ cisco_ssh:
 netconf:
   port: 22
   transport: netconf
-
-commit_changes: '0'
-rollback_rescue: '0'

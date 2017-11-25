@@ -1,0 +1,8 @@
+---
+- name: Bootstrapping network
+  junos_config:
+    src: configs/{{ os }}/{{ inventory_hostname }}.conf
+    src_format: set
+    update: replace
+    provider: "{{ netconf }}"
+  tags: [ print_action ]

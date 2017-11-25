@@ -1,0 +1,14 @@
+---
+- name: Executing Napalm Tasks (Push Configuration)
+  napalm_install_config:
+    hostname: "{{ ansible_host|default(inventory_hostname) }}"
+    username: "{{ ansible_user }}"
+    dev_os: "{{ os }}"
+    password: "{{ ansible_ssh_pass }}"
+    config_file: "../{{ configs_dir }}/{{ inventory_hostname }}/999-candidate.conf"
+    replace_config: true
+    commit_changes: yes
+    diff_file: "../{{ configs_dir }}/{{ inventory_hostname }}/show-compare.diff"
+  #no_log: true
+  tags: [ deploy_configs, print_action ]
+  when: not ansible_check_mode

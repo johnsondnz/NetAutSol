@@ -1,10 +1,3 @@
 ---
-- include_vars: ../../../vars/config_fabric.yml
-
-- name: Include getter modules
-  include: "{{ item }}"
-  with_fileglob: [ "getters/*.yml" ]
-
-- name: Include test modules
-  include: "{{ item }}"
-  with_fileglob: [ "tests/*.yml" ]
+- include: task_list.yml
+  when: not ansible_check_mode

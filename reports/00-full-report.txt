@@ -1,14 +1,14 @@
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-COR1
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [PASS]
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.0                                   [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.17                                  [PASS]
@@ -21,25 +21,25 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 7
-TESTS FAILED: 4
+TESTS PASSED: 11
+TESTS FAILED: 0
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
 
 
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-COR2
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [PASS]
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [PASS]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.16                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.2                                   [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.23                                  [PASS]
@@ -50,25 +50,25 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 6
-TESTS FAILED: 4
+TESTS PASSED: 10
+TESTS FAILED: 0
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
 
 
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-COR3
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [PASS]
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.14                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.20                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.22                                  [PASS]
@@ -79,14 +79,14 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 5
-TESTS FAILED: 5
+TESTS PASSED: 9
+TESTS FAILED: 1
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
 
 
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-COR4
 Serial: serial_number
 Software Version: software_ver
@@ -94,9 +94,9 @@ Software Version: software_ver
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [PASS]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [FAIL]
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.10                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.12                                  [PASS]
@@ -109,22 +109,22 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 10
-TESTS FAILED: 1
+TESTS PASSED: 9
+TESTS FAILED: 2
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
 
 
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-PE1
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.1                                   [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.3                                   [PASS]
 
@@ -132,22 +132,22 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 2
-TESTS FAILED: 2
+TESTS PASSED: 4
+TESTS FAILED: 0
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
 
 
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-PE2
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.5                                   [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.7                                   [PASS]
 
@@ -155,21 +155,21 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 2
-TESTS FAILED: 2
+TESTS PASSED: 4
+TESTS FAILED: 0
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
 
 
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-PE3
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.11                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.9                                   [PASS]
@@ -178,14 +178,14 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 3
-TESTS FAILED: 1
+TESTS PASSED: 4
+TESTS FAILED: 0
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
 
 
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-PE4
 Serial: serial_number
 Software Version: software_ver
@@ -193,7 +193,7 @@ Software Version: software_ver
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.13                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.15                                  [PASS]
 
@@ -201,8 +201,8 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 3
-TESTS FAILED: 1
+TESTS PASSED: 4
+TESTS FAILED: 0
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------

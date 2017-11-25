@@ -2,7 +2,7 @@
 # ----- Executed from facts obtained via fabric ----- #
 - name: Execute ping tests
   napalm_ping:
-    hostname: "{{ inventory_hostname }}"
+    hostname: "{{ ansible_host|default(inventory_hostname) }}"
     username: "{{ ansible_user }}"
     dev_os: "{{ os }}"
     password: "{{ ansible_ssh_pass }}"

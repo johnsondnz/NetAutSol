@@ -1,7 +1,3 @@
 ---
-- include: includes/00-setup.yml
-- include: includes/01-report_content.yml
-- include: includes/02-assemble_reports.yml
-- include: includes/03-report_footer.yml
-- include: includes/04-aggregated_report.yml
-- include: includes/05-debugging.yml
+- include: task_list.yml
+  when: not ansible_check_mode

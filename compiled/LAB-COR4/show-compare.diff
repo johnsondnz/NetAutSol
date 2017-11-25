@@ -118,7 +118,7 @@
 +                     point-to-point;
 +                     node-link-protection;
 +                     level 1 disable;
-+                     level 2 hello-interval 90;
++                     level 2 hello-interval 60;
 +                 }
 +             }
 +         }
@@ -275,6 +275,7 @@
 +      }
 +      isis {
 +          apply-groups PROTOCOL-DEFAULTS-ISIS;
++          export CORE-RP-EXPORT;
 +          interface em1.0 {
 +              level 2 metric 5;
 +          }
@@ -305,6 +306,16 @@
 +  }
 +  /* Best Practice: You must configure per-packet load-balancing routing policy when using ospf/isis node-link-protection */
 +  policy-options {
++      policy-statement CORE-RP-EXPORT {
++          term PERMIT-LOOPBACKS {
++              from interface lo0.0;
++              then accept;
++          }
++          term BLOCK-FABRIC {
++              from protocol direct;
++              then reject;
++          }
++      }
 +      policy-statement load-balancing-policy {
 +          then {
 +              load-balance per-packet;

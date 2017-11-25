@@ -1,15 +1,15 @@
-Ansible Generated MPLS Report - Wed Nov 22 17:36:46 NZDT 2017
+Ansible Generated MPLS Report - Sat Nov 25 13:41:28 NZDT 2017
 Hostname: LAB-COR3
 Serial: serial_number
 Software Version: software_ver
 
 TASK                                              TASK DESCRIPTION                                                           RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em1'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em2'                                         [PASS]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em3'                                         [PASS]
 IS-IS Adjancency                                  Check for IS-IS neighbour on 'em4'                                         [FAIL]
-IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [FAIL]
+IS-IS Adjancency                                  Check for IS-IS neighbour on 'em5'                                         [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.14                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.20                                  [PASS]
 Ping Test                                         Check for successful ping to 169.254.0.22                                  [PASS]
@@ -20,8 +20,8 @@ Ping Test                                         Check for successful ping to 1
 TEST SUMMARY
 ------------
 
-TESTS PASSED: 5
-TESTS FAILED: 5
+TESTS PASSED: 9
+TESTS FAILED: 1
 
 
 ---------------------------------------------- END OF REPORT ---------------------------------------------------------
