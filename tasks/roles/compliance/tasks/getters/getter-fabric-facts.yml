@@ -10,3 +10,5 @@
   loop_control:
     loop_var: line_item
   when: inventory_hostname in line_item
+  changed_when: false
+  tags: [ print_action ]

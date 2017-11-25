@@ -1,9 +1,0 @@
-protocols {
-    bgp {
-        local-address 10.1.1.13;
-group INTERNAL {
-            neighbor 10.1.1.11;
-            neighbor 10.1.1.12;
-        }
-    }
-}

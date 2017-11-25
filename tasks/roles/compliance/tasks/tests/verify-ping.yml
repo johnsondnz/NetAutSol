@@ -14,6 +14,8 @@
   loop_control:
     loop_var: line_item
   register: ping_results
+  changed_when: false
+  tags: [ print_action ]
 
 - name: Check ping results and load into compliance_test_ facts
   compliance_test:
@@ -27,6 +29,8 @@
     - "{{ ping_results.results }}"
   loop_control:
     loop_var: line_item
+  changed_when: false
+  tags: [ print_action ]
 
 - name: Cleanup ping test vars
   file:

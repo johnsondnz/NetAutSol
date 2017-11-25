@@ -13,3 +13,5 @@
     - "{{ fabric_tests }}"
   loop_control:
     loop_var: line_item
+  changed_when: false
+  tags: [ print_action ]

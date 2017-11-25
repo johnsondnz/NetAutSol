@@ -5,3 +5,5 @@
     display: text
     provider: "{{ netconf }}"
   register: getter_isis_adjacency
+  changed_when: false
+  tags: [ print_action ]
