@@ -37,9 +37,8 @@ Defined in `./group_vars/all.yml`
 
 # Running Playbook
 ## Automated fabric provisioning
-1. `./rollback-rescue.sh`   # only to reset configurations to management only, no services provisioned.
-2. `./generate-configs.sh`  # generate the configurations, log into devices and generate diff, no committing done.
-3. `./deploy-configs.sh`    # deploy configurations and commit changes.
+1. `./play_bootstrap_fabric.yml`   # only to reset configurations to management only, no services provisioned.
+2. `./play_deploy_fabric.yml    `  # generate the configurations, log into devices and generate diff and commit (unless in check_mode)
 
 ## Automated fabric verification
-1. `./verify.sh`            # fabric operation verification tests
+1. `./play_verify_fabric.yml`      # fabric operation verification tests
