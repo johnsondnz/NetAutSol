@@ -17,7 +17,7 @@ jmespath==0.9.3
 jtextfsm==0.3.1
 junos-eznc==2.1.7
 jxmlease==1.0.1
-lxml==4.1.1
+lxml==4.6.2
 MarkupSafe==1.0
 napalm==2.1.0
 napalm-base==0.25.0
