@@ -43,7 +43,7 @@ pynxos==0.0.3
 pyserial==3.4
 pysmi==0.2.2
 pysnmp==4.4.2
-PyYAML==5.1
+PyYAML==5.4
 requests==2.20.0
 scp==0.10.2
 six==1.11.0
